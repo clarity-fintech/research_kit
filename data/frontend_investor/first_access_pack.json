@@ -14,7 +14,7 @@
     "cognitive_terminal": "frontend/investor/cognitive-terminal.html",
     "treasury_hud": "frontend/investor/treasury-dashboard.html",
     "prism_cli": "first_access_pack/02_terminal_vector/prism_cli/",
-    "prism_cli_repo": "https://github.com/williamsnameiswill/clarity-prism-cli",
+    "prism_cli_repo": "https://github.com/clarity-fintech/clarity_prism_cli",
     "local_inference": "first_access_pack/02_terminal_vector/inference/",
     "closed_alpha_api": "first_access_pack/02_terminal_vector/alpha_api/",
     "proof_of_fidelity": "first_access_pack/02_terminal_vector/proof_of_fidelity/",
