@@ -1,0 +1,1406 @@
+{
+  "version": 1,
+  "chain_id": "clrty-1",
+  "events": [
+    {
+      "event_id": 1,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_0",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 2,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_1",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 3,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_2",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 4,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_3",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 5,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_4",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 6,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_5",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 7,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_6",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 8,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_7",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 9,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_8",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 10,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "genesis_mint_validator_node_9",
+      "l1_action": "genesis_verify",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ledger_integrity",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 11,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "register_binding_latency_1",
+      "l1_action": "register_sync",
+      "market_action": null,
+      "latency_ms_inject": 1,
+      "verify": [
+        "register_latency",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 12,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "register_binding_latency_2",
+      "l1_action": "register_sync",
+      "market_action": null,
+      "latency_ms_inject": 2,
+      "verify": [
+        "register_latency",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 13,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "register_binding_latency_3",
+      "l1_action": "register_sync",
+      "market_action": null,
+      "latency_ms_inject": 3,
+      "verify": [
+        "register_latency",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 14,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "register_binding_latency_4",
+      "l1_action": "register_sync",
+      "market_action": null,
+      "latency_ms_inject": 4,
+      "verify": [
+        "register_latency",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 15,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "register_binding_latency_5",
+      "l1_action": "register_sync",
+      "market_action": null,
+      "latency_ms_inject": 5,
+      "verify": [
+        "register_latency",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 16,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "concurrent_tx_burst_1",
+      "l1_action": "sim_block",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ccr_transfer",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 17,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "concurrent_tx_burst_2",
+      "l1_action": "sim_block",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ccr_transfer",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 18,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "concurrent_tx_burst_3",
+      "l1_action": "sim_block",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ccr_transfer",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 19,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "concurrent_tx_burst_4",
+      "l1_action": "sim_block",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ccr_transfer",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 20,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Stable",
+      "bucket": "A",
+      "name": "concurrent_tx_burst_5",
+      "l1_action": "sim_block",
+      "market_action": null,
+      "latency_ms_inject": 0,
+      "verify": [
+        "ccr_transfer",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 21,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Adversarial",
+      "bucket": "A",
+      "name": "bft_malicious_inject_1",
+      "l1_action": "bft_stress",
+      "market_action": null,
+      "latency_ms_inject": 5,
+      "verify": [
+        "byzantine_tolerance",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 22,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Adversarial",
+      "bucket": "A",
+      "name": "bft_malicious_inject_2",
+      "l1_action": "bft_stress",
+      "market_action": null,
+      "latency_ms_inject": 7,
+      "verify": [
+        "byzantine_tolerance",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 23,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Adversarial",
+      "bucket": "A",
+      "name": "bft_malicious_inject_3",
+      "l1_action": "bft_stress",
+      "market_action": null,
+      "latency_ms_inject": 9,
+      "verify": [
+        "byzantine_tolerance",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 24,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Adversarial",
+      "bucket": "A",
+      "name": "bft_malicious_inject_4",
+      "l1_action": "bft_stress",
+      "market_action": null,
+      "latency_ms_inject": 11,
+      "verify": [
+        "byzantine_tolerance",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 25,
+      "oq": "OQ1_GenesisLedger",
+      "regime": "Adversarial",
+      "bucket": "A",
+      "name": "bft_malicious_inject_5",
+      "l1_action": "bft_stress",
+      "market_action": null,
+      "latency_ms_inject": 13,
+      "verify": [
+        "byzantine_tolerance",
+        "ledger_integrity"
+      ]
+    },
+    {
+      "event_id": 26,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_1",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 27,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_2",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 28,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_3",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 29,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_4",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 30,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_5",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 31,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_6",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 32,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_7",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 33,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_8",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 34,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_9",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 35,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "baseline_book_inject_10",
+      "l1_action": null,
+      "market_action": "book_inject",
+      "latency_ms_inject": 0,
+      "verify": [
+        "deterministic_fill",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 36,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_1",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 37,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_2",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 38,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_3",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 39,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_4",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 40,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_5",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 41,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_6",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 42,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_7",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 43,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_8",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 44,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_9",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 45,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Stable",
+      "bucket": "B",
+      "name": "mid_liquidity_absorption_10",
+      "l1_action": null,
+      "market_action": "mid_absorb",
+      "latency_ms_inject": 1,
+      "verify": [
+        "slippage_within_tick",
+        "tick_precision"
+      ]
+    },
+    {
+      "event_id": 46,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Expansion",
+      "bucket": "B",
+      "name": "funding_rate_vol_1",
+      "l1_action": null,
+      "market_action": "funding_vol",
+      "latency_ms_inject": 3,
+      "verify": [
+        "volatility_scalar",
+        "deterministic_fill"
+      ]
+    },
+    {
+      "event_id": 47,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Expansion",
+      "bucket": "B",
+      "name": "funding_rate_vol_2",
+      "l1_action": null,
+      "market_action": "funding_vol",
+      "latency_ms_inject": 3,
+      "verify": [
+        "volatility_scalar",
+        "deterministic_fill"
+      ]
+    },
+    {
+      "event_id": 48,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Expansion",
+      "bucket": "B",
+      "name": "funding_rate_vol_3",
+      "l1_action": null,
+      "market_action": "funding_vol",
+      "latency_ms_inject": 3,
+      "verify": [
+        "volatility_scalar",
+        "deterministic_fill"
+      ]
+    },
+    {
+      "event_id": 49,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Expansion",
+      "bucket": "B",
+      "name": "funding_rate_vol_4",
+      "l1_action": null,
+      "market_action": "funding_vol",
+      "latency_ms_inject": 3,
+      "verify": [
+        "volatility_scalar",
+        "deterministic_fill"
+      ]
+    },
+    {
+      "event_id": 50,
+      "oq": "OQ2_LiquidityArchitecture",
+      "regime": "Expansion",
+      "bucket": "B",
+      "name": "funding_rate_vol_5",
+      "l1_action": null,
+      "market_action": "funding_vol",
+      "latency_ms_inject": 3,
+      "verify": [
+        "volatility_scalar",
+        "deterministic_fill"
+      ]
+    },
+    {
+      "event_id": 51,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_1",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 5,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 52,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_2",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 6,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 53,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_3",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 7,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 54,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_4",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 8,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 55,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_5",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 9,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 56,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_6",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 10,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 57,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_7",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 11,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 58,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_8",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 12,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 59,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_9",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 13,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 60,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "bid_contraction_10",
+      "l1_action": null,
+      "market_action": "bid_contract",
+      "latency_ms_inject": 14,
+      "verify": [
+        "book_breath",
+        "drift_lt_1ms"
+      ]
+    },
+    {
+      "event_id": 61,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "ask_sweep_1",
+      "l1_action": null,
+      "market_action": "ask_sweep",
+      "latency_ms_inject": 10,
+      "verify": [
+        "momentum_reversal",
+        "kernel_latency_2ms"
+      ]
+    },
+    {
+      "event_id": 62,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "ask_sweep_2",
+      "l1_action": null,
+      "market_action": "ask_sweep",
+      "latency_ms_inject": 15,
+      "verify": [
+        "momentum_reversal",
+        "kernel_latency_2ms"
+      ]
+    },
+    {
+      "event_id": 63,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "ask_sweep_3",
+      "l1_action": null,
+      "market_action": "ask_sweep",
+      "latency_ms_inject": 20,
+      "verify": [
+        "momentum_reversal",
+        "kernel_latency_2ms"
+      ]
+    },
+    {
+      "event_id": 64,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "ask_sweep_4",
+      "l1_action": null,
+      "market_action": "ask_sweep",
+      "latency_ms_inject": 25,
+      "verify": [
+        "momentum_reversal",
+        "kernel_latency_2ms"
+      ]
+    },
+    {
+      "event_id": 65,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "ask_sweep_5",
+      "l1_action": null,
+      "market_action": "ask_sweep",
+      "latency_ms_inject": 30,
+      "verify": [
+        "momentum_reversal",
+        "kernel_latency_2ms"
+      ]
+    },
+    {
+      "event_id": 66,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "latency_inject_1",
+      "l1_action": null,
+      "market_action": "latency_inject",
+      "latency_ms_inject": 2,
+      "verify": [
+        "network_drift",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 67,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "latency_inject_2",
+      "l1_action": null,
+      "market_action": "latency_inject",
+      "latency_ms_inject": 4,
+      "verify": [
+        "network_drift",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 68,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "latency_inject_3",
+      "l1_action": null,
+      "market_action": "latency_inject",
+      "latency_ms_inject": 6,
+      "verify": [
+        "network_drift",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 69,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "latency_inject_4",
+      "l1_action": null,
+      "market_action": "latency_inject",
+      "latency_ms_inject": 8,
+      "verify": [
+        "network_drift",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 70,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "latency_inject_5",
+      "l1_action": null,
+      "market_action": "latency_inject",
+      "latency_ms_inject": 10,
+      "verify": [
+        "network_drift",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 71,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "entropy_inject_1",
+      "l1_action": null,
+      "market_action": "entropy_inject",
+      "latency_ms_inject": 8,
+      "verify": [
+        "computational_entropy",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 72,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "entropy_inject_2",
+      "l1_action": null,
+      "market_action": "entropy_inject",
+      "latency_ms_inject": 9,
+      "verify": [
+        "computational_entropy",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 73,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "entropy_inject_3",
+      "l1_action": null,
+      "market_action": "entropy_inject",
+      "latency_ms_inject": 10,
+      "verify": [
+        "computational_entropy",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 74,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "entropy_inject_4",
+      "l1_action": null,
+      "market_action": "entropy_inject",
+      "latency_ms_inject": 11,
+      "verify": [
+        "computational_entropy",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 75,
+      "oq": "OQ3_AdversarialLatency",
+      "regime": "Adversarial",
+      "bucket": "C",
+      "name": "entropy_inject_5",
+      "l1_action": null,
+      "market_action": "entropy_inject",
+      "latency_ms_inject": 12,
+      "verify": [
+        "computational_entropy",
+        "adversarial_resilience"
+      ]
+    },
+    {
+      "event_id": 76,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_1",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 77,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_2",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 78,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_3",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 79,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_4",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 80,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_5",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 81,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_6",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 82,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_7",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 83,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_8",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 84,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_9",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 85,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Expansion",
+      "bucket": "D",
+      "name": "cross_venue_arb_10",
+      "l1_action": null,
+      "market_action": "cross_arb",
+      "latency_ms_inject": 2,
+      "verify": [
+        "arb_profit",
+        "strategy_weight"
+      ]
+    },
+    {
+      "event_id": 86,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_1",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 87,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_2",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 88,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_3",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 89,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_4",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 90,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_5",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 91,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_6",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 92,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_7",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 93,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_8",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 94,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_9",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 95,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Accumulation",
+      "bucket": "D",
+      "name": "regime_shift_10",
+      "l1_action": null,
+      "market_action": "regime_shift",
+      "latency_ms_inject": 3,
+      "verify": [
+        "regime_detection",
+        "strategy_active"
+      ]
+    },
+    {
+      "event_id": 96,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Stable",
+      "bucket": "D",
+      "name": "global_sync_1",
+      "l1_action": "entropy_bus_commit",
+      "market_action": "sync_hash",
+      "latency_ms_inject": 0,
+      "verify": [
+        "global_sync",
+        "merkle_consistency"
+      ]
+    },
+    {
+      "event_id": 97,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Stable",
+      "bucket": "D",
+      "name": "global_sync_2",
+      "l1_action": "entropy_bus_commit",
+      "market_action": "sync_hash",
+      "latency_ms_inject": 0,
+      "verify": [
+        "global_sync",
+        "merkle_consistency"
+      ]
+    },
+    {
+      "event_id": 98,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Stable",
+      "bucket": "D",
+      "name": "global_sync_3",
+      "l1_action": "entropy_bus_commit",
+      "market_action": "sync_hash",
+      "latency_ms_inject": 0,
+      "verify": [
+        "global_sync",
+        "merkle_consistency"
+      ]
+    },
+    {
+      "event_id": 99,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Stable",
+      "bucket": "D",
+      "name": "global_sync_4",
+      "l1_action": "entropy_bus_commit",
+      "market_action": "sync_hash",
+      "latency_ms_inject": 0,
+      "verify": [
+        "global_sync",
+        "merkle_consistency"
+      ]
+    },
+    {
+      "event_id": 100,
+      "oq": "OQ4_RegimeAdaptive",
+      "regime": "Stable",
+      "bucket": "D",
+      "name": "global_sync_5",
+      "l1_action": "entropy_bus_commit",
+      "market_action": "sync_hash",
+      "latency_ms_inject": 0,
+      "verify": [
+        "global_sync",
+        "merkle_consistency"
+      ]
+    }
+  ]
+}

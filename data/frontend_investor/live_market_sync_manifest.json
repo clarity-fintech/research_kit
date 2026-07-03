@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-06-22T13:07:36Z",
+  "task": "live_market_sync",
+  "shadow_dir": "var/helix",
+  "artifacts": [
+    "full_market_model.json",
+    "live_spot_orders.json",
+    "order_grid.json",
+    "active_orders.json",
+    "sim100_convergence_report.json"
+  ]
+}

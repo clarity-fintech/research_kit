@@ -1,0 +1,1888 @@
+{
+  "version": 1,
+  "task": "platform_integrations",
+  "count": 100,
+  "platforms": [
+    {
+      "id": "PLAT-001",
+      "slug": "visa",
+      "name": "Visa Developer Center",
+      "tier": "tier1_settlement",
+      "portal_url": "https://developer.visa.com/apibrowser",
+      "capabilities": [
+        "visa_direct",
+        "visa_accept",
+        "click_to_pay"
+      ],
+      "clrty_function": "Tokenization of CLRTY assets for POS settlement",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_VISA_",
+      "webhook_path": "/v1/integrations/visa/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "visa"
+    },
+    {
+      "id": "PLAT-002",
+      "slug": "mastercard",
+      "name": "Mastercard Developers",
+      "tier": "tier1_settlement",
+      "portal_url": "https://developer.mastercard.com/",
+      "capabilities": [
+        "agent_toolkit",
+        "b2b_payment_controls"
+      ],
+      "clrty_function": "CLRTY-backed debit cards for enterprise expenses",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_MASTERCARD_",
+      "webhook_path": "/v1/integrations/mastercard/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "mastercard"
+    },
+    {
+      "id": "PLAT-003",
+      "slug": "swift",
+      "name": "SWIFT gpi & APIs",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.swift.com/",
+      "capabilities": [
+        "iso20022"
+      ],
+      "clrty_function": "ISO 20022 messaging for CLRTY cross-border transfers",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_SWIFT_",
+      "webhook_path": "/v1/integrations/swift/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-004",
+      "slug": "jpm_onyx",
+      "name": "J.P. Morgan Onyx",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.jpmorgan.com/onyx",
+      "capabilities": [
+        "jpm_coin"
+      ],
+      "clrty_function": "JPM Coin intra-bank CLRTY liquidity",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_JPM_",
+      "webhook_path": "/v1/integrations/jpm_onyx/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-005",
+      "slug": "ripple",
+      "name": "Ripple XRPL",
+      "tier": "tier1_settlement",
+      "portal_url": "https://xrpl.org/",
+      "capabilities": [
+        "xrpl_payment"
+      ],
+      "clrty_function": "High-speed CLRTY liquidity on XRPL",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_RIPPLE_",
+      "webhook_path": "/v1/integrations/ripple/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-006",
+      "slug": "ach_nacha",
+      "name": "ACH/NACHA",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.nacha.org/",
+      "capabilities": [
+        "ach_clearing"
+      ],
+      "clrty_function": "US domestic CLRTY payment clearing",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ACH_",
+      "webhook_path": "/v1/integrations/ach_nacha/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-007",
+      "slug": "sepa",
+      "name": "SEPA European Payments Council",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.europeanpaymentscouncil.eu/",
+      "capabilities": [
+        "sepa_credit"
+      ],
+      "clrty_function": "Euro-denominated CLRTY settlement",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_SEPA_",
+      "webhook_path": "/v1/integrations/sepa/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-008",
+      "slug": "fednow",
+      "name": "FedNow",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.frbservices.org/financial-services/fednow",
+      "capabilities": [
+        "instant_settlement"
+      ],
+      "clrty_function": "Real-time CLRTY settlement for domestic banks",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_FEDNOW_",
+      "webhook_path": "/v1/integrations/fednow/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-009",
+      "slug": "stripe",
+      "name": "Stripe Connect",
+      "tier": "tier1_settlement",
+      "portal_url": "https://stripe.com/docs/api",
+      "capabilities": [
+        "payment_intent",
+        "connect"
+      ],
+      "clrty_function": "Fiat payments into CLRTY via Stripe Connect",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_STRIPE_",
+      "webhook_path": "/v1/integrations/stripe/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "stripe"
+    },
+    {
+      "id": "PLAT-010",
+      "slug": "circle",
+      "name": "Circle Mint/API",
+      "tier": "tier1_settlement",
+      "portal_url": "https://developers.circle.com/",
+      "capabilities": [
+        "usdc_mint",
+        "payout"
+      ],
+      "clrty_function": "Stablecoin collateral CLRTY-to-USDC liquidity",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_CIRCLE_",
+      "webhook_path": "/v1/integrations/circle/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "circle"
+    },
+    {
+      "id": "PLAT-011",
+      "slug": "chainlink",
+      "name": "Chainlink CCIP",
+      "tier": "tier1_settlement",
+      "portal_url": "https://docs.chain.link/",
+      "capabilities": [
+        "price_feed",
+        "ccip"
+      ],
+      "clrty_function": "Oracle price feeds and cross-chain value transfer",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_CHAINLINK_",
+      "webhook_path": "/v1/integrations/chainlink/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-012",
+      "slug": "fireblocks",
+      "name": "Fireblocks API",
+      "tier": "tier1_settlement",
+      "portal_url": "https://developers.fireblocks.com/",
+      "capabilities": [
+        "custody",
+        "signing"
+      ],
+      "clrty_function": "Institutional MPC custody for CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_FIREBLOCKS_",
+      "webhook_path": "/v1/integrations/fireblocks/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "fireblocks"
+    },
+    {
+      "id": "PLAT-013",
+      "slug": "copper",
+      "name": "Copper Platform",
+      "tier": "tier1_settlement",
+      "portal_url": "https://copper.co/",
+      "capabilities": [
+        "prime_brokerage"
+      ],
+      "clrty_function": "Prime brokerage CLRTY trade settlement",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_COPPER_",
+      "webhook_path": "/v1/integrations/copper/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-014",
+      "slug": "b2c2",
+      "name": "B2C2 OTC API",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.b2c2.com/",
+      "capabilities": [
+        "otc_liquidity"
+      ],
+      "clrty_function": "Deep-liquidity OTC market making for CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_B2C2_",
+      "webhook_path": "/v1/integrations/b2c2/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-015",
+      "slug": "wintermute",
+      "name": "Wintermute Trading",
+      "tier": "tier1_settlement",
+      "portal_url": "https://www.wintermute.com/",
+      "capabilities": [
+        "market_making"
+      ],
+      "clrty_function": "Algorithmic market making for CLRTY depth",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_WINTERMUTE_",
+      "webhook_path": "/v1/integrations/wintermute/webhook",
+      "substrate_links": [
+        "settlement/deposit_confirm.rs",
+        "cortexpay/payment_router.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-016",
+      "slug": "aws",
+      "name": "AWS",
+      "tier": "tier2_compute",
+      "portal_url": "https://aws.amazon.com/documentation/",
+      "capabilities": [
+        "lambda",
+        "ec2"
+      ],
+      "clrty_function": "Meter cloud compute hours using CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_AWS_",
+      "webhook_path": "/v1/integrations/aws/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "aws"
+    },
+    {
+      "id": "PLAT-017",
+      "slug": "gcp",
+      "name": "Google Cloud Vertex AI",
+      "tier": "tier2_compute",
+      "portal_url": "https://cloud.google.com/vertex-ai/docs",
+      "capabilities": [
+        "vertex_ai"
+      ],
+      "clrty_function": "Settle AI inference costs on CLRTY ledger",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_GCP_",
+      "webhook_path": "/v1/integrations/gcp/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-018",
+      "slug": "azure",
+      "name": "Azure AI Services",
+      "tier": "tier2_compute",
+      "portal_url": "https://learn.microsoft.com/azure/",
+      "capabilities": [
+        "openai_service"
+      ],
+      "clrty_function": "Micro-payments for OpenAI model calls",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_AZURE_",
+      "webhook_path": "/v1/integrations/azure/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-019",
+      "slug": "nvidia",
+      "name": "NVIDIA DGX Cloud",
+      "tier": "tier2_compute",
+      "portal_url": "https://www.nvidia.com/en-us/data-center/dgx-cloud/",
+      "capabilities": [
+        "gpu_hours"
+      ],
+      "clrty_function": "Tokenized GPU-hour allocation via CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_NVIDIA_",
+      "webhook_path": "/v1/integrations/nvidia/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-020",
+      "slug": "akash",
+      "name": "Akash Network",
+      "tier": "tier2_compute",
+      "portal_url": "https://docs.akash.network/",
+      "capabilities": [
+        "decentralized_compute"
+      ],
+      "clrty_function": "Pay decentralized compute nodes with CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_AKASH_",
+      "webhook_path": "/v1/integrations/akash/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-021",
+      "slug": "render",
+      "name": "Render Network",
+      "tier": "tier2_compute",
+      "portal_url": "https://rendernetwork.com/",
+      "capabilities": [
+        "gpu_rendering"
+      ],
+      "clrty_function": "Distributed GPU rendering settlement",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_RENDER_",
+      "webhook_path": "/v1/integrations/render/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-022",
+      "slug": "fetch_ai",
+      "name": "Fetch.ai",
+      "tier": "tier2_compute",
+      "portal_url": "https://fetch.ai/docs",
+      "capabilities": [
+        "agent_economy"
+      ],
+      "clrty_function": "Agent-to-agent economic coordination",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_FETCH_",
+      "webhook_path": "/v1/integrations/fetch_ai/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-023",
+      "slug": "autogpt",
+      "name": "AutoGPT",
+      "tier": "tier2_compute",
+      "portal_url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "capabilities": [
+        "agent_workflow"
+      ],
+      "clrty_function": "Agentic workflow finalization on CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_AUTOGPT_",
+      "webhook_path": "/v1/integrations/autogpt/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-024",
+      "slug": "langchain",
+      "name": "LangChain",
+      "tier": "tier2_compute",
+      "portal_url": "https://python.langchain.com/docs/",
+      "capabilities": [
+        "llm_chains"
+      ],
+      "clrty_function": "CLRTY settlement embedded in LLM chains",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_LANGCHAIN_",
+      "webhook_path": "/v1/integrations/langchain/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "langchain"
+    },
+    {
+      "id": "PLAT-025",
+      "slug": "huggingface",
+      "name": "Hugging Face Hub",
+      "tier": "tier2_compute",
+      "portal_url": "https://huggingface.co/docs",
+      "capabilities": [
+        "model_hub"
+      ],
+      "clrty_function": "Micropayments for model weights and datasets",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_HF_",
+      "webhook_path": "/v1/integrations/huggingface/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi",
+      "optional_cargo_feature": "hf"
+    },
+    {
+      "id": "PLAT-026",
+      "slug": "ipfs_filecoin",
+      "name": "IPFS/Filecoin",
+      "tier": "tier2_compute",
+      "portal_url": "https://docs.filecoin.io/",
+      "capabilities": [
+        "storage_proof"
+      ],
+      "clrty_function": "Incentivized decentralized storage rewards",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_FILECOIN_",
+      "webhook_path": "/v1/integrations/ipfs_filecoin/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-027",
+      "slug": "arweave",
+      "name": "Arweave",
+      "tier": "tier2_compute",
+      "portal_url": "https://docs.arweave.org/",
+      "capabilities": [
+        "permanent_storage"
+      ],
+      "clrty_function": "Immutable log storage settlement",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ARWEAVE_",
+      "webhook_path": "/v1/integrations/arweave/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-028",
+      "slug": "ankr",
+      "name": "Ankr RPC",
+      "tier": "tier2_compute",
+      "portal_url": "https://www.ankr.com/docs/",
+      "capabilities": [
+        "rpc_nodes"
+      ],
+      "clrty_function": "Validator node infrastructure deployment",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ANKR_",
+      "webhook_path": "/v1/integrations/ankr/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-029",
+      "slug": "bigquery",
+      "name": "GCP BigQuery",
+      "tier": "tier2_compute",
+      "portal_url": "https://cloud.google.com/bigquery/docs",
+      "capabilities": [
+        "analytics_export"
+      ],
+      "clrty_function": "Stream on-chain CLRTY state for audit",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BIGQUERY_",
+      "webhook_path": "/v1/integrations/bigquery/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-030",
+      "slug": "snowflake",
+      "name": "Snowflake",
+      "tier": "tier2_compute",
+      "portal_url": "https://docs.snowflake.com/",
+      "capabilities": [
+        "data_warehouse"
+      ],
+      "clrty_function": "Enterprise ledger transaction warehousing",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_SNOWFLAKE_",
+      "webhook_path": "/v1/integrations/snowflake/webhook",
+      "substrate_links": [
+        "token_core/blue_code/compute_commodity.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-031",
+      "slug": "chainalysis",
+      "name": "Chainalysis",
+      "tier": "tier3_compliance",
+      "portal_url": "https://www.chainalysis.com/",
+      "capabilities": [
+        "kyt_screening"
+      ],
+      "clrty_function": "Flag toxic wallets before CLRTY transactions",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_CHAINALYSIS_",
+      "webhook_path": "/v1/integrations/chainalysis/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-032",
+      "slug": "elliptic",
+      "name": "Elliptic",
+      "tier": "tier3_compliance",
+      "portal_url": "https://www.elliptic.co/",
+      "capabilities": [
+        "risk_scoring"
+      ],
+      "clrty_function": "Risk-score institutional CLRTY access",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ELLIPTIC_",
+      "webhook_path": "/v1/integrations/elliptic/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-033",
+      "slug": "trm_labs",
+      "name": "TRM Labs",
+      "tier": "tier3_compliance",
+      "portal_url": "https://www.trmlabs.com/",
+      "capabilities": [
+        "agent_screening"
+      ],
+      "clrty_function": "Real-time agentic transaction screening",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_TRM_",
+      "webhook_path": "/v1/integrations/trm_labs/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-034",
+      "slug": "worldcoin",
+      "name": "Worldcoin",
+      "tier": "tier3_compliance",
+      "portal_url": "https://worldcoin.org/developers",
+      "capabilities": [
+        "proof_of_personhood"
+      ],
+      "clrty_function": "Verify humans for CLRTY Genesis access",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_WORLDCOIN_",
+      "webhook_path": "/v1/integrations/worldcoin/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-035",
+      "slug": "polygon_id",
+      "name": "Polygon ID",
+      "tier": "tier3_compliance",
+      "portal_url": "https://devs.polygonid.com/",
+      "capabilities": [
+        "zk_credentials"
+      ],
+      "clrty_function": "Zk-proof credential verification",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_POLYGON_ID_",
+      "webhook_path": "/v1/integrations/polygon_id/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-036",
+      "slug": "civic",
+      "name": "Civic Identity",
+      "tier": "tier3_compliance",
+      "portal_url": "https://www.civic.com/",
+      "capabilities": [
+        "identity_gating"
+      ],
+      "clrty_function": "Institutional identity gating for CLRTY pools",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_CIVIC_",
+      "webhook_path": "/v1/integrations/civic/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-037",
+      "slug": "bloom",
+      "name": "Bloom Protocol",
+      "tier": "tier3_compliance",
+      "portal_url": "https://bloom.co/",
+      "capabilities": [
+        "credit_scoring"
+      ],
+      "clrty_function": "On-chain credit histories with CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BLOOM_",
+      "webhook_path": "/v1/integrations/bloom/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-038",
+      "slug": "onfido",
+      "name": "Onfido",
+      "tier": "tier3_compliance",
+      "portal_url": "https://documentation.onfido.com/",
+      "capabilities": [
+        "id_verification"
+      ],
+      "clrty_function": "Automate identity verification for onboarding",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ONFIDO_",
+      "webhook_path": "/v1/integrations/onfido/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-039",
+      "slug": "sumsub",
+      "name": "Sumsub",
+      "tier": "tier3_compliance",
+      "portal_url": "https://docs.sumsub.com/",
+      "capabilities": [
+        "kyc_aml"
+      ],
+      "clrty_function": "Multi-jurisdictional AML/KYC checks",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_SUMSUB_",
+      "webhook_path": "/v1/integrations/sumsub/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-040",
+      "slug": "socure",
+      "name": "Socure",
+      "tier": "tier3_compliance",
+      "portal_url": "https://developer.socure.com/",
+      "capabilities": [
+        "identity_proofing"
+      ],
+      "clrty_function": "Predictive identity fraud prevention",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_SOCURE_",
+      "webhook_path": "/v1/integrations/socure/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-041",
+      "slug": "lit_protocol",
+      "name": "Lit Protocol",
+      "tier": "tier3_compliance",
+      "portal_url": "https://developer.litprotocol.com/",
+      "capabilities": [
+        "access_control"
+      ],
+      "clrty_function": "Decentralized keys for CLRTY data access",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_LIT_",
+      "webhook_path": "/v1/integrations/lit_protocol/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-042",
+      "slug": "privy",
+      "name": "Privy",
+      "tier": "tier3_compliance",
+      "portal_url": "https://docs.privy.io/",
+      "capabilities": [
+        "wallet_onboarding"
+      ],
+      "clrty_function": "Institutional user wallet creation",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_PRIVY_",
+      "webhook_path": "/v1/integrations/privy/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-043",
+      "slug": "zk_proofs",
+      "name": "Zero-Knowledge Proofs",
+      "tier": "tier3_compliance",
+      "portal_url": "https://zkproof.org/",
+      "capabilities": [
+        "privacy_compliance"
+      ],
+      "clrty_function": "Privacy-preserving CLRTY transfers",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ZK_",
+      "webhook_path": "/v1/integrations/zk_proofs/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-044",
+      "slug": "brightid",
+      "name": "BrightID",
+      "tier": "tier3_compliance",
+      "portal_url": "https://www.brightid.org/",
+      "capabilities": [
+        "sybil_resistance"
+      ],
+      "clrty_function": "Prevent Sybil attacks on governance",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BRIGHTID_",
+      "webhook_path": "/v1/integrations/brightid/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-045",
+      "slug": "gitcoin_passport",
+      "name": "Gitcoin Passport",
+      "tier": "tier3_compliance",
+      "portal_url": "https://docs.passport.xyz/",
+      "capabilities": [
+        "reputation"
+      ],
+      "clrty_function": "Aggregate reputation for stake-weighting",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_GITCOIN_",
+      "webhook_path": "/v1/integrations/gitcoin_passport/webhook",
+      "substrate_links": [
+        "settlement/kyc_webhook.rs",
+        "compliance/kyc_gate.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-046",
+      "slug": "hardhat",
+      "name": "Hardhat",
+      "tier": "tier4_devtools",
+      "portal_url": "https://hardhat.org/docs",
+      "capabilities": [
+        "local_dev"
+      ],
+      "clrty_function": "Local smart contract development",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_HARDHAT_",
+      "webhook_path": "/v1/integrations/hardhat/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-047",
+      "slug": "foundry",
+      "name": "Foundry",
+      "tier": "tier4_devtools",
+      "portal_url": "https://book.getfoundry.sh/",
+      "capabilities": [
+        "testing"
+      ],
+      "clrty_function": "Protocol invariant testing",
+      "status_class": "implemented",
+      "env_prefix": "CLRTY_FOUNDRY_",
+      "webhook_path": "/v1/integrations/foundry/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-048",
+      "slug": "rust",
+      "name": "Rust",
+      "tier": "tier4_devtools",
+      "portal_url": "https://www.rust-lang.org/",
+      "capabilities": [
+        "core_dev"
+      ],
+      "clrty_function": "Core CLRTY substrate language",
+      "status_class": "implemented",
+      "env_prefix": "CLRTY_RUST_",
+      "webhook_path": "/v1/integrations/rust/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-049",
+      "slug": "wasm",
+      "name": "WebAssembly",
+      "tier": "tier4_devtools",
+      "portal_url": "https://webassembly.org/",
+      "capabilities": [
+        "vm_contracts"
+      ],
+      "clrty_function": "High-performance VM contracts",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_WASM_",
+      "webhook_path": "/v1/integrations/wasm/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-050",
+      "slug": "docker",
+      "name": "Docker",
+      "tier": "tier4_devtools",
+      "portal_url": "https://docs.docker.com/",
+      "capabilities": [
+        "containerization"
+      ],
+      "clrty_function": "Containerize node infrastructure",
+      "status_class": "implemented",
+      "env_prefix": "CLRTY_DOCKER_",
+      "webhook_path": "/v1/integrations/docker/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-051",
+      "slug": "kubernetes",
+      "name": "Kubernetes",
+      "tier": "tier4_devtools",
+      "portal_url": "https://kubernetes.io/docs/",
+      "capabilities": [
+        "orchestration"
+      ],
+      "clrty_function": "Scale validator clusters",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_K8S_",
+      "webhook_path": "/v1/integrations/kubernetes/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-052",
+      "slug": "github_actions",
+      "name": "GitHub Actions",
+      "tier": "tier4_devtools",
+      "portal_url": "https://docs.github.com/actions",
+      "capabilities": [
+        "cicd"
+      ],
+      "clrty_function": "Automate CI/CD deployments",
+      "status_class": "implemented",
+      "env_prefix": "CLRTY_GHA_",
+      "webhook_path": "/v1/integrations/github_actions/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-053",
+      "slug": "terraform",
+      "name": "Terraform",
+      "tier": "tier4_devtools",
+      "portal_url": "https://developer.hashicorp.com/terraform",
+      "capabilities": [
+        "iac"
+      ],
+      "clrty_function": "Multi-cloud infrastructure provisioning",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_TERRAFORM_",
+      "webhook_path": "/v1/integrations/terraform/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-054",
+      "slug": "vscode",
+      "name": "VS Code",
+      "tier": "tier4_devtools",
+      "portal_url": "https://code.visualstudio.com/docs",
+      "capabilities": [
+        "ide"
+      ],
+      "clrty_function": "IDE extensions for protocol development",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_VSCODE_",
+      "webhook_path": "/v1/integrations/vscode/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-055",
+      "slug": "postman",
+      "name": "Postman",
+      "tier": "tier4_devtools",
+      "portal_url": "https://learning.postman.com/docs/",
+      "capabilities": [
+        "api_testing"
+      ],
+      "clrty_function": "Test institutional API endpoints",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_POSTMAN_",
+      "webhook_path": "/v1/integrations/postman/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-056",
+      "slug": "alchemy",
+      "name": "Alchemy",
+      "tier": "tier4_devtools",
+      "portal_url": "https://docs.alchemy.com/",
+      "capabilities": [
+        "web3_api"
+      ],
+      "clrty_function": "Web3 API infrastructure scaling",
+      "status_class": "active_l1_bridge",
+      "env_prefix": "CLRTY_ALCHEMY_",
+      "webhook_path": "/v1/integrations/alchemy/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-057",
+      "slug": "infura",
+      "name": "Infura",
+      "tier": "tier4_devtools",
+      "portal_url": "https://docs.infura.io/",
+      "capabilities": [
+        "node_access"
+      ],
+      "clrty_function": "Reliable node access for developers",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_INFURA_",
+      "webhook_path": "/v1/integrations/infura/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-058",
+      "slug": "quicknode",
+      "name": "QuickNode",
+      "tier": "tier4_devtools",
+      "portal_url": "https://www.quicknode.com/docs",
+      "capabilities": [
+        "enterprise_rpc"
+      ],
+      "clrty_function": "Enterprise RPC for high throughput",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_QUICKNODE_",
+      "webhook_path": "/v1/integrations/quicknode/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-059",
+      "slug": "the_graph",
+      "name": "The Graph",
+      "tier": "tier4_devtools",
+      "portal_url": "https://thegraph.com/docs/",
+      "capabilities": [
+        "indexing"
+      ],
+      "clrty_function": "Index CLRTY data for app queries",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_GRAPH_",
+      "webhook_path": "/v1/integrations/the_graph/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-060",
+      "slug": "graphql",
+      "name": "GraphQL",
+      "tier": "tier4_devtools",
+      "portal_url": "https://graphql.org/learn/",
+      "capabilities": [
+        "state_query"
+      ],
+      "clrty_function": "Expressive substrate state querying",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_GRAPHQL_",
+      "webhook_path": "/v1/integrations/graphql/webhook",
+      "substrate_links": [
+        "Makefile",
+        "scripts/audit/verify_all_modules.sh"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-061",
+      "slug": "binance_institutional",
+      "name": "Binance Institutional",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.binance.com/en/institutional",
+      "capabilities": [
+        "spot_futures"
+      ],
+      "clrty_function": "Institutional spot/futures CLRTY access",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BINANCE_",
+      "webhook_path": "/v1/integrations/binance_institutional/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-062",
+      "slug": "coinbase_prime",
+      "name": "Coinbase Prime",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.coinbase.com/prime",
+      "capabilities": [
+        "custody_trading"
+      ],
+      "clrty_function": "Enterprise custody and trading",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_COINBASE_",
+      "webhook_path": "/v1/integrations/coinbase_prime/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-063",
+      "slug": "kraken_institutional",
+      "name": "Kraken Institutional",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.kraken.com/institutions",
+      "capabilities": [
+        "otc"
+      ],
+      "clrty_function": "High-volume OTC trading desk",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_KRAKEN_",
+      "webhook_path": "/v1/integrations/kraken_institutional/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-064",
+      "slug": "hidden_road",
+      "name": "Hidden Road Partners",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.hiddenroad.com/",
+      "capabilities": [
+        "prime_brokerage"
+      ],
+      "clrty_function": "Prime brokerage for CLRTY-margin trading",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_HIDDENROAD_",
+      "webhook_path": "/v1/integrations/hidden_road/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-065",
+      "slug": "falconx",
+      "name": "FalconX Prime",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.falconx.io/",
+      "capabilities": [
+        "execution"
+      ],
+      "clrty_function": "Aggregated institutional execution",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_FALCONX_",
+      "webhook_path": "/v1/integrations/falconx/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-066",
+      "slug": "cumberland",
+      "name": "Cumberland DRW",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.cumberland.io/",
+      "capabilities": [
+        "otc_mm"
+      ],
+      "clrty_function": "OTC market making distribution",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_CUMBERLAND_",
+      "webhook_path": "/v1/integrations/cumberland/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-067",
+      "slug": "jump_crypto",
+      "name": "Jump Crypto",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.jumpcrypto.com/",
+      "capabilities": [
+        "hft_liquidity"
+      ],
+      "clrty_function": "High-frequency liquidity provisioning",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_JUMP_",
+      "webhook_path": "/v1/integrations/jump_crypto/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-068",
+      "slug": "wintermute_institutional",
+      "name": "Wintermute Institutional",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.wintermute.com/institutional",
+      "capabilities": [
+        "algo_execution"
+      ],
+      "clrty_function": "Institutional algo-execution",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_WINTERMUTE_INST_",
+      "webhook_path": "/v1/integrations/wintermute_institutional/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-069",
+      "slug": "bitgo",
+      "name": "BitGo",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.bitgo.com/developers/",
+      "capabilities": [
+        "custody"
+      ],
+      "clrty_function": "Enterprise multi-sig custodial wallets",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BITGO_",
+      "webhook_path": "/v1/integrations/bitgo/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-070",
+      "slug": "anchorage",
+      "name": "Anchorage Digital",
+      "tier": "tier5_institutional",
+      "portal_url": "https://www.anchorage.com/developers",
+      "capabilities": [
+        "qualified_custodian"
+      ],
+      "clrty_function": "Qualified custodian for CLRTY tokens",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ANCHORAGE_",
+      "webhook_path": "/v1/integrations/anchorage/webhook",
+      "substrate_links": [
+        "helix_engine/matching_grid.rs",
+        "arbitrage_core/loop_engine.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-071",
+      "slug": "dune",
+      "name": "Dune Analytics",
+      "tier": "tier6_analytics",
+      "portal_url": "https://docs.dune.com/",
+      "capabilities": [
+        "sql_dashboards"
+      ],
+      "clrty_function": "SQL dashboards for on-chain CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_DUNE_",
+      "webhook_path": "/v1/integrations/dune/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-072",
+      "slug": "nansen",
+      "name": "Nansen",
+      "tier": "tier6_analytics",
+      "portal_url": "https://www.nansen.ai/",
+      "capabilities": [
+        "entity_labeling"
+      ],
+      "clrty_function": "Entity labeling for wallet flows",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_NANSEN_",
+      "webhook_path": "/v1/integrations/nansen/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-073",
+      "slug": "glassnode",
+      "name": "Glassnode",
+      "tier": "tier6_analytics",
+      "portal_url": "https://docs.glassnode.com/",
+      "capabilities": [
+        "supply_metrics"
+      ],
+      "clrty_function": "Supply and network health metrics",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_GLASSNODE_",
+      "webhook_path": "/v1/integrations/glassnode/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-074",
+      "slug": "messari",
+      "name": "Messari",
+      "tier": "tier6_analytics",
+      "portal_url": "https://messari.io/api",
+      "capabilities": [
+        "research"
+      ],
+      "clrty_function": "Research and market intelligence",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_MESSARI_",
+      "webhook_path": "/v1/integrations/messari/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-075",
+      "slug": "coinmetrics",
+      "name": "CoinMetrics",
+      "tier": "tier6_analytics",
+      "portal_url": "https://docs.coinmetrics.io/",
+      "capabilities": [
+        "network_health"
+      ],
+      "clrty_function": "Network health analytics",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_COINMETRICS_",
+      "webhook_path": "/v1/integrations/coinmetrics/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-076",
+      "slug": "tokenterminal",
+      "name": "TokenTerminal",
+      "tier": "tier6_analytics",
+      "portal_url": "https://tokenterminal.com/",
+      "capabilities": [
+        "financial_kpis"
+      ],
+      "clrty_function": "Financial KPIs for CLRTY",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_TOKENTERMINAL_",
+      "webhook_path": "/v1/integrations/tokenterminal/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-077",
+      "slug": "artemis",
+      "name": "Artemis",
+      "tier": "tier6_analytics",
+      "portal_url": "https://www.artemis.xyz/",
+      "capabilities": [
+        "agentic_metrics"
+      ],
+      "clrty_function": "Agentic transaction metrics",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ARTEMIS_",
+      "webhook_path": "/v1/integrations/artemis/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-078",
+      "slug": "defillama",
+      "name": "DefiLlama",
+      "tier": "tier6_analytics",
+      "portal_url": "https://defillama.com/docs/api",
+      "capabilities": [
+        "tvl_monitoring"
+      ],
+      "clrty_function": "TVL monitoring for CLRTY pools",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_DEFILLAMA_",
+      "webhook_path": "/v1/integrations/defillama/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-079",
+      "slug": "parsec",
+      "name": "Parsec",
+      "tier": "tier6_analytics",
+      "portal_url": "https://parsec.fi/",
+      "capabilities": [
+        "realtime_data"
+      ],
+      "clrty_function": "Real-time market data feeds",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_PARSEC_",
+      "webhook_path": "/v1/integrations/parsec/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-080",
+      "slug": "the_block",
+      "name": "The Block",
+      "tier": "tier6_analytics",
+      "portal_url": "https://www.theblock.co/data",
+      "capabilities": [
+        "market_insights"
+      ],
+      "clrty_function": "Market insights and research",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_THEBLOCK_",
+      "webhook_path": "/v1/integrations/the_block/webhook",
+      "substrate_links": [
+        "data_lake_pipeline/indexer_worker.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-081",
+      "slug": "tradingview",
+      "name": "TradingView",
+      "tier": "tier7_trading",
+      "portal_url": "https://www.tradingview.com/rest-api-spec/",
+      "capabilities": [
+        "charting"
+      ],
+      "clrty_function": "Charting and technical analysis",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_TRADINGVIEW_",
+      "webhook_path": "/v1/integrations/tradingview/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-082",
+      "slug": "bloomberg",
+      "name": "Bloomberg Terminal",
+      "tier": "tier7_trading",
+      "portal_url": "https://www.bloomberg.com/professional/",
+      "capabilities": [
+        "price_feed"
+      ],
+      "clrty_function": "Terminal price feed integration",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BLOOMBERG_",
+      "webhook_path": "/v1/integrations/bloomberg/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-083",
+      "slug": "metatrader",
+      "name": "MetaTrader",
+      "tier": "tier7_trading",
+      "portal_url": "https://www.metatrader5.com/",
+      "capabilities": [
+        "forex_style"
+      ],
+      "clrty_function": "Forex-style CLRTY trading interface",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_METATRADER_",
+      "webhook_path": "/v1/integrations/metatrader/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-084",
+      "slug": "ninjatrader",
+      "name": "NinjaTrader",
+      "tier": "tier7_trading",
+      "portal_url": "https://ninjatrader.com/support/helpGuides/",
+      "capabilities": [
+        "futures"
+      ],
+      "clrty_function": "Futures-style execution",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_NINJATRADER_",
+      "webhook_path": "/v1/integrations/ninjatrader/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-085",
+      "slug": "quantconnect",
+      "name": "QuantConnect",
+      "tier": "tier7_trading",
+      "portal_url": "https://www.quantconnect.com/docs/",
+      "capabilities": [
+        "backtesting"
+      ],
+      "clrty_function": "Algo strategy backtesting",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_QUANTCONNECT_",
+      "webhook_path": "/v1/integrations/quantconnect/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-086",
+      "slug": "backtrader",
+      "name": "Backtrader",
+      "tier": "tier7_trading",
+      "portal_url": "https://www.backtrader.com/docu/",
+      "capabilities": [
+        "algo_strategy"
+      ],
+      "clrty_function": "Python algo strategy framework",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BACKTRADER_",
+      "webhook_path": "/v1/integrations/backtrader/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-087",
+      "slug": "hummingbot",
+      "name": "Hummingbot",
+      "tier": "tier7_trading",
+      "portal_url": "https://hummingbot.org/",
+      "capabilities": [
+        "market_making_bot"
+      ],
+      "clrty_function": "Market-making bot integration",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_HUMMINGBOT_",
+      "webhook_path": "/v1/integrations/hummingbot/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-088",
+      "slug": "koinly",
+      "name": "Koinly",
+      "tier": "tier7_trading",
+      "portal_url": "https://koinly.io/",
+      "capabilities": [
+        "tax_reporting"
+      ],
+      "clrty_function": "Tax reporting for CLRTY trades",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_KOINLY_",
+      "webhook_path": "/v1/integrations/koinly/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-089",
+      "slug": "rotki",
+      "name": "Rotki",
+      "tier": "tier7_trading",
+      "portal_url": "https://docs.rotki.com/",
+      "capabilities": [
+        "portfolio"
+      ],
+      "clrty_function": "Asset portfolio tracking",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ROTKI_",
+      "webhook_path": "/v1/integrations/rotki/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-090",
+      "slug": "cointracker",
+      "name": "CoinTracker",
+      "tier": "tier7_trading",
+      "portal_url": "https://www.cointracker.io/",
+      "capabilities": [
+        "tracking"
+      ],
+      "clrty_function": "Transaction tracking and reporting",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_COINTRACKER_",
+      "webhook_path": "/v1/integrations/cointracker/webhook",
+      "substrate_links": [
+        "quant_stack/fma/spread_detector.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-091",
+      "slug": "legalzoom",
+      "name": "LegalZoom",
+      "tier": "tier8_legal",
+      "portal_url": "https://www.legalzoom.com/",
+      "capabilities": [
+        "entity_formation"
+      ],
+      "clrty_function": "Corporate entity formation",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_LEGALZOOM_",
+      "webhook_path": "/v1/integrations/legalzoom/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-092",
+      "slug": "docusign",
+      "name": "DocuSign",
+      "tier": "tier8_legal",
+      "portal_url": "https://developers.docusign.com/",
+      "capabilities": [
+        "agreements"
+      ],
+      "clrty_function": "Smart contract agreement signing",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_DOCUSIGN_",
+      "webhook_path": "/v1/integrations/docusign/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-093",
+      "slug": "gnosis_safe",
+      "name": "Gnosis Safe",
+      "tier": "tier8_legal",
+      "portal_url": "https://docs.safe.global/",
+      "capabilities": [
+        "multisig_treasury"
+      ],
+      "clrty_function": "Multisig treasury for CLRTY",
+      "status_class": "implemented",
+      "env_prefix": "CLRTY_SAFE_",
+      "webhook_path": "/v1/integrations/gnosis_safe/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-094",
+      "slug": "multis",
+      "name": "Multis",
+      "tier": "tier8_legal",
+      "portal_url": "https://www.multis.co/",
+      "capabilities": [
+        "business_banking"
+      ],
+      "clrty_function": "Business banking for CLRTY ops",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_MULTIS_",
+      "webhook_path": "/v1/integrations/multis/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-095",
+      "slug": "colony",
+      "name": "Colony",
+      "tier": "tier8_legal",
+      "portal_url": "https://colony.io/",
+      "capabilities": [
+        "dao_structure"
+      ],
+      "clrty_function": "DAO organizational structure",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_COLONY_",
+      "webhook_path": "/v1/integrations/colony/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-096",
+      "slug": "daostack",
+      "name": "DAOStack",
+      "tier": "tier8_legal",
+      "portal_url": "https://daostack.io/",
+      "capabilities": [
+        "governance_modules"
+      ],
+      "clrty_function": "Governance module integration",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_DAOSTACK_",
+      "webhook_path": "/v1/integrations/daostack/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-097",
+      "slug": "aragon",
+      "name": "Aragon",
+      "tier": "tier8_legal",
+      "portal_url": "https://aragon.org/",
+      "capabilities": [
+        "community_mgmt"
+      ],
+      "clrty_function": "Community management tooling",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ARAGON_",
+      "webhook_path": "/v1/integrations/aragon/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-098",
+      "slug": "boardroom",
+      "name": "Boardroom",
+      "tier": "tier8_legal",
+      "portal_url": "https://boardroom.io/",
+      "capabilities": [
+        "voting"
+      ],
+      "clrty_function": "Governance voting platform",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_BOARDROOM_",
+      "webhook_path": "/v1/integrations/boardroom/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-099",
+      "slug": "snapshot",
+      "name": "Snapshot",
+      "tier": "tier8_legal",
+      "portal_url": "https://docs.snapshot.org/",
+      "capabilities": [
+        "governance_signals"
+      ],
+      "clrty_function": "Off-chain governance signals",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_SNAPSHOT_",
+      "webhook_path": "/v1/integrations/snapshot/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    },
+    {
+      "id": "PLAT-100",
+      "slug": "zodiac",
+      "name": "Zodiac",
+      "tier": "tier8_legal",
+      "portal_url": "https://github.com/gnosisguild/zodiac",
+      "capabilities": [
+        "dao_tooling"
+      ],
+      "clrty_function": "Composable DAO tooling",
+      "status_class": "deferred",
+      "env_prefix": "CLRTY_ZODIAC_",
+      "webhook_path": "/v1/integrations/zodiac/webhook",
+      "substrate_links": [
+        "settlement/safe_client.rs",
+        "treasury_sink/ecosystem_vesting_escrow.rs"
+      ],
+      "sdk_strategy": "http_openapi"
+    }
+  ]
+}

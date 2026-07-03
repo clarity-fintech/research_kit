@@ -1,0 +1,564 @@
+{
+  "version": 1,
+  "hub_title": "CLARITY Agent Skills",
+  "hub_tagline": "Pre-built skills you can drop into AI agents and operators to interact with clrty-1 \u2014 programs, tokens, HELIX, commerce, and more.",
+  "install_command": "cargo install --path clarity-cli --bin clrty && clrty skill list",
+  "install_note": "Foundation-maintained skills ship from this monorepo. Community packs are listed separately \u2014 always DYOR.",
+  "categories": [
+    "All",
+    "Community",
+    "HELIX",
+    "Legacy",
+    "Nano",
+    "Payments",
+    "Quantum",
+    "Reference",
+    "Security",
+    "Tooling"
+  ],
+  "repos": {
+    "clrty-cli-core": {
+      "label": "clrty-cli-core",
+      "path": "clrty-cli-core/",
+      "github": "https://github.com/clrty-network/clrty-project/tree/main/clrty-cli-core"
+    },
+    "helix_engine": {
+      "label": "helix_engine",
+      "path": "helix_engine/",
+      "github": "https://github.com/clrty-network/clrty-project/tree/main/helix_engine"
+    },
+    "cortexpay_engine": {
+      "label": "cortexpay_engine",
+      "path": "cortexpay_engine/",
+      "github": "https://github.com/clrty-network/clrty-project/tree/main/cortexpay_engine"
+    },
+    "neuro_templates_engine": {
+      "label": "neuro_templates_engine",
+      "path": "neuro_templates_engine/",
+      "github": "https://github.com/clrty-network/clrty-project/tree/main/neuro_templates_engine"
+    },
+    "CLRTY_SUBSTRATE": {
+      "label": "CLRTY_SUBSTRATE",
+      "path": "CLRTY_SUBSTRATE/",
+      "github": "https://github.com/clrty-network/clrty-project/tree/main/CLRTY_SUBSTRATE"
+    },
+    "docs": {
+      "label": "docs",
+      "path": "docs/",
+      "github": "https://github.com/clrty-network/clrty-project/tree/main/docs"
+    }
+  },
+  "official": [
+    {
+      "id": "clarity-skills-protocol",
+      "name": "Clarity Skills Protocol",
+      "category": "Reference",
+      "tier": "official",
+      "repo": "docs",
+      "description": "Canonical skill execution model \u2014 dual-lock gates, sequential pipelines, one-skill-per-account rule.",
+      "doc": "docs/protocol/clarity-skills.md",
+      "cli": "clrty skill list"
+    },
+    {
+      "id": "quantum-skills-overview",
+      "name": "Quantum Skills Trading Suite",
+      "category": "Reference",
+      "tier": "official",
+      "repo": "docs",
+      "description": "MCA, TSR, AVR, EHL \u2014 the four production Quantum Skills with risk profiles and substrate links.",
+      "doc": "docs/investor/clarity_skills_overview.md",
+      "cli": "clrty strategy run --steps=mca,avr"
+    },
+    {
+      "id": "execution-funnel",
+      "name": "Execution Funnel",
+      "category": "Reference",
+      "tier": "official",
+      "repo": "docs",
+      "description": "Operator path from intent \u2192 skill lock \u2192 HELIX shadow \u2192 canonical commit.",
+      "doc": "docs/cli/execution_funnel.md"
+    },
+    {
+      "id": "install-hub",
+      "name": "Installation & Toolchain",
+      "category": "Tooling",
+      "tier": "official",
+      "repo": "docs",
+      "description": "Build clrty CLI, verify manifests, run skill smoke tests.",
+      "doc": "frontend/docs/content/build/installation.md",
+      "cli": "bash scripts/install/clrty_install.sh"
+    },
+    {
+      "id": "strategy-compiler",
+      "name": "Strategy Compiler",
+      "category": "Tooling",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "description": "Human-readable strategy \u2192 sequential skill pipeline \u2014 Solidity for strategies on clrty-1.",
+      "doc": "docs/investor/clarity_skills_overview.md",
+      "cli": "clrty strategy run --steps=metric-collapse-arbitrage,attestation-verify"
+    },
+    {
+      "id": "nano-skills-cookbook",
+      "name": "Nano-Skills Cookbook",
+      "category": "Tooling",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "description": "N01\u2013N20 inference catalog \u2014 deterministic heuristics with feature-evidence JSON.",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "cli": "clrty nano list"
+    },
+    {
+      "id": "metric-collapse-arbitrage",
+      "name": "Metric-Collapse Arbitrage",
+      "category": "Quantum",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "quant",
+      "description": "Calculates distance from 99-1 optimization state; filters noisy trades; executes only when deterministic score predicts net edge after fees/latency.",
+      "status": "partial",
+      "cli": "clrty skill run mca",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "topological-state-rebalance",
+      "name": "Topological State-Rebalancing",
+      "category": "Quantum",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "quant",
+      "description": "Manages 99\u21921 set mechanics; wallet tier migration based on entropy, holding duration, velocity; fee-priority / Set 1 privilege buff.",
+      "status": "partial",
+      "cli": "clrty skill run tsr",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "attestation-verify",
+      "name": "Attestation-Verified Routing",
+      "category": "Security",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "compliance",
+      "description": "Compliance-as-Code via Attestation Blob; FATF/Travel Rule at kernel.",
+      "status": "partial",
+      "cli": "clrty skill run avr",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "entropy-heartbeat-check",
+      "name": "Entropy-Heartbeat Liquidation",
+      "category": "Security",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "risk",
+      "description": "Black swan circuit breaker; locks account lanes during extreme entropy.",
+      "status": "partial",
+      "cli": "clrty skill run ehl",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "helix-intent-resolve",
+      "name": "HELIX Intent Resolution",
+      "category": "HELIX",
+      "tier": "official",
+      "repo": "helix_engine",
+      "tag": "helix",
+      "description": "Routes ExecutionIntent through HELIX-02 resolver for capital, commerce, and Mirra yield lanes.",
+      "status": "partial",
+      "cli": "clrty helix intents submit --amount=100",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "helix-net-settle",
+      "name": "HELIX Net Settlement Preview",
+      "category": "HELIX",
+      "tier": "official",
+      "repo": "helix_engine",
+      "tag": "helix",
+      "description": "Net settlement leg preview via HELIX-03; nets bilateral flows before shadow commit.",
+      "status": "partial",
+      "cli": "clrty helix net preview",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "helix-route",
+      "name": "HELIX Full Route",
+      "category": "HELIX",
+      "tier": "official",
+      "repo": "helix_engine",
+      "tag": "helix",
+      "description": "AVR attestation gate \u2192 HELIX-02 intent resolve \u2192 HELIX-03 net settle; wired to economic_core and arbitrage_core.",
+      "status": "partial",
+      "cli": "clrty strategy run --steps=attestation-verify,helix-intent-resolve,helix-net-settle",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "cortexpay-predict",
+      "name": "CortexPay Intent Predict",
+      "category": "Payments",
+      "tier": "official",
+      "repo": "cortexpay_engine",
+      "tag": "cortexpay",
+      "description": "Session intent probability + abandonment score via CORTEX-01.",
+      "status": "partial",
+      "cli": "clrty cortexpay predict",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "cortexpay-route-pay",
+      "name": "CortexPay Route Pay",
+      "category": "Payments",
+      "tier": "official",
+      "repo": "cortexpay_engine",
+      "tag": "cortexpay",
+      "description": "Liquidity-aware rail selection routed through HELIX-02.",
+      "status": "partial",
+      "cli": "clrty cortexpay route",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "nt-optimize",
+      "name": "NeuroTemplates Optimize",
+      "category": "Tooling",
+      "tier": "official",
+      "repo": "neuro_templates_engine",
+      "tag": "neuro-templates",
+      "description": "Template adaptation cycle via NT-07/NT-08 optimization scoring.",
+      "status": "partial",
+      "cli": "clrty nt optimize",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "nt-refactor-suggest",
+      "name": "NeuroTemplates Refactor Suggest",
+      "category": "Tooling",
+      "tier": "official",
+      "repo": "neuro_templates_engine",
+      "tag": "neuro-templates",
+      "description": "Architecture refactor proposals \u2014 dual-lock required to apply.",
+      "status": "partial",
+      "cli": "clrty nt refactor-suggest",
+      "doc": "docs/investor/clarity_skills_overview.md"
+    },
+    {
+      "id": "latent-state-sync",
+      "name": "Latent State Sync",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N01 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N01",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N01"
+    },
+    {
+      "id": "moniverse-entropy-probe",
+      "name": "Moniverse Entropy Probe",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N02 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N02",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N02"
+    },
+    {
+      "id": "probabilistic-settlement",
+      "name": "Probabilistic Settlement",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N03 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N03",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N03"
+    },
+    {
+      "id": "set-collapse-estimator",
+      "name": "Set Collapse Estimator",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N04 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N04",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N04"
+    },
+    {
+      "id": "quantum-spread-scanner",
+      "name": "Quantum Spread Scanner",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N05 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N05",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N05"
+    },
+    {
+      "id": "attestation-vector-auth",
+      "name": "Attestation Vector Auth",
+      "category": "Security",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "compliance",
+      "description": "Nano-skill N06 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N06",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N06"
+    },
+    {
+      "id": "drift-mitigation-loop",
+      "name": "Drift Mitigation Loop",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N07 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N07",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N07"
+    },
+    {
+      "id": "tensor-tx-bundler",
+      "name": "Tensor Tx Bundler",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N08 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N08",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N08"
+    },
+    {
+      "id": "slippage-collapse-gate",
+      "name": "Slippage Collapse Gate",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N09 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N09",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N09"
+    },
+    {
+      "id": "toxicity-score-injector",
+      "name": "Toxicity Score Injector",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N10 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N10",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N10"
+    },
+    {
+      "id": "pulse-rate-normalization",
+      "name": "Pulse Rate Normalization",
+      "category": "Security",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "risk",
+      "description": "Nano-skill N11 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N11",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N11"
+    },
+    {
+      "id": "c-edge-filter",
+      "name": "C-Edge Filter",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N12 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N12",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N12"
+    },
+    {
+      "id": "topology-rebalancer",
+      "name": "Topology Rebalancer",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N13 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N13",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N13"
+    },
+    {
+      "id": "feature-lane-assignment",
+      "name": "Feature Lane Assignment",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N14 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N14",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N14"
+    },
+    {
+      "id": "oracle-state-hashing",
+      "name": "Oracle State Hashing",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N15 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N15",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N15"
+    },
+    {
+      "id": "quantum-path-solver",
+      "name": "Quantum Path Solver",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N16 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N16",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N16"
+    },
+    {
+      "id": "volatility-surface-map",
+      "name": "Volatility Surface Map",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N17 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N17",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N17"
+    },
+    {
+      "id": "bias-detection-engine",
+      "name": "Bias Detection Engine",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N18 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N18",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N18"
+    },
+    {
+      "id": "execution-latency-opt",
+      "name": "Execution Latency Opt",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N19 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N19",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N19"
+    },
+    {
+      "id": "state-collapse-anchor",
+      "name": "State Collapse Anchor",
+      "category": "Nano",
+      "tier": "official",
+      "repo": "clrty-cli-core",
+      "tag": "inference",
+      "description": "Nano-skill N20 \u2014 deterministic inference with feature-evidence hooks.",
+      "status": "partial",
+      "cli": "clrty nano run N20",
+      "doc": "frontend/docs/content/build/cookbook/nano-skills.md",
+      "catalog_id": "N20"
+    }
+  ],
+  "legacy": [
+    {
+      "id": "market-arbitrage",
+      "name": "Market Arbitrage",
+      "category": "Legacy",
+      "tier": "legacy",
+      "repo": "frontend",
+      "description": "Browser demo skill \u2014 superseded by MCA (metric-collapse-arbitrage) in Rust CLI.",
+      "doc": "frontend/products/clarity-skills.html"
+    },
+    {
+      "id": "payment-executor",
+      "name": "Payment Executor",
+      "category": "Legacy",
+      "tier": "legacy",
+      "repo": "frontend",
+      "description": "Browser demo \u2014 superseded by CortexPay route-pay skill.",
+      "doc": "frontend/products/clarity-skills.html"
+    },
+    {
+      "id": "lead-scraper",
+      "name": "Lead Scraper",
+      "category": "Legacy",
+      "tier": "legacy",
+      "repo": "frontend",
+      "description": "Growth scaffold \u2014 VIS BizDev Engine product face (planned).",
+      "doc": "frontend/products/vis/bizdev-engine.html"
+    },
+    {
+      "id": "entropy-monitor",
+      "name": "Entropy Monitor",
+      "category": "Legacy",
+      "tier": "legacy",
+      "repo": "frontend",
+      "description": "Browser demo \u2014 superseded by EHL (entropy-heartbeat-check).",
+      "doc": "frontend/products/clarity-skills.html"
+    }
+  ],
+  "community": [
+    {
+      "id": "community-submit",
+      "name": "Submit a Community Skill",
+      "category": "Community",
+      "tier": "community",
+      "repo": "docs",
+      "description": "Third-party skills are not yet listed. DYOR before installing external skill packs.",
+      "doc": "docs/integration/third_party_onboarding.md",
+      "external": "https://github.com/clrty-network/clrty-project/issues"
+    }
+  ],
+  "counts": {
+    "official": 37,
+    "legacy": 4,
+    "community": 1,
+    "total": 42
+  },
+  "sources": [
+    "CLRTY_SUBSTRATE/boot/quant_skills_manifest.json",
+    "CLRTY_SUBSTRATE/boot/nano_skills_manifest.json"
+  ]
+}

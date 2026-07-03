@@ -1,0 +1,55 @@
+{
+  "chain_id": "clrty-1",
+  "convergence_id": "clrty-convergence-v1",
+  "total_supply": 16000000,
+  "decimals": 9,
+  "mint_authority": null,
+  "freeze_authority": null,
+  "denom": "uclrty",
+  "allocations": {
+    "treasury": 4000000,
+    "validators": 3000000,
+    "liquidity": 4000000,
+    "ecosystem": 3000000,
+    "public": 2000000
+  },
+  "sub_allocations": {
+    "team_vesting": {
+      "amount": 1600000,
+      "source": "treasury",
+      "cliff_months": 12,
+      "vest_months": 48
+    },
+    "reserve": {
+      "amount": 800000,
+      "source": "treasury"
+    }
+  },
+  "distribution_tiers": {
+    "team": {
+      "amount": 1600000,
+      "source": "treasury",
+      "cliff_months": 12,
+      "vest_months": 48
+    },
+    "private_seed": {
+      "amount": 2000000,
+      "source": "treasury",
+      "cliff_months": 6,
+      "vest_months": 24
+    },
+    "ecosystem_grants": {
+      "amount": 3000000,
+      "source": "ecosystem"
+    },
+    "liquidity_pools": {
+      "amount": 4000000,
+      "source": "liquidity"
+    },
+    "treasury": {
+      "amount": 2400000,
+      "source": "treasury",
+      "note": "treasury bucket after team/seed carve-outs"
+    }
+  }
+}

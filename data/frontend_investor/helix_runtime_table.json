@@ -1,0 +1,90 @@
+{
+  "generated_at": 1781993666,
+  "engine": "helix_engine",
+  "shadow_dir": "var/helix",
+  "modules": [
+    {
+      "id": "HELIX-01",
+      "name": "matching_grid",
+      "status": "implemented",
+      "artifact": "helix_engine/src/matching_grid.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-02",
+      "name": "intent_resolver",
+      "status": "implemented",
+      "artifact": "helix_engine/src/intent_resolver.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-03",
+      "name": "net_settlement",
+      "status": "implemented",
+      "artifact": "helix_engine/src/net_settlement.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-04",
+      "name": "synthetic_pairs",
+      "status": "partial",
+      "artifact": "helix_engine/src/synthetic_pairs.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-05",
+      "name": "arb_mesh",
+      "status": "implemented",
+      "artifact": "helix_engine/src/arb_mesh.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-06",
+      "name": "liquidity_graph",
+      "status": "implemented",
+      "artifact": "helix_engine/src/liquidity_graph.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-07",
+      "name": "encrypted_tunnels",
+      "status": "partial",
+      "artifact": "helix_engine/src/encrypted_tunnels.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-08",
+      "name": "predictive_oracle",
+      "status": "partial",
+      "artifact": "helix_engine/src/predictive_oracle.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-09",
+      "name": "imm_core",
+      "status": "implemented",
+      "artifact": "helix_engine/src/imm_core.rs",
+      "cli": null
+    },
+    {
+      "id": "HELIX-10",
+      "name": "kernel",
+      "status": "implemented",
+      "artifact": "helix_engine/src/kernel.rs",
+      "cli": "clrty helix status"
+    }
+  ],
+  "substrate_links": [
+    "state_manifold",
+    "arbitrage_core",
+    "quant_stack",
+    "mirra_dark_pool",
+    "economic_core",
+    "deterministic_committer"
+  ],
+  "skills": [
+    "helix-intent-resolve",
+    "helix-net-settle",
+    "helix-route"
+  ]
+}

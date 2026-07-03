@@ -1,0 +1,43 @@
+{
+  "generated_at": "1782133656",
+  "asset": "uclrty",
+  "direction": "up",
+  "current_mid": 1.0125,
+  "target_mid": 1.0206,
+  "confidence": 0.75,
+  "horizon_ticks": 3,
+  "pump_levels": [
+    {
+      "side": "buy",
+      "price": 1.0154999999999998,
+      "volume": 75000.0,
+      "tag": "pump-up-1"
+    },
+    {
+      "side": "buy",
+      "price": 1.0185,
+      "volume": 50000.0,
+      "tag": "pump-up-2"
+    },
+    {
+      "side": "buy",
+      "price": 1.0225,
+      "volume": 25000.0,
+      "tag": "pump-up-3"
+    }
+  ],
+  "oracle": {
+    "asset": "uclrty",
+    "predicted_mid": 1.0075,
+    "confidence": 0.5,
+    "horizon_ticks": 1
+  },
+  "inputs": {
+    "sim100_seed": 42,
+    "sim100_merkle": "94e73f187aa0dda0e628268b8ca4288e1b29ac87d04d247f68e14e4c1b1d732e",
+    "book_mid": 1.0125,
+    "best_bid": 1.015,
+    "best_ask": 1.01,
+    "spread_bps": 0.0
+  }
+}

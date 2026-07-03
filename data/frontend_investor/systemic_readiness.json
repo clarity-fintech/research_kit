@@ -1,0 +1,36 @@
+{
+  "l1_pulse": "green",
+  "phase4_tokenization_frozen": false,
+  "zones": {
+    "1": {
+      "pass": 25,
+      "fail": 0,
+      "partial": 0,
+      "skip": 0
+    },
+    "2": {
+      "pass": 25,
+      "fail": 0,
+      "partial": 0,
+      "skip": 0
+    },
+    "3": {
+      "pass": 25,
+      "fail": 0,
+      "partial": 0,
+      "skip": 0
+    },
+    "4": {
+      "pass": 25,
+      "fail": 0,
+      "partial": 0,
+      "skip": 0
+    }
+  },
+  "generated_at": "2026-06-20T22:13:56.984998+00:00",
+  "report_hash": "5e3a52786421735e725f0425bcd59b006fe808ab8fbeedf74d3054b622be3c5d",
+  "pretest_campaign_start": "2026-06-18T00:00:00Z",
+  "campaign_days": 177,
+  "days_elapsed": 2,
+  "days_remaining": 175
+}

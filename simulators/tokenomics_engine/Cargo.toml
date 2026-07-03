@@ -1,0 +1,12 @@
+[package]
+name = "tokenomics_engine"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "tokenomics_engine"
+path = "src/main.rs"
+
+[dependencies]
+clrty-substrate = { path = "../../CLRTY_SUBSTRATE" }
+serde_json = "1"

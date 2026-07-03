@@ -1,0 +1,607 @@
+{
+  "version": 1,
+  "pretest_campaign_start": "2026-06-18T00:00:00Z",
+  "campaign_days": 177,
+  "tasks": [
+    {
+      "id": "PT-001",
+      "zone": 1,
+      "title": "sim_block_commit_latency_median",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-002",
+      "zone": 1,
+      "title": "sim_block_commit_p50_100_samples",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-003",
+      "zone": 1,
+      "title": "sim_block_commit_p95",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-004",
+      "zone": 1,
+      "title": "sim_block_commit_max",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-005",
+      "zone": 1,
+      "title": "topology_isolation_gate_50ms",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-006",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_1",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-007",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_2",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-008",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_3",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-009",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_4",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-010",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_5",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-011",
+      "zone": 1,
+      "title": "state_root_chain_hop_1",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-012",
+      "zone": 1,
+      "title": "state_root_chain_hop_2",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-013",
+      "zone": 1,
+      "title": "state_root_chain_hop_3",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-014",
+      "zone": 1,
+      "title": "state_root_chain_hop_4",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-015",
+      "zone": 1,
+      "title": "state_root_chain_hop_5",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-016",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_1",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-017",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_2",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-018",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_3",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-019",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_4",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-020",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_5",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-021",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_1",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-022",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_2",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-023",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_3",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-024",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_4",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-025",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_5",
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-026",
+      "zone": 2,
+      "title": "genesis_no_mint_authority",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-027",
+      "zone": 2,
+      "title": "genesis_supply_cap",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-028",
+      "zone": 2,
+      "title": "genesis_hardening",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-029",
+      "zone": 2,
+      "title": "tokenomics_manifest_checksum",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-030",
+      "zone": 2,
+      "title": "phase4_mint_schedule_compliance",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-031",
+      "zone": 2,
+      "title": "vesting_cliff_month_6",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-032",
+      "zone": 2,
+      "title": "vesting_linear_month_12",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-033",
+      "zone": 2,
+      "title": "vesting_linear_month_18",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-034",
+      "zone": 2,
+      "title": "vesting_linear_month_24",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-035",
+      "zone": 2,
+      "title": "vesting_saft_enforcement",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-036",
+      "zone": 2,
+      "title": "double_spend_supply_cap_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-037",
+      "zone": 2,
+      "title": "double_spend_supply_cap_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-038",
+      "zone": 2,
+      "title": "double_spend_supply_cap_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-039",
+      "zone": 2,
+      "title": "double_spend_supply_cap_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-040",
+      "zone": 2,
+      "title": "double_spend_supply_cap_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-041",
+      "zone": 2,
+      "title": "treasury_bucket_integrity",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-042",
+      "zone": 2,
+      "title": "validator_bucket_integrity",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-043",
+      "zone": 2,
+      "title": "liquidity_bucket_integrity",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-044",
+      "zone": 2,
+      "title": "listing_config_genesis_match",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-045",
+      "zone": 2,
+      "title": "sub_allocation_lockup_audit",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-046",
+      "zone": 2,
+      "title": "tge_mock_distribution_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-047",
+      "zone": 2,
+      "title": "tge_mock_distribution_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-048",
+      "zone": 2,
+      "title": "tge_mock_distribution_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-049",
+      "zone": 2,
+      "title": "tge_mock_distribution_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-050",
+      "zone": 2,
+      "title": "tge_mock_distribution_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-051",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-052",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-053",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-054",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-055",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-056",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-057",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-058",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-059",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-060",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-061",
+      "zone": 3,
+      "title": "shadow_liquidity_map_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-062",
+      "zone": 3,
+      "title": "shadow_liquidity_map_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-063",
+      "zone": 3,
+      "title": "shadow_liquidity_map_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-064",
+      "zone": 3,
+      "title": "shadow_liquidity_map_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-065",
+      "zone": 3,
+      "title": "shadow_liquidity_map_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-066",
+      "zone": 3,
+      "title": "otc_block_trade_routing_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-067",
+      "zone": 3,
+      "title": "otc_block_trade_routing_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-068",
+      "zone": 3,
+      "title": "otc_block_trade_routing_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-069",
+      "zone": 3,
+      "title": "otc_block_trade_routing_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-070",
+      "zone": 3,
+      "title": "otc_block_trade_routing_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-071",
+      "zone": 3,
+      "title": "spread_capture_profit_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-072",
+      "zone": 3,
+      "title": "spread_capture_profit_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-073",
+      "zone": 3,
+      "title": "spread_capture_profit_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-074",
+      "zone": 3,
+      "title": "spread_capture_profit_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-075",
+      "zone": 3,
+      "title": "spread_capture_profit_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-076",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-077",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-078",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-079",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-080",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-081",
+      "zone": 4,
+      "title": "capital_flight_guard_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-082",
+      "zone": 4,
+      "title": "capital_flight_guard_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-083",
+      "zone": 4,
+      "title": "capital_flight_guard_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-084",
+      "zone": 4,
+      "title": "capital_flight_guard_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-085",
+      "zone": 4,
+      "title": "capital_flight_guard_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-086",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-087",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-088",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-089",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-090",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-091",
+      "zone": 4,
+      "title": "kyc_attestation_blob_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-092",
+      "zone": 4,
+      "title": "kyc_attestation_blob_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-093",
+      "zone": 4,
+      "title": "kyc_attestation_blob_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-094",
+      "zone": 4,
+      "title": "kyc_attestation_blob_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-095",
+      "zone": 4,
+      "title": "kyc_attestation_blob_5",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-096",
+      "zone": 4,
+      "title": "black_swan_recovery_1",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-097",
+      "zone": 4,
+      "title": "black_swan_recovery_2",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-098",
+      "zone": 4,
+      "title": "black_swan_recovery_3",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-099",
+      "zone": 4,
+      "title": "black_swan_recovery_4",
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-100",
+      "zone": 4,
+      "title": "black_swan_final_gate",
+      "failure_freezes_phase4": false
+    }
+  ]
+}

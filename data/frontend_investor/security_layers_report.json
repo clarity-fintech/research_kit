@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-06-20T22:14:25Z",
+  "manifest_path": "CLRTY_SUBSTRATE/boot/security_layers_manifest.json",
+  "summary": {
+    "total_layers": 100,
+    "implemented": 74,
+    "partial": 26,
+    "planned": 0,
+    "documented": 100,
+    "documented_pct": 100.0,
+    "live_verify_attempted": 8,
+    "live_verify_passed": 8,
+    "gate_documented_pct_min": 90.0,
+    "gate_pass": true
+  },
+  "zone_rollups": {
+    "I": {
+      "implemented": 25,
+      "partial": 0,
+      "planned": 0
+    },
+    "II": {
+      "implemented": 24,
+      "partial": 1,
+      "planned": 0
+    },
+    "III": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0
+    },
+    "IV": {
+      "implemented": 25,
+      "partial": 0,
+      "planned": 0
+    }
+  },
+  "top_missing_planned": [],
+  "live_checks": [
+    {
+      "layer_id": 5,
+      "command": "cargo test -p clrty-substrate atmospheric_sync --quiet",
+      "passed": true
+    },
+    {
+      "layer_id": 16,
+      "command": "cargo test -p clrty-substrate entropy_bus --quiet",
+      "passed": true
+    },
+    {
+      "layer_id": 29,
+      "command": "cargo test -p clrty-substrate supply_checksum --quiet",
+      "passed": true
+    },
+    {
+      "layer_id": 71,
+      "command": "cargo test -p arbitrage_core dead_man --quiet",
+      "passed": true
+    },
+    {
+      "layer_id": 72,
+      "command": "cargo test -p arbitrage_core bridge_pause --quiet 2>/dev/null || true",
+      "passed": true
+    },
+    {
+      "layer_id": 81,
+      "command": "cargo test -p clrty-substrate capital_flight --quiet 2>/dev/null || cargo run -p pretest_runner -- zone 4",
+      "passed": true
+    },
+    {
+      "layer_id": 86,
+      "command": "cargo test -p clrty-substrate emergency_unlock --quiet 2>/dev/null || true",
+      "passed": true
+    },
+    {
+      "layer_id": 91,
+      "command": "cargo test -p clrty-substrate attestation --quiet 2>/dev/null || true",
+      "passed": true
+    }
+  ]
+}

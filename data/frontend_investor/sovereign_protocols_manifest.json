@@ -1,0 +1,5223 @@
+{
+  "version": 2,
+  "architecture": "Sovereign-600",
+  "description": "600-protocol sovereign security registry (Zones A-Y). Parallel to MSA-100.",
+  "zones": [
+    {
+      "letter": "A",
+      "band": "perimeter",
+      "range": "1-25",
+      "count": 25
+    },
+    {
+      "letter": "B",
+      "band": "perimeter",
+      "range": "26-50",
+      "count": 25
+    },
+    {
+      "letter": "C",
+      "band": "hardware",
+      "range": "51-75",
+      "count": 25
+    },
+    {
+      "letter": "D",
+      "band": "hardware",
+      "range": "76-100",
+      "count": 25
+    },
+    {
+      "letter": "E",
+      "band": "core",
+      "range": "101-125",
+      "count": 25
+    },
+    {
+      "letter": "F",
+      "band": "core",
+      "range": "126-150",
+      "count": 25
+    },
+    {
+      "letter": "G",
+      "band": "consensus",
+      "range": "151-175",
+      "count": 25
+    },
+    {
+      "letter": "H",
+      "band": "consensus",
+      "range": "176-200",
+      "count": 25
+    },
+    {
+      "letter": "I",
+      "band": "consensus",
+      "range": "201-225",
+      "count": 25
+    },
+    {
+      "letter": "J",
+      "band": "crypto",
+      "range": "226-250",
+      "count": 25
+    },
+    {
+      "letter": "K",
+      "band": "crypto",
+      "range": "251-275",
+      "count": 25
+    },
+    {
+      "letter": "L",
+      "band": "crypto",
+      "range": "276-300",
+      "count": 25
+    },
+    {
+      "letter": "M",
+      "band": "network",
+      "range": "301-325",
+      "count": 25
+    },
+    {
+      "letter": "N",
+      "band": "network",
+      "range": "326-350",
+      "count": 25
+    },
+    {
+      "letter": "O",
+      "band": "network",
+      "range": "351-375",
+      "count": 25
+    },
+    {
+      "letter": "P",
+      "band": "adversarial",
+      "range": "376-400",
+      "count": 25
+    },
+    {
+      "letter": "Q",
+      "band": "adversarial",
+      "range": "401-425",
+      "count": 25
+    },
+    {
+      "letter": "R",
+      "band": "adversarial",
+      "range": "426-450",
+      "count": 25
+    },
+    {
+      "letter": "S",
+      "band": "pqc",
+      "range": "451-475",
+      "count": 25
+    },
+    {
+      "letter": "T",
+      "band": "governance",
+      "range": "476-500",
+      "count": 25
+    },
+    {
+      "letter": "U",
+      "band": "finality",
+      "range": "501-520",
+      "count": 20
+    },
+    {
+      "letter": "V",
+      "band": "finality",
+      "range": "521-540",
+      "count": 20
+    },
+    {
+      "letter": "W",
+      "band": "finality",
+      "range": "541-560",
+      "count": 20
+    },
+    {
+      "letter": "X",
+      "band": "finality",
+      "range": "561-580",
+      "count": 20
+    },
+    {
+      "letter": "Y",
+      "band": "singularity",
+      "range": "581-600",
+      "count": 20
+    }
+  ],
+  "summary": {
+    "total": 600,
+    "implemented": 65,
+    "partial": 435,
+    "planned": 100,
+    "deferred": 0,
+    "documented_pct": 83.3,
+    "perimeter_500_pct": 80.0,
+    "atomic_600_pct": 100.0
+  },
+  "protocols": [
+    {
+      "id": 1,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "HSM (Hardware Security Module) Root-of-Trust",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 1,
+      "pretest_id": "PT-001"
+    },
+    {
+      "id": 2,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "TEE (Trusted Execution Environment) Isolation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 2,
+      "pretest_id": "PT-002"
+    },
+    {
+      "id": 3,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Secure Boot verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 3,
+      "pretest_id": "PT-003"
+    },
+    {
+      "id": 4,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Physical anti-tamper circuitry",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 4,
+      "pretest_id": "PT-004"
+    },
+    {
+      "id": 5,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Ephemeral key rotation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 5,
+      "pretest_id": "PT-005"
+    },
+    {
+      "id": 6,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Write-Once-Read-Many (WORM) storage for logs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 6,
+      "pretest_id": "PT-006"
+    },
+    {
+      "id": 7,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Hardware entropy generation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 7,
+      "pretest_id": "PT-007"
+    },
+    {
+      "id": 8,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Logic locking on FPGAs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 8,
+      "pretest_id": "PT-008"
+    },
+    {
+      "id": 9,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Side-channel attack mitigation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 9,
+      "pretest_id": "PT-009"
+    },
+    {
+      "id": 10,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Voltage/clock glitching protection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 10,
+      "pretest_id": "PT-010"
+    },
+    {
+      "id": 11,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Secure Enclave data encryption",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 11,
+      "pretest_id": "PT-011"
+    },
+    {
+      "id": 12,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Multi-factor physical access control",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 12,
+      "pretest_id": "PT-012"
+    },
+    {
+      "id": 13,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Supply chain hardware authenticity (TPM)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 13,
+      "pretest_id": "PT-013"
+    },
+    {
+      "id": 14,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Electromagnetic shielding",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 14,
+      "pretest_id": "PT-014"
+    },
+    {
+      "id": 15,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Cold-storage cold-boot protection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 15,
+      "pretest_id": "PT-015"
+    },
+    {
+      "id": 16,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Air-gapped key ceremony protocol",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 16,
+      "pretest_id": "PT-016"
+    },
+    {
+      "id": 17,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Hardware-level memory scraping prevention",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 17,
+      "pretest_id": "PT-017"
+    },
+    {
+      "id": 18,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Anti-debug triggers",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 18,
+      "pretest_id": "PT-018"
+    },
+    {
+      "id": 19,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Secure interrupt handling",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 19,
+      "pretest_id": "PT-019"
+    },
+    {
+      "id": 20,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Physical layer network port lockdowns",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 20,
+      "pretest_id": "PT-020"
+    },
+    {
+      "id": 21,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Formal Verification of Core Opcodes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 21,
+      "pretest_id": "PT-021"
+    },
+    {
+      "id": 22,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "BFT (Byzantine Fault Tolerance) Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 22,
+      "pretest_id": "PT-022"
+    },
+    {
+      "id": 23,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Hash-locking of state transitions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 23,
+      "pretest_id": "PT-023"
+    },
+    {
+      "id": 24,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Atomic state-root binding",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 24,
+      "pretest_id": "PT-024"
+    },
+    {
+      "id": 25,
+      "zone": "A",
+      "band": "perimeter",
+      "title": "Peer-reputation indexing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "msa_layer": 25,
+      "pretest_id": "PT-025"
+    },
+    {
+      "id": 26,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Genesis null-mint verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 26,
+      "pretest_id": "PT-026"
+    },
+    {
+      "id": 27,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Consensus-level validator slashing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 27,
+      "pretest_id": "PT-027"
+    },
+    {
+      "id": 28,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Fork-choice rule hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 28,
+      "pretest_id": "PT-028"
+    },
+    {
+      "id": 29,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Mempool congestion anti-spam",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 29,
+      "pretest_id": "PT-029"
+    },
+    {
+      "id": 30,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Re-entrancy guard implementation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 30,
+      "pretest_id": "PT-030"
+    },
+    {
+      "id": 31,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Underflow/Overflow safety checks",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 31,
+      "pretest_id": "PT-031"
+    },
+    {
+      "id": 32,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Integer overflow arithmetic safety",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 32,
+      "pretest_id": "PT-032"
+    },
+    {
+      "id": 33,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Formal logic opcode verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 33,
+      "pretest_id": "PT-033"
+    },
+    {
+      "id": 34,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Stateless protocol design",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 34,
+      "pretest_id": "PT-034"
+    },
+    {
+      "id": 35,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Finality-state persistence",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 35,
+      "pretest_id": "PT-035"
+    },
+    {
+      "id": 36,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Validator set rotation entropy",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 36,
+      "pretest_id": "PT-036"
+    },
+    {
+      "id": 37,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Byzantine-resistant peer discovery",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 37,
+      "pretest_id": "PT-037"
+    },
+    {
+      "id": 38,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Consensus message signature verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 38,
+      "pretest_id": "PT-038"
+    },
+    {
+      "id": 39,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Block-time drift monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 39,
+      "pretest_id": "PT-039"
+    },
+    {
+      "id": 40,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Zero-knowledge proof (ZKP) state-validity checks",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 40,
+      "pretest_id": "PT-040"
+    },
+    {
+      "id": 41,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Quantum-resistant signature schemes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 41,
+      "pretest_id": "PT-041"
+    },
+    {
+      "id": 42,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Multi-Sig threshold cryptography (TSS)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 42,
+      "pretest_id": "PT-042"
+    },
+    {
+      "id": 43,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Homomorphic encryption for private data",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 43,
+      "pretest_id": "PT-043"
+    },
+    {
+      "id": 44,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Stealth address generation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 44,
+      "pretest_id": "PT-044"
+    },
+    {
+      "id": 45,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Ring signature obfuscation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 45,
+      "pretest_id": "PT-045"
+    },
+    {
+      "id": 46,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Elliptic Curve Digital Signature Algorithm (ECDSA) hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 46,
+      "pretest_id": "PT-046"
+    },
+    {
+      "id": 47,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Key derivation function (KDF) stretching",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 47,
+      "pretest_id": "PT-047"
+    },
+    {
+      "id": 48,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "AES-256 GCM authenticated encryption",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 48,
+      "pretest_id": "PT-048"
+    },
+    {
+      "id": 49,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Merkle-Patricia tree integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 49,
+      "pretest_id": "PT-049"
+    },
+    {
+      "id": 50,
+      "zone": "B",
+      "band": "perimeter",
+      "title": "Immutable log anchoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/poc_consensus/",
+      "msa_layer": 50,
+      "pretest_id": "PT-050"
+    },
+    {
+      "id": 51,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Data-at-rest encryption",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 51,
+      "pretest_id": "PT-051"
+    },
+    {
+      "id": 52,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Data-in-transit TLS 1.3+ mandates",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 52,
+      "pretest_id": "PT-052"
+    },
+    {
+      "id": 53,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Perfect forward secrecy",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 53,
+      "pretest_id": "PT-053"
+    },
+    {
+      "id": 54,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Zero-knowledge identity attestation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 54,
+      "pretest_id": "PT-054"
+    },
+    {
+      "id": 55,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Private key secret-sharing (Shamir\u2019s)",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 55,
+      "pretest_id": "PT-055"
+    },
+    {
+      "id": 56,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Hash chain sequence validation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 56,
+      "pretest_id": "PT-056"
+    },
+    {
+      "id": 57,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Collision-resistant cryptographic hash functions",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 57,
+      "pretest_id": "PT-057"
+    },
+    {
+      "id": 58,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Secure randomness seeding",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 58,
+      "pretest_id": "PT-058"
+    },
+    {
+      "id": 59,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Digital signature non-repudiation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 59,
+      "pretest_id": "PT-059"
+    },
+    {
+      "id": 60,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Blockchain snapshot validation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 60,
+      "pretest_id": "PT-060"
+    },
+    {
+      "id": 61,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Distributed Denial of Service (DDoS) scrubbing",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 61,
+      "pretest_id": "PT-061"
+    },
+    {
+      "id": 62,
+      "zone": "C",
+      "band": "hardware",
+      "title": "RPC rate limiting & throttling",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 62,
+      "pretest_id": "PT-062"
+    },
+    {
+      "id": 63,
+      "zone": "C",
+      "band": "hardware",
+      "title": "IP whitelisting for institutional nodes",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 63,
+      "pretest_id": "PT-063"
+    },
+    {
+      "id": 64,
+      "zone": "C",
+      "band": "hardware",
+      "title": "VPN/Private tunnel ingress",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 64,
+      "pretest_id": "PT-064"
+    },
+    {
+      "id": 65,
+      "zone": "C",
+      "band": "hardware",
+      "title": "WAF (Web Application Firewall) Layer-7 protection",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 65,
+      "pretest_id": "PT-065"
+    },
+    {
+      "id": 66,
+      "zone": "C",
+      "band": "hardware",
+      "title": "API Gateway authentication (JWT/OAuth)",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 66,
+      "pretest_id": "PT-066"
+    },
+    {
+      "id": 67,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Cross-Origin Resource Sharing (CORS) restriction",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 67,
+      "pretest_id": "PT-067"
+    },
+    {
+      "id": 68,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Packet inspection for protocol anomalies",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 68,
+      "pretest_id": "PT-068"
+    },
+    {
+      "id": 69,
+      "zone": "C",
+      "band": "hardware",
+      "title": "NAT traversal isolation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 69,
+      "pretest_id": "PT-069"
+    },
+    {
+      "id": 70,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Node peer-gossip filtering",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 70,
+      "pretest_id": "PT-070"
+    },
+    {
+      "id": 71,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Zero-Trust network architecture",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 71,
+      "pretest_id": "PT-071"
+    },
+    {
+      "id": 72,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Load balancer anomaly detection",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 72,
+      "pretest_id": "PT-072"
+    },
+    {
+      "id": 73,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Segmented VPC architecture",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 73,
+      "pretest_id": "PT-073"
+    },
+    {
+      "id": 74,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Automated threat hunting",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 74,
+      "pretest_id": "PT-074"
+    },
+    {
+      "id": 75,
+      "zone": "C",
+      "band": "hardware",
+      "title": "Service mesh traffic encryption",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/crypto_invariants.rs",
+      "msa_layer": 75,
+      "pretest_id": "PT-075"
+    },
+    {
+      "id": 76,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Ingress/Egress traffic logging",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 76,
+      "pretest_id": "PT-076"
+    },
+    {
+      "id": 77,
+      "zone": "D",
+      "band": "hardware",
+      "title": "API key rotation policy",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 77,
+      "pretest_id": "PT-077"
+    },
+    {
+      "id": 78,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Certificate transparency monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 78,
+      "pretest_id": "PT-078"
+    },
+    {
+      "id": 79,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Protocol-level rate limiting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 79,
+      "pretest_id": "PT-079"
+    },
+    {
+      "id": 80,
+      "zone": "D",
+      "band": "hardware",
+      "title": "DNSSEC implementation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 80,
+      "pretest_id": "PT-080"
+    },
+    {
+      "id": 81,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Automated \"Black Swan\" resilience simulation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 81,
+      "pretest_id": "PT-081"
+    },
+    {
+      "id": 82,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Recursive honeypots",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 82,
+      "pretest_id": "PT-082"
+    },
+    {
+      "id": 83,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Drift-monitoring for protocol logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 83,
+      "pretest_id": "PT-083"
+    },
+    {
+      "id": 84,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Real-time gas-pattern analysis",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 84,
+      "pretest_id": "PT-084"
+    },
+    {
+      "id": 85,
+      "zone": "D",
+      "band": "hardware",
+      "title": "FATF Travel Rule compliance integration",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 85,
+      "pretest_id": "PT-085"
+    },
+    {
+      "id": 86,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Dead-man heartbeat switch",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 86,
+      "pretest_id": "PT-086"
+    },
+    {
+      "id": 87,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Emergency liquidity migration protocol",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 87,
+      "pretest_id": "PT-087"
+    },
+    {
+      "id": 88,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Automated capital flight prevention",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 88,
+      "pretest_id": "PT-088"
+    },
+    {
+      "id": 89,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Singularity Lock (Protocol Lockdown)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 89,
+      "pretest_id": "PT-089"
+    },
+    {
+      "id": 90,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Finality-enforced rollback recovery",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 90,
+      "pretest_id": "PT-090"
+    },
+    {
+      "id": 91,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Continuous penetration testing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 91,
+      "pretest_id": "PT-091"
+    },
+    {
+      "id": 92,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Bug bounty program integration",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 92,
+      "pretest_id": "PT-092"
+    },
+    {
+      "id": 93,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Security operations center (SOC) feed",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 93,
+      "pretest_id": "PT-093"
+    },
+    {
+      "id": 94,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Log sanitization & hashing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 94,
+      "pretest_id": "PT-094"
+    },
+    {
+      "id": 95,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Cross-layer integrity heartbeat",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 95,
+      "pretest_id": "PT-095"
+    },
+    {
+      "id": 96,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Immutable anchoring of security logs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 96,
+      "pretest_id": "PT-096"
+    },
+    {
+      "id": 97,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Topology isolation (network segmentation)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 97,
+      "pretest_id": "PT-097"
+    },
+    {
+      "id": 98,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Automated vulnerability scanning",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 98,
+      "pretest_id": "PT-098"
+    },
+    {
+      "id": 99,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Incident response automation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 99,
+      "pretest_id": "PT-099"
+    },
+    {
+      "id": 100,
+      "zone": "D",
+      "band": "hardware",
+      "title": "Governance-enforced security parameter updates",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/alerting_infrastructure.rs",
+      "msa_layer": 100,
+      "pretest_id": "PT-100"
+    },
+    {
+      "id": 101,
+      "zone": "E",
+      "band": "core",
+      "title": "Post-Quantum Cryptography (PQC) integration (Lattice-based signatures)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 102,
+      "zone": "E",
+      "band": "core",
+      "title": "Multi-party computation (MPC) key shards",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 103,
+      "zone": "E",
+      "band": "core",
+      "title": "Threshold-based key generation (DKG)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 104,
+      "zone": "E",
+      "band": "core",
+      "title": "Obfuscated obfuscation (O-O) for protocol code",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 105,
+      "zone": "E",
+      "band": "core",
+      "title": "Verifiable Random Functions (VRF) for consensus selection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 106,
+      "zone": "E",
+      "band": "core",
+      "title": "Zero-Knowledge Range Proofs (ZKRP) for asset integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 107,
+      "zone": "E",
+      "band": "core",
+      "title": "Recursive SNARKs for proof aggregation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 108,
+      "zone": "E",
+      "band": "core",
+      "title": "Cryptographic hash-chain continuity audits",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 109,
+      "zone": "E",
+      "band": "core",
+      "title": "Authenticated Dictionary structures for state-lookup",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 110,
+      "zone": "E",
+      "band": "core",
+      "title": "Key-rotation for hardware root-of-trust (m-of-n)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 111,
+      "zone": "E",
+      "band": "core",
+      "title": "Non-interactive zero-knowledge proofs (NIZK)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 112,
+      "zone": "E",
+      "band": "core",
+      "title": "Salted key derivation for all internal nodes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 113,
+      "zone": "E",
+      "band": "core",
+      "title": "Cryptographic timestamping of all blocks (RFC 3161)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 114,
+      "zone": "E",
+      "band": "core",
+      "title": "Dual-signature mandates for consensus finalization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 115,
+      "zone": "E",
+      "band": "core",
+      "title": "Hash-collision resistance verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 116,
+      "zone": "E",
+      "band": "core",
+      "title": "Key-destruction triggers on physical compromise",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 117,
+      "zone": "E",
+      "band": "core",
+      "title": "Identity-based encryption (IBE) for inter-node comms",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 118,
+      "zone": "E",
+      "band": "core",
+      "title": "Blind signatures for privacy-preserving voting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 119,
+      "zone": "E",
+      "band": "core",
+      "title": "Fully Homomorphic Encryption (FHE) for dark-pool data",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 120,
+      "zone": "E",
+      "band": "core",
+      "title": "Cryptographically signed firmware images",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 121,
+      "zone": "E",
+      "band": "core",
+      "title": "Byzantine-fault tolerant network peering (BFT-N)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 122,
+      "zone": "E",
+      "band": "core",
+      "title": "Dark fiber direct-connects for validator nodes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 123,
+      "zone": "E",
+      "band": "core",
+      "title": "BGP hijack monitoring & mitigation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 124,
+      "zone": "E",
+      "band": "core",
+      "title": "Anycast DDoS protection with deep packet inspection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 125,
+      "zone": "E",
+      "band": "core",
+      "title": "Protocol-level obfuscation of node IP addresses",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/capital_flight_guard.rs"
+    },
+    {
+      "id": 126,
+      "zone": "F",
+      "band": "core",
+      "title": "Micro-segmentation of the validator runtime",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 127,
+      "zone": "F",
+      "band": "core",
+      "title": "Network-layer flow-fingerprinting",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 128,
+      "zone": "F",
+      "band": "core",
+      "title": "Egress traffic anomaly detection (ML-based)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 129,
+      "zone": "F",
+      "band": "core",
+      "title": "Automated IP-reputation blocking",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 130,
+      "zone": "F",
+      "band": "core",
+      "title": "Peer-to-peer (P2P) protocol encryption",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 131,
+      "zone": "F",
+      "band": "core",
+      "title": "Secure bootloader verification for all edge-nodes",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 132,
+      "zone": "F",
+      "band": "core",
+      "title": "Network-based honeypots for intruder trapping",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 133,
+      "zone": "F",
+      "band": "core",
+      "title": "TLS/SSL certificate pinning for all internal APIs",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 134,
+      "zone": "F",
+      "band": "core",
+      "title": "DNS hijacking resistance (TSIG)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 135,
+      "zone": "F",
+      "band": "core",
+      "title": "Hidden service routing (Tor/I2P bridge logic)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 136,
+      "zone": "F",
+      "band": "core",
+      "title": "Port knocking for sensitive administration interfaces",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 137,
+      "zone": "F",
+      "band": "core",
+      "title": "Automated firewall rule-set updates",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 138,
+      "zone": "F",
+      "band": "core",
+      "title": "Egress-only network pathing for sensitive assets",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 139,
+      "zone": "F",
+      "band": "core",
+      "title": "Traffic padding to prevent timing attacks",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 140,
+      "zone": "F",
+      "band": "core",
+      "title": "Signal-to-noise ratio monitoring of validator gossip",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 141,
+      "zone": "F",
+      "band": "core",
+      "title": "Kernel-level syscall interception",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 142,
+      "zone": "F",
+      "band": "core",
+      "title": "Memory-safe language enforcement (Rust/SPARK Ada)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 143,
+      "zone": "F",
+      "band": "core",
+      "title": "Control-Flow Integrity (CFI) enforcement",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 144,
+      "zone": "F",
+      "band": "core",
+      "title": "Address Space Layout Randomization (ASLR)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 145,
+      "zone": "F",
+      "band": "core",
+      "title": "Data Execution Prevention (DEP/NX)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 146,
+      "zone": "F",
+      "band": "core",
+      "title": "Stack canaries for buffer overflow protection",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 147,
+      "zone": "F",
+      "band": "core",
+      "title": "Process-level sandboxing (Namespaces/Cgroups)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 148,
+      "zone": "F",
+      "band": "core",
+      "title": "Mandatory Access Control (SELinux/AppArmor)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 149,
+      "zone": "F",
+      "band": "core",
+      "title": "Immutable system partitions",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 150,
+      "zone": "F",
+      "band": "core",
+      "title": "Runtime self-healing through snapshot restoration",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 151,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Binary code integrity signing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 152,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Instruction-set randomization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 153,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Hardware-assisted memory tagging (MTE)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 154,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Automated system state-rollback",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 155,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Anti-forensics (volatile-only memory processing)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 156,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Kernel module signing requirements",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 157,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Process execution whitelisting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 158,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Hypervisor-based memory introspection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 159,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Time-of-Check to Time-of-Use (TOCTOU) defense",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 160,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Secure ephemeral workspace clearing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 161,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Governance-gated emergency pause",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 162,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Decentralized multisig veto rights",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 163,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Security DAO-managed upgrade paths",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 164,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Time-locked administrative actions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 165,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Reputation-weighted emergency voting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 166,
+      "zone": "G",
+      "band": "consensus",
+      "title": "On-chain security council election",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 167,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Proof-of-Stake-based slashing for malicious governance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 168,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Formal verification of all proposal logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 169,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Governance proposal \"pre-simulation\"",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 170,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Automated governance anomaly alerts",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 171,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Administrative function dead-man\u2019s switches",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 172,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Multi-sig quorum re-verification (MQR)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 173,
+      "zone": "G",
+      "band": "consensus",
+      "title": "On-chain security bounties for report verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 174,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Validator \"Jailing\" for bad-faith proposals",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 175,
+      "zone": "G",
+      "band": "consensus",
+      "title": "Governance vote-weight decay for inactive participants",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/atmospheric_sync.rs"
+    },
+    {
+      "id": 176,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Protocol-level bribe resistance (MACI)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 177,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Public audit of all governance-related smart contracts",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 178,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Governance-controlled security parameter adjustment",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 179,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Anti-Sybil governance mechanisms",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 180,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Immutable record of all governance decisions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 181,
+      "zone": "H",
+      "band": "consensus",
+      "title": "ML-model-based protocol deviation detection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 182,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Predictive asset-liquidity risk modeling",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 183,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Automated smart contract exploit simulation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 184,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Predictive whale-mirroring monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 185,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Anomaly-based gas fee pattern analysis",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 186,
+      "zone": "H",
+      "band": "consensus",
+      "title": "AI-gated transaction throughput control",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 187,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Cross-chain state-consistency monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 188,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Predictive node performance degradation alerts",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 189,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Real-time threat intelligence ingestion",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 190,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Automated incident response workflows",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 191,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Deep-learning-based phishing detection (for internal comms)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 192,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Pattern-based validator misbehavior prediction",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 193,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Behavioral analysis of system administrators",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 194,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Automated log aggregation and semantic analysis",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 195,
+      "zone": "H",
+      "band": "consensus",
+      "title": "AI-driven firmware vulnerability detection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 196,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Predictive \"Black Swan\" event modeling",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 197,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Autonomous security posture scoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 198,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Continuous automated red-teaming",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 199,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Neural-network-based integrity validation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 200,
+      "zone": "H",
+      "band": "consensus",
+      "title": "Singularity-State protocol locking",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/"
+    },
+    {
+      "id": 201,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Lattice-based Cryptography (Kyber/Dilithium)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/",
+      "structural_task": 201
+    },
+    {
+      "id": 202,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Isogeny-based primitives for key exchange",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 203,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Fully Homomorphic Encryption (FHE) on sensitive governance paths",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 204,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Multi-linear maps for advanced ZK-SNARKs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 205,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Verifiable Delay Functions (VDF) for entropy generation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 206,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Quantum-resistant hash-based signatures (XMSS/LMS)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 207,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Distributed Key Generation (DKG) with forward secrecy",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 208,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Proactive secret sharing (PSS) for key maintenance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 209,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Zero-knowledge identity proofs without trusted setup",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 210,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Threshold decryption for private mempool ordering",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 211,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Code-based cryptography for signature schemes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/",
+      "structural_task": 211
+    },
+    {
+      "id": 212,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Homomorphic commitment schemes for treasury privacy",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 213,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Multi-party computation (MPC) for cross-chain bridging",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 214,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Cryptographic proof-of-custody for asset reserves",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 215,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Unlinkable stealth address generation via ZK",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 216,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Forward-secure digital signatures",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 217,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Secure computation of consensus parameters (MPC)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 218,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Hidden-order group based cryptography",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 219,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Verifiable secret sharing (VSS) for node governance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 220,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Cryptographic proof-of-retrievability for archive logs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 221,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Autonomous Security Operations Center (ASOC)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/",
+      "structural_task": 221
+    },
+    {
+      "id": 222,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Reinforcement Learning for dynamic WAF adjustments",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 223,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Adversarial simulation (Red Team AI) for contract testing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 224,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Heuristic-based zero-day threat prediction",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 225,
+      "zone": "I",
+      "band": "consensus",
+      "title": "Neural-network-driven flow anomaly detection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 226,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Predictive behavioral profiling of network entities",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 227,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Automated mitigation of supply-chain compromises",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 228,
+      "zone": "J",
+      "band": "crypto",
+      "title": "AI-optimized protocol parameter rebalancing",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 229,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Real-time smart contract exploit-patching (Auto-patch)",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 230,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Semantic analysis of network telemetry data",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 231,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Automated honeypot configuration based on threat trends",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/",
+      "structural_task": 231
+    },
+    {
+      "id": 232,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Self-evolving intrusion detection systems (IDS)",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 233,
+      "zone": "J",
+      "band": "crypto",
+      "title": "AI-supervised consensus participation monitoring",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 234,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Predictive load-shedding for DDoS mitigation",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 235,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Autonomous cryptographic key management systems",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 236,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Intelligent traffic-shaping to thwart pattern analysis",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 237,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Real-time protocol-state auditing by local agent",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 238,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Automated forensic analysis of attack vectors",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 239,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Multi-modal threat intelligence fusion",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 240,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Neural-network integrity validation for OS kernel",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 241,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Physical Unclonable Functions (PUF) for device ID",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/",
+      "structural_task": 241
+    },
+    {
+      "id": 242,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Hardware-level memory integrity monitoring",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 243,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Secure Enclave side-channel leak prevention",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 244,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Logic-gated hardware instruction monitoring",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 245,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Secure boot chain for all validator edge-hardware",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 246,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Tamper-evident enclosure sensors for physical nodes",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 247,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Electromagnetic side-channel shielding",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 248,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Hardware-based secure time-stamping (GPS/Atomic)",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 249,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Multi-factor physical key ceremony protocols",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 250,
+      "zone": "J",
+      "band": "crypto",
+      "title": "Secure cryptographic wipe on physical theft",
+      "status": "planned",
+      "artifact": "CLRTY_SUBSTRATE/data_lake_pipeline/"
+    },
+    {
+      "id": 251,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Hardware-assisted stack protection",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md",
+      "structural_task": 251
+    },
+    {
+      "id": 252,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Physically isolated network segments (Air-gapping)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 253,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Power consumption behavioral auditing",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 254,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Hardware-level DMA attack protection",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 255,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Secure hardware-based random number entropy",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 256,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Cryptographic chip-level serial numbers",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 257,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Secure JTAG/Debugger access prevention",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 258,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Hardware-accelerated ZK-proof generation",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 259,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Secure sensor fusion for node environment health",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 260,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Ephemeral hardware configuration loading",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 261,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Formally-verified smart contract upgrades",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md",
+      "structural_task": 261
+    },
+    {
+      "id": 262,
+      "zone": "K",
+      "band": "crypto",
+      "title": "On-chain formal proof verification",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 263,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Economic-security-gated emergency shutdowns",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 264,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Decentralized Oracle-based disaster recovery",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 265,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Governance-enforced security parameter versioning",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 266,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Multi-jurisdictional node distribution mapping",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 267,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Automated slashing of malicious governance actors",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 268,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Formal logic proof for all protocol amendments",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 269,
+      "zone": "K",
+      "band": "crypto",
+      "title": "On-chain security bounties for verified exploits",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 270,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Governance-managed emergency pause thresholds",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 271,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Proof-of-Stake-based malicious-governance prevention",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md",
+      "structural_task": 271
+    },
+    {
+      "id": 272,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Immutable ledger of all security incidents",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 273,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Transparent governance veto-power (Multi-Sig)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 274,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Automated mitigation of governance attacks",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 275,
+      "zone": "K",
+      "band": "crypto",
+      "title": "Security-council-managed timelock overrides",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 276,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Formal proofs for cross-layer state transitions",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 277,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Decentralized insurance-pool backstopping",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 278,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Security-governance \"stress-test\" protocols",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 279,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Immutable protocol-state recovery procedures",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 280,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Cross-DAO consensus for protocol upgrades",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 281,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Protocol-level traffic padding (constant-rate)",
+      "status": "partial",
+      "artifact": "arbitrage_core/",
+      "structural_task": 281
+    },
+    {
+      "id": 282,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Byzantine-fault-tolerant P2P propagation",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 283,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Covert channel detection (steganographic traffic)",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 284,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Protocol-aware IDS/IPS integration",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 285,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Automated cross-chain state synchronization security",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 286,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Decentralized identity (DID) for inter-node communication",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 287,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Immutable, off-chain security log anchoring",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 288,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Hardware-software integrity co-verification",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 289,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Autonomous incident response orchestrator",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 290,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Continuous, non-disruptive penetration testing",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 291,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Formal verification of API endpoints",
+      "status": "partial",
+      "artifact": "arbitrage_core/",
+      "structural_task": 291
+    },
+    {
+      "id": 292,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Advanced cryptographic proof of asset reserves",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 293,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Secure multiparty computation (SMPC) governance",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 294,
+      "zone": "L",
+      "band": "crypto",
+      "title": "AI-driven protocol fuzzing",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 295,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Secure remote attestation of system state",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 296,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Immutable audit-trail for administrative actions",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 297,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Adaptive node-level firewalling",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 298,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Quantum-resistant secure boot",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 299,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Decentralized protocol-update validation",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 300,
+      "zone": "L",
+      "band": "crypto",
+      "title": "Singularity Lock (Final immutable protocol state)",
+      "status": "partial",
+      "artifact": "arbitrage_core/"
+    },
+    {
+      "id": 301,
+      "zone": "M",
+      "band": "network",
+      "title": "Stateful Hash-Based Signature Schemes (LMS/XMSS) for long-term ledger security",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "structural_task": 301
+    },
+    {
+      "id": 302,
+      "zone": "M",
+      "band": "network",
+      "title": "Supersingular Isogeny Diffie-Hellman (SIDH) for resistant key exchange",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 303,
+      "zone": "M",
+      "band": "network",
+      "title": "Lattice-based Zero-Knowledge Proofs for private transaction validation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 304,
+      "zone": "M",
+      "band": "network",
+      "title": "Quantum-Entropy Generation via optical photon-decay monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 305,
+      "zone": "M",
+      "band": "network",
+      "title": "Post-Quantum Key Encapsulation Mechanisms (KEM) for inter-node transport",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 306,
+      "zone": "M",
+      "band": "network",
+      "title": "Symmetric-Key Quantum Resistance using 512-bit key lengths",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 307,
+      "zone": "M",
+      "band": "network",
+      "title": "Hash-Tree Traversal Hardening against quantum search algorithms",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 308,
+      "zone": "M",
+      "band": "network",
+      "title": "Dual-Signature Requirements (Classical ECDSA + PQC) for consensus",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 309,
+      "zone": "M",
+      "band": "network",
+      "title": "Quantum-Safe Public Key Infrastructure (PKI) migration protocols",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 310,
+      "zone": "M",
+      "band": "network",
+      "title": "Zero-Trust Quantum Key Distribution (QKD) via optical fiber segments",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 311,
+      "zone": "M",
+      "band": "network",
+      "title": "Randomized Hash-Function Rotation to prevent quantum collision attacks",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "structural_task": 311
+    },
+    {
+      "id": 312,
+      "zone": "M",
+      "band": "network",
+      "title": "Verifiable Secret Sharing (VSS) with quantum-safe threshold parameters",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 313,
+      "zone": "M",
+      "band": "network",
+      "title": "Homomorphic Encryption (FHE) with Quantum Resistance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 314,
+      "zone": "M",
+      "band": "network",
+      "title": "Quantum-Noise-Based Randomness Extraction",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 315,
+      "zone": "M",
+      "band": "network",
+      "title": "Signature Aggregation Schemes that are resistant to Shor's algorithm",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 316,
+      "zone": "M",
+      "band": "network",
+      "title": "Side-Channel-Attack Resistance for PQC algorithms",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 317,
+      "zone": "M",
+      "band": "network",
+      "title": "Post-Quantum Formal Proof Verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 318,
+      "zone": "M",
+      "band": "network",
+      "title": "Multi-layer Cryptographic Wrapping (Quantum + Classical)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 319,
+      "zone": "M",
+      "band": "network",
+      "title": "Immutable Quantum-Ledger Anchoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 320,
+      "zone": "M",
+      "band": "network",
+      "title": "Quantum-Safe Firmware Attestation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 321,
+      "zone": "M",
+      "band": "network",
+      "title": "Autonomous Runtime Integrity Checking (Micro-kernel introspection)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs",
+      "structural_task": 321
+    },
+    {
+      "id": 322,
+      "zone": "M",
+      "band": "network",
+      "title": "Self-Replicating Security Agents for decentralized node monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 323,
+      "zone": "M",
+      "band": "network",
+      "title": "Automated Fault-Injection Sanitization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 324,
+      "zone": "M",
+      "band": "network",
+      "title": "Heuristic-based Threat Mutation Discovery",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 325,
+      "zone": "M",
+      "band": "network",
+      "title": "Neural-Network-Controlled Firewall Reconfiguration",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/hardware_integrity.rs"
+    },
+    {
+      "id": 326,
+      "zone": "N",
+      "band": "network",
+      "title": "Automated Memory-Corruption Patching (In-Memory)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 327,
+      "zone": "N",
+      "band": "network",
+      "title": "Predictive System-State Rollback (Pre-emptive mitigation)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 328,
+      "zone": "N",
+      "band": "network",
+      "title": "Adversarial-AI-based Fuzzing of Protocol Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 329,
+      "zone": "N",
+      "band": "network",
+      "title": "Dynamic System-Call Interception & Filtering",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 330,
+      "zone": "N",
+      "band": "network",
+      "title": "Self-Healing State-Tree Synchronization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 331,
+      "zone": "N",
+      "band": "network",
+      "title": "Autonomous Consensus-Rule Enforcement",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "structural_task": 331
+    },
+    {
+      "id": 332,
+      "zone": "N",
+      "band": "network",
+      "title": "Adversarial Pattern-Recognition for Bot-net identification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 333,
+      "zone": "N",
+      "band": "network",
+      "title": "Adaptive Honeypot Morphing (Changing attack surface dynamically)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 334,
+      "zone": "N",
+      "band": "network",
+      "title": "Automated Forensic Trapping of Ingress Attacks",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 335,
+      "zone": "N",
+      "band": "network",
+      "title": "Real-time Protocol-Logic Drift Detection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 336,
+      "zone": "N",
+      "band": "network",
+      "title": "AI-Directed Node-Jailing for Malicious Peers",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 337,
+      "zone": "N",
+      "band": "network",
+      "title": "Autonomous Key-Rotation on Intrusion Detection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 338,
+      "zone": "N",
+      "band": "network",
+      "title": "Self-Correcting Distributed Consensus Parameters",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 339,
+      "zone": "N",
+      "band": "network",
+      "title": "Decentralized Reputation-Scoring Self-Adjustment",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 340,
+      "zone": "N",
+      "band": "network",
+      "title": "AI-Managed Security-Log Anonymization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 341,
+      "zone": "N",
+      "band": "network",
+      "title": "Physical Unclonable Function (PUF) Device Auth",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "structural_task": 341
+    },
+    {
+      "id": 342,
+      "zone": "N",
+      "band": "network",
+      "title": "Logic-Gated Hardware-Execution Tracing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 343,
+      "zone": "N",
+      "band": "network",
+      "title": "Electromagnetic-Signature Auditing of Processor Units",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 344,
+      "zone": "N",
+      "band": "network",
+      "title": "Hardware-Locked System Configuration",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 345,
+      "zone": "N",
+      "band": "network",
+      "title": "Multi-Factor Physical Proximity Verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 346,
+      "zone": "N",
+      "band": "network",
+      "title": "Hardware-Level DMA Attack Blocking",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 347,
+      "zone": "N",
+      "band": "network",
+      "title": "Voltage-Stability Anomaly Monitoring (Side-channel defense)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 348,
+      "zone": "N",
+      "band": "network",
+      "title": "Secure Ephemeral Memory Wiping on Power-Loss",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 349,
+      "zone": "N",
+      "band": "network",
+      "title": "Hardware-Based Randomness Entropy-Monitoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 350,
+      "zone": "N",
+      "band": "network",
+      "title": "Logic-Encrypted FPGA Controller Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs"
+    },
+    {
+      "id": 351,
+      "zone": "O",
+      "band": "network",
+      "title": "Secure Micro-Kernel Isolation (Hypervisor-level)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/",
+      "structural_task": 351
+    },
+    {
+      "id": 352,
+      "zone": "O",
+      "band": "network",
+      "title": "Anti-Forensic Volatile-Memory Processing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 353,
+      "zone": "O",
+      "band": "network",
+      "title": "Secure Debugger-Access Prevention (Fuse-blown)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 354,
+      "zone": "O",
+      "band": "network",
+      "title": "Hardware-accelerated ZK-Proof Generation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 355,
+      "zone": "O",
+      "band": "network",
+      "title": "Thermal-Anomaly-Detection for Malicious Code Execution",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 356,
+      "zone": "O",
+      "band": "network",
+      "title": "Secure Sensor-Fusion for Environmental Tamper-Alerts",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 357,
+      "zone": "O",
+      "band": "network",
+      "title": "Hardware-Layer Cryptographic Serial-Checking",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 358,
+      "zone": "O",
+      "band": "network",
+      "title": "Physically Isolated Cryptographic Co-processors",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 359,
+      "zone": "O",
+      "band": "network",
+      "title": "Immutable Secure Boot Chain (Chain of Trust)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 360,
+      "zone": "O",
+      "band": "network",
+      "title": "Voltage-Glitch Protection via Hardware-Filters",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 361,
+      "zone": "O",
+      "band": "network",
+      "title": "Governance-Weighted Emergency Pausing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/",
+      "structural_task": 361
+    },
+    {
+      "id": 362,
+      "zone": "O",
+      "band": "network",
+      "title": "Decentralized Multisig Veto-Powers",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 363,
+      "zone": "O",
+      "band": "network",
+      "title": "Security-DAO Automated Emergency Patching",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 364,
+      "zone": "O",
+      "band": "network",
+      "title": "Time-locked Administrative Overrides",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 365,
+      "zone": "O",
+      "band": "network",
+      "title": "Reputation-Weighted Security Voting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 366,
+      "zone": "O",
+      "band": "network",
+      "title": "On-chain Formal Verification of Governance Changes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 367,
+      "zone": "O",
+      "band": "network",
+      "title": "Slashing Mechanisms for Governance Sybil-Attacks",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 368,
+      "zone": "O",
+      "band": "network",
+      "title": "Automated Anomaly Alerts for Administrative Functions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 369,
+      "zone": "O",
+      "band": "network",
+      "title": "Decentralized Security-Council Election Contracts",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 370,
+      "zone": "O",
+      "band": "network",
+      "title": "Governance Proposal Pre-Simulation Engine",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 371,
+      "zone": "O",
+      "band": "network",
+      "title": "Anti-Bribe Mechanism (MACI - Minimal Anti-Collusion Infrastructure)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/",
+      "structural_task": 371
+    },
+    {
+      "id": 372,
+      "zone": "O",
+      "band": "network",
+      "title": "Formal Proof-based Protocol Upgrade Governance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 373,
+      "zone": "O",
+      "band": "network",
+      "title": "Automated Security Bounty Distribution",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 374,
+      "zone": "O",
+      "band": "network",
+      "title": "Governance-Level Singularity-Lock Control",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 375,
+      "zone": "O",
+      "band": "network",
+      "title": "Validator Jailing for Malicious Governance Proposals",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/bridge_perimeter/"
+    },
+    {
+      "id": 376,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "On-chain Immutable Security Incident Registry",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 377,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Governance-Controlled Security-Parameter Thresholds",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 378,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Protocol-Level Sybil-Resistance (Proof-of-Personhood/Stake)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 379,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Formal Logic-Verification of Consensus Rule-Sets",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 380,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Security-Council Controlled Rollback Logic",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 381,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Recursive Honeypot-Orchestration",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md",
+      "structural_task": 381
+    },
+    {
+      "id": 382,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Protocol-Level Traffic-Padding (Constant-Rate Encryption)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 383,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Byzantine-Fault-Tolerant P2P Propagation",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 384,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Steganographic Traffic Detection",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 385,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Automated State-Sync Security Re-verification",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 386,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Decentralized Identity (DID) for Node-Comm",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 387,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Immutable Security-Log Off-chain Anchoring",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 388,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Autonomous Cross-Chain Integrity Validation",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 389,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Predictive \"Black Swan\" Resilience Modeling",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 390,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Formal Proof of Asset Reserve Integrity",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 391,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Advanced Fuzzing of Protocol APIs",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md",
+      "structural_task": 391
+    },
+    {
+      "id": 392,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Autonomous Incident-Response Orchestration",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 393,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Continuous Automated Red-Teaming (Non-Disruptive)",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 394,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Formal Logic-Verification of API Endpoints",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 395,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "SMPC-Governed Protocol-Update Authorization",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 396,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Adaptive Node-Level Firewalling",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 397,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Quantum-Resistant Secure-Boot Chain",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 398,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Decentralized Protocol-Update Consensus",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 399,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "Finality-Enforced Rollback-Recovery Mechanism",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 400,
+      "zone": "P",
+      "band": "adversarial",
+      "title": "The Singularity Lock: Deterministic Immutable State",
+      "status": "planned",
+      "artifact": "docs/security/pqc_migration.md"
+    },
+    {
+      "id": 401,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Mathematical Proof-of-Supply",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/",
+      "structural_task": 401
+    },
+    {
+      "id": 402,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Genesis-Locked Mint Authority",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 403,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Programmable Vesting Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 404,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Anti-Inflationary Decay Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 405,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Atomic-Swap Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 406,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Underflow/Overflow Prevention",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 407,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Slippage-Gate Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 408,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Validator-Jailing Economics",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 409,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Staking-Weight Immutability",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 410,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "TGE Distribution Attestation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 411,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Flash-Loan Resistance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/",
+      "structural_task": 411
+    },
+    {
+      "id": 412,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Synthetic-Peg Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 413,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Supply Checksum Validation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 414,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Bridge-Settlement Halting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 415,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Fee-Burn Verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 416,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Token-Metadata Immutability",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 417,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Stake-Lock Finality",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 418,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Emission-Schedule Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 419,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Treasury-Bucket Lock-up",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 420,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Asset-Provenance Tracking",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 421,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Byzantine-Resilient Peer-Discovery",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/",
+      "structural_task": 421
+    },
+    {
+      "id": 422,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Block-Hash Ancestry Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 423,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Formal Verification of Consensus Opcodes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 424,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "EntropyBus \u03bb-Heartbeat Verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 425,
+      "zone": "Q",
+      "band": "adversarial",
+      "title": "Finality-Enforced State-Rollback Protection",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/l_dnet/"
+    },
+    {
+      "id": 426,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Stateless Node Synchronization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 427,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Peer-Reputation Consensus-Weighting",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 428,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Validator-Rotation Cryptographic Entropy",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 429,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Mempool-Transaction Ordering Obfuscation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 430,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Block-Producer Identity Masking",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 431,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Latency-Gated Block Acceptance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs",
+      "structural_task": 431
+    },
+    {
+      "id": 432,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Chain-Reorganization Immunity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 433,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Consensus-Message Authenticity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 434,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "State-Pruning Verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 435,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Cross-Chain State-Transition Proofs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 436,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Adversarial-Node Identification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 437,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Consensus-Parameter Governance-Lock",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 438,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "BFT-Consensus Message-Integrity Audit",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 439,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Historical Ledger Snapshot Anchor",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 440,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Node-Jailing for Consensus-Rule Deviation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 441,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Quantum-Resistant Ledger Signatures",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs",
+      "structural_task": 441
+    },
+    {
+      "id": 442,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Stealth Address Obfuscation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 443,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Zero-Knowledge Asset Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 444,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Hash-Chain Continuity Audits",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 445,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Multi-Party Computation (MPC) Validator Keys",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 446,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Homomorphic Balance Updates",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 447,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Cryptographic Proof-of-Retrievability",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 448,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Dynamic Signature Scheme Rotation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 449,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Cross-Layer Integrity Heartbeat",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 450,
+      "zone": "R",
+      "band": "adversarial",
+      "title": "Threshold Decryption for Private Mempools",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/h2tb/driver.rs"
+    },
+    {
+      "id": 451,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Randomness Seeding from Hardware Entropy",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/",
+      "structural_task": 451
+    },
+    {
+      "id": 452,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Non-Interactive ZK-Proof Generation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 453,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Cryptographically Signed Firmware for Nodes",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 454,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Immutable Ledger of Security Incidents",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 455,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Hash-Locking of All Cross-Chain Bridges",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 456,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Private Key Secret Sharing (Shamir's)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 457,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Signature Aggregation Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 458,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Zero-Knowledge Identity Attestation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 459,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Cryptographic Proof of Custody for Reserves",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 460,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Quantum-Resistant TLS 1.3+ P2P Communication",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 461,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Formal Logic-Verification of All Upgrades",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/",
+      "structural_task": 461
+    },
+    {
+      "id": 462,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Governance-Weighted Emergency Pausing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 463,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Adversarial Simulation Fuzzing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 464,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Self-Healing Ledger State",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 465,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Time-locked Admin Functions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 466,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Formal Proof-based Proposal Validation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 467,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Automated Slashing for Bad-Faith Proposals",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 468,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Security-Council Controlled Rollback Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 469,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Immutable Governance Decision Records",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 470,
+      "zone": "S",
+      "band": "pqc",
+      "title": "AI-Directed Anomaly Detection for Consensus Rounds",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 471,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Multi-Sig Quorum Re-verification (MQR)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/",
+      "structural_task": 471
+    },
+    {
+      "id": 472,
+      "zone": "S",
+      "band": "pqc",
+      "title": "On-Chain Security Bounty Program",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 473,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Formal Verification of API Endpoints",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 474,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Autonomous Security Posture Scoring for Validators",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 475,
+      "zone": "S",
+      "band": "pqc",
+      "title": "Governance-Gated Security Parameter Versioning",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/governance_substrate/"
+    },
+    {
+      "id": 476,
+      "zone": "T",
+      "band": "governance",
+      "title": "Adversarial-AI-Driven Consensus Stress-Testing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 477,
+      "zone": "T",
+      "band": "governance",
+      "title": "Decentralized Oracle Integration for Real-World Consensus Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 478,
+      "zone": "T",
+      "band": "governance",
+      "title": "Formal Proofs of Cross-Layer State Transitions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 479,
+      "zone": "T",
+      "band": "governance",
+      "title": "On-Chain Governance Proposal Pre-Simulation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 480,
+      "zone": "T",
+      "band": "governance",
+      "title": "Governance-Level Singularity Lock Implementation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 481,
+      "zone": "T",
+      "band": "governance",
+      "title": "Atomic Finality-Seal",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs",
+      "structural_task": 481
+    },
+    {
+      "id": 482,
+      "zone": "T",
+      "band": "governance",
+      "title": "Protocol-Level Traffic-Padding",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 483,
+      "zone": "T",
+      "band": "governance",
+      "title": "Byzantine-Fault-Tolerant Propagation Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 484,
+      "zone": "T",
+      "band": "governance",
+      "title": "Steganographic Threat Detection in Network Traffic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 485,
+      "zone": "T",
+      "band": "governance",
+      "title": "Formal Logic-Verification of State-Tree Merging",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 486,
+      "zone": "T",
+      "band": "governance",
+      "title": "Autonomous Security Operations Center (ASOC) Integration",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 487,
+      "zone": "T",
+      "band": "governance",
+      "title": "Immutable Security-Log Off-chain Anchoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 488,
+      "zone": "T",
+      "band": "governance",
+      "title": "Formal Proof-based Cross-Chain Synchronization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 489,
+      "zone": "T",
+      "band": "governance",
+      "title": "Predictive Resilience Modeling for \"Black Swan\" Events",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 490,
+      "zone": "T",
+      "band": "governance",
+      "title": "Formal Proof of Asset Reserve Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 491,
+      "zone": "T",
+      "band": "governance",
+      "title": "Quantum-Resistant Secure-Boot Chain Verification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs",
+      "structural_task": 491
+    },
+    {
+      "id": 492,
+      "zone": "T",
+      "band": "governance",
+      "title": "Autonomous Incident-Response Orchestrator",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 493,
+      "zone": "T",
+      "band": "governance",
+      "title": "Continuous Automated Red-Teaming (Non-Disruptive)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 494,
+      "zone": "T",
+      "band": "governance",
+      "title": "Formal Logic-Verification of All API Endpoints",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 495,
+      "zone": "T",
+      "band": "governance",
+      "title": "SMPC-Governed Protocol-Update Authorization",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 496,
+      "zone": "T",
+      "band": "governance",
+      "title": "Adaptive Node-Level Firewalling",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 497,
+      "zone": "T",
+      "band": "governance",
+      "title": "Quantum-Resistant Secure Boot",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 498,
+      "zone": "T",
+      "band": "governance",
+      "title": "Decentralized Protocol-Update Consensus",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 499,
+      "zone": "T",
+      "band": "governance",
+      "title": "Finality-Enforced Rollback-Recovery Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 500,
+      "zone": "T",
+      "band": "governance",
+      "title": "The Singularity Lock: Deterministic Immutable State Lockdown",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/token_core/blue_code/resilience.rs"
+    },
+    {
+      "id": 501,
+      "zone": "U",
+      "band": "finality",
+      "title": "Zero-Knowledge Asset Commitments",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs",
+      "verify_command": "cargo test -p clrty-substrate supply_checksum -- --nocapture"
+    },
+    {
+      "id": 502,
+      "zone": "U",
+      "band": "finality",
+      "title": "Homomorphic Balance Summation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 503,
+      "zone": "U",
+      "band": "finality",
+      "title": "Quantum-Safe Ring Signatures",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 504,
+      "zone": "U",
+      "band": "finality",
+      "title": "Deterministic Token-Supply Anchoring",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 505,
+      "zone": "U",
+      "band": "finality",
+      "title": "Stealth-Address Protocol Enforcement",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 506,
+      "zone": "U",
+      "band": "finality",
+      "title": "Proof-of-Stake Finality Signatures",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 507,
+      "zone": "U",
+      "band": "finality",
+      "title": "TSS-based Key Sharding",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 508,
+      "zone": "U",
+      "band": "finality",
+      "title": "Elliptic-Curve-Over-Lattice Hybrid Signatures",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 509,
+      "zone": "U",
+      "band": "finality",
+      "title": "Transaction-Path Obfuscation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 510,
+      "zone": "U",
+      "band": "finality",
+      "title": "Immutable Vesting-Lock Signatures",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 511,
+      "zone": "U",
+      "band": "finality",
+      "title": "Proof-of-Burn Verification",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 512,
+      "zone": "U",
+      "band": "finality",
+      "title": "Mempool-Leakage Prevention",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 513,
+      "zone": "U",
+      "band": "finality",
+      "title": "Cryptographic Non-Malleability",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 514,
+      "zone": "U",
+      "band": "finality",
+      "title": "Cross-Chain Attestation Proofs",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 515,
+      "zone": "U",
+      "band": "finality",
+      "title": "Balance-Tree Merkle-Root Sealing",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 516,
+      "zone": "U",
+      "band": "finality",
+      "title": "Emission-Schedule Cryptographic Sealing",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 517,
+      "zone": "U",
+      "band": "finality",
+      "title": "Staking-Contract Immutability-Lock",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 518,
+      "zone": "U",
+      "band": "finality",
+      "title": "Atomic-Swap Verification Logic",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 519,
+      "zone": "U",
+      "band": "finality",
+      "title": "Quantum-resistant Public Key Hashing",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs"
+    },
+    {
+      "id": 520,
+      "zone": "U",
+      "band": "finality",
+      "title": "Token-Identity Hash-Locking",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/economic_engine/tokenomics/supply_checksum.rs",
+      "verify_command": "cargo test -p clrty-substrate ecosystem_vesting -- --nocapture"
+    },
+    {
+      "id": 521,
+      "zone": "V",
+      "band": "finality",
+      "title": "Byzantine-Fault-Tolerant Propagation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 522,
+      "zone": "V",
+      "band": "finality",
+      "title": "Hash-Chain Continuity Auditing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 523,
+      "zone": "V",
+      "band": "finality",
+      "title": "Recursive State-Root Hashing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 524,
+      "zone": "V",
+      "band": "finality",
+      "title": "Validator-Jailing Economics",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 525,
+      "zone": "V",
+      "band": "finality",
+      "title": "Consensus-Round Latency-Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 526,
+      "zone": "V",
+      "band": "finality",
+      "title": "Stateless-Validation ZK-Proofs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 527,
+      "zone": "V",
+      "band": "finality",
+      "title": "Epoch-Transition Cryptographic Sealing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 528,
+      "zone": "V",
+      "band": "finality",
+      "title": "Validator Identity Obfuscation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 529,
+      "zone": "V",
+      "band": "finality",
+      "title": "Block-Producer Randomness Seeding",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 530,
+      "zone": "V",
+      "band": "finality",
+      "title": "Re-org Resistance Protocols",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 531,
+      "zone": "V",
+      "band": "finality",
+      "title": "Cross-Layer State Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 532,
+      "zone": "V",
+      "band": "finality",
+      "title": "Mempool-Ordered Sequencing Proofs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 533,
+      "zone": "V",
+      "band": "finality",
+      "title": "Consensus-Message Authenticity Checks",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 534,
+      "zone": "V",
+      "band": "finality",
+      "title": "Historical-State Pruning Proofs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 535,
+      "zone": "V",
+      "band": "finality",
+      "title": "Oracle-Consensus-Logic Binding",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 536,
+      "zone": "V",
+      "band": "finality",
+      "title": "Adversarial-Behavior Identification",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 537,
+      "zone": "V",
+      "band": "finality",
+      "title": "Consensus-Parameter Governance-Lock",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 538,
+      "zone": "V",
+      "band": "finality",
+      "title": "BFT-Consensus Message-Integrity Heartbeat",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 539,
+      "zone": "V",
+      "band": "finality",
+      "title": "Chain-State Snapshot Anchoring",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs"
+    },
+    {
+      "id": 540,
+      "zone": "V",
+      "band": "finality",
+      "title": "Protocol-Rule-Set Immutability",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/state_root.rs",
+      "verify_command": "cargo test -p clrty-substrate state_manifold -- --nocapture"
+    },
+    {
+      "id": 541,
+      "zone": "W",
+      "band": "finality",
+      "title": "PQC Ledger Signing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 542,
+      "zone": "W",
+      "band": "finality",
+      "title": "Stealth Asset Obfuscation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 543,
+      "zone": "W",
+      "band": "finality",
+      "title": "Zero-Knowledge Asset Integrity",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 544,
+      "zone": "W",
+      "band": "finality",
+      "title": "Hash-Chain Sequence-Validation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 545,
+      "zone": "W",
+      "band": "finality",
+      "title": "MPC Validator Key-Distribution",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 546,
+      "zone": "W",
+      "band": "finality",
+      "title": "Homomorphic Ledger Arithmetic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 547,
+      "zone": "W",
+      "band": "finality",
+      "title": "Proof-of-Retrievability (PoR)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 548,
+      "zone": "W",
+      "band": "finality",
+      "title": "Dynamic Signature-Scheme Rotation",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 549,
+      "zone": "W",
+      "band": "finality",
+      "title": "Cross-Protocol Integrity-Heartbeat",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 550,
+      "zone": "W",
+      "band": "finality",
+      "title": "Threshold-Decryption for Private Mempool-Ordering",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 551,
+      "zone": "W",
+      "band": "finality",
+      "title": "Seeding from Hardware-Security-Modules (HSMs)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 552,
+      "zone": "W",
+      "band": "finality",
+      "title": "Non-Interactive ZK-Proof Generation (Zero-Setup)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 553,
+      "zone": "W",
+      "band": "finality",
+      "title": "Signed Ledger Firmware",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 554,
+      "zone": "W",
+      "band": "finality",
+      "title": "Immutable Security-Incident Ledger",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 555,
+      "zone": "W",
+      "band": "finality",
+      "title": "Hash-Locked Cross-Chain Atomic-Finality",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 556,
+      "zone": "W",
+      "band": "finality",
+      "title": "Shamir\u2019s Secret-Sharing (SSS) for Governance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 557,
+      "zone": "W",
+      "band": "finality",
+      "title": "Signature-Aggregation Hardening",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 558,
+      "zone": "W",
+      "band": "finality",
+      "title": "Zero-Knowledge Identity Attestation for Compliance",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 559,
+      "zone": "W",
+      "band": "finality",
+      "title": "Cryptographic Proof of Asset-Backing (Reserves)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 560,
+      "zone": "W",
+      "band": "finality",
+      "title": "Quantum-Resistant P2P Transport Layer",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/attestation_blob.rs"
+    },
+    {
+      "id": 561,
+      "zone": "X",
+      "band": "finality",
+      "title": "Formally-Verified Upgrade-Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 562,
+      "zone": "X",
+      "band": "finality",
+      "title": "Governance-Weighted Circuit-Breakers",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 563,
+      "zone": "X",
+      "band": "finality",
+      "title": "Adversarial-Simulation Fuzzing for Consensus-Code",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 564,
+      "zone": "X",
+      "band": "finality",
+      "title": "Self-Healing Ledger State-Restoration",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 565,
+      "zone": "X",
+      "band": "finality",
+      "title": "Time-locked Protocol-Logic Overrides",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 566,
+      "zone": "X",
+      "band": "finality",
+      "title": "Proposal Logic-Verification Proofs",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 567,
+      "zone": "X",
+      "band": "finality",
+      "title": "Automated Slashing of Malicious Proposal-Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 568,
+      "zone": "X",
+      "band": "finality",
+      "title": "Security-Council Controlled Finality-Fallback",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 569,
+      "zone": "X",
+      "band": "finality",
+      "title": "Immutable Governance Decision-Mapping",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 570,
+      "zone": "X",
+      "band": "finality",
+      "title": "AI-Directed Anomaly-Detection for Protocol State",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 571,
+      "zone": "X",
+      "band": "finality",
+      "title": "Multi-Sig Governance Quorum Re-verification (MQR)",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 572,
+      "zone": "X",
+      "band": "finality",
+      "title": "On-Chain Security-Bounty Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 573,
+      "zone": "X",
+      "band": "finality",
+      "title": "Formal Verification of Every API Ingress-Endpoint",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 574,
+      "zone": "X",
+      "band": "finality",
+      "title": "Autonomous Security-Scoring for Protocol Participants",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 575,
+      "zone": "X",
+      "band": "finality",
+      "title": "Governance-Gated Security Parameter Versioning",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 576,
+      "zone": "X",
+      "band": "finality",
+      "title": "Adversarial-AI Consensus Stress-Testing",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 577,
+      "zone": "X",
+      "band": "finality",
+      "title": "Decentralized Oracle Integration for Consensus-Reality",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 578,
+      "zone": "X",
+      "band": "finality",
+      "title": "Formal Proofs of Cross-Protocol State-Transitions",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 579,
+      "zone": "X",
+      "band": "finality",
+      "title": "On-Chain Proposal Pre-Simulation Engine",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 580,
+      "zone": "X",
+      "band": "finality",
+      "title": "Governance-Level Singularity Lockdown-Logic",
+      "status": "partial",
+      "artifact": "CLRTY_SUBSTRATE/settlement/commit_payment.rs"
+    },
+    {
+      "id": 581,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Atomic Finality-Sealing",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 582,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Constant-Rate Transaction Padding",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 583,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Byzantine-Fault-Tolerant Ledger Propagation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 584,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Steganographic Threat-Detection",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 585,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Formal Proof-based State-Tree Synchronization",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 586,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Autonomous Security Monitoring (ASOC)",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 587,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Off-Chain Security-Log Anchoring",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 588,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Formal Proof-based State-Transition Validation",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 589,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Predictive Resilience for Black Swan Resilience",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 590,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Reserve Integrity Cryptographic-Proof",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 591,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Quantum-Resistant Boot-Chain Verification",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 592,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Autonomous Incident-Response Orchestration",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 593,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Continuous Automated Red-Teaming",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 594,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "API-Endpoint Formal Logic-Verification",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 595,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "SMPC-Governed Update-Authorization",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 596,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Adaptive Node-Level Firewalling",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 597,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Quantum-Resistant Boot-Logic",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 598,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Decentralized Update-Consensus",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 599,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "Finality-Enforced Rollback-Prevention",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60"
+    },
+    {
+      "id": 600,
+      "zone": "Y",
+      "band": "singularity",
+      "title": "The Singularity Lock: Deterministic Immutable Ledger",
+      "status": "implemented",
+      "artifact": "CLRTY_SUBSTRATE/state_manifold/genesis_seal.rs",
+      "atu_phase": "p59-p60",
+      "verify_command": "cargo test -p clrty-substrate genesis_seal -- --nocapture 2>/dev/null || cargo test -p clrty-substrate state_manifold -- --nocapture"
+    }
+  ]
+}

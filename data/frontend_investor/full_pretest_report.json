@@ -1,0 +1,1363 @@
+{
+  "generated_at": "2026-06-20T21:26:26.621361+00:00",
+  "summary": {
+    "total": 100,
+    "pass": 100,
+    "fail": 0,
+    "partial": 0,
+    "skip": 0,
+    "duration_ms": 133
+  },
+  "tasks": [
+    {
+      "id": "PT-001",
+      "zone": 1,
+      "title": "sim_block_commit_latency_median",
+      "status": "pass",
+      "duration_ms": 3,
+      "audit_hash": "9c67a4a279ba554d589a4bbbcc392640176091a6272148bb7e1d3a0c6a1d4528",
+      "evidence": {
+        "commit_us": 61,
+        "samples": 5,
+        "threshold_us": 15000
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-002",
+      "zone": 1,
+      "title": "sim_block_commit_p50_100_samples",
+      "status": "pass",
+      "duration_ms": 12,
+      "audit_hash": "2c37173f35a7ab428d8a043c3e7624cd6f981a097f2dba1f915fe2e5e59f4b2e",
+      "evidence": {
+        "median_us": 67,
+        "samples": 100,
+        "threshold_us": 15000
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-003",
+      "zone": 1,
+      "title": "sim_block_commit_p95",
+      "status": "pass",
+      "duration_ms": 23,
+      "audit_hash": "b5682f2576ccd7d1c9593e95ee0ae57688d77da18eb9d2c3a73854ca8acd195b",
+      "evidence": {
+        "p95_us": 565,
+        "threshold_us": 20000
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-004",
+      "zone": 1,
+      "title": "sim_block_commit_max",
+      "status": "pass",
+      "duration_ms": 4,
+      "audit_hash": "831632a225dd8a3555b25787aba161120da29e2de698a787fd1417590ff7b2c6",
+      "evidence": {
+        "max_us": 375,
+        "threshold_us": 35000
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-005",
+      "zone": 1,
+      "title": "topology_isolation_gate_50ms",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "40f2121c54b89e869cef666fb4e31632dc0f2b67391cbae457c44e7b8aabf589",
+      "evidence": {
+        "topology_gate_ms": 50
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-006",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "38c5a51d7679777d47a57572e6f0286a3507c2be63d6bb5fd8c0dc11e599abd9",
+      "evidence": {
+        "converged": 5,
+        "nodes": 5,
+        "task": 6
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-007",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b44ef12b8a269788d7ae0dd0ac7f8d4f157a1411fc0e9c12ef277fc5fbf697d4",
+      "evidence": {
+        "converged": 5,
+        "nodes": 5,
+        "task": 7
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-008",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "2d17839b9a70f4a469c23b67c511ed02b96c0f51153271de4b9dade48ffec606",
+      "evidence": {
+        "converged": 5,
+        "nodes": 5,
+        "task": 8
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-009",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "ab729cd9b05ec07cef488bc6d9b222b38db37bc1a6b186309b23acc7f01dce4d",
+      "evidence": {
+        "converged": 5,
+        "nodes": 5,
+        "task": 9
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-010",
+      "zone": 1,
+      "title": "consensus_sync_geo_node_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "8275f7c51ad066984a4b626f7cca3381f914f49a06b3ae173fd4d4f4ff50a967",
+      "evidence": {
+        "l1_concurrency_sim": true,
+        "median_ms": 22
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-011",
+      "zone": 1,
+      "title": "state_root_chain_hop_1",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "677ac04645c048ce0ccbb8bd9f87585752a14e7d6f24b028b7c5fb835811a01e",
+      "evidence": {
+        "events": 5,
+        "state_root_chain": true,
+        "task": 11
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-012",
+      "zone": 1,
+      "title": "state_root_chain_hop_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "761dcc23bfd6225914a3be9507ea6005bce5f51c45ea5bfc625d0cef2d0b7e83",
+      "evidence": {
+        "events": 5,
+        "state_root_chain": true,
+        "task": 12
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-013",
+      "zone": 1,
+      "title": "state_root_chain_hop_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "10b6b00a28aa5c593f953dca13118b0916426ac9529b0f61b164415e07571547",
+      "evidence": {
+        "events": 5,
+        "state_root_chain": true,
+        "task": 13
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-014",
+      "zone": 1,
+      "title": "state_root_chain_hop_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "e3a3e0b368c590fe009c4dcdf4ff30ca9ec6933b712e331497e6871bfa72124e",
+      "evidence": {
+        "events": 5,
+        "state_root_chain": true,
+        "task": 14
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-015",
+      "zone": 1,
+      "title": "state_root_chain_hop_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "feb8fb6aec7d9c894fa4b40be8e4ce950b90083b87b84763ff8addd1628de2df",
+      "evidence": {
+        "events": 5,
+        "state_root_chain": true,
+        "task": 15
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-016",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_1",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "40ac13b4d6b3248c627e59a7bfbe2c98c3d101855ebd062189ed1f26527bdd96",
+      "evidence": {
+        "entropy_events": 50,
+        "task": 16
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-017",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_2",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "2a07a34d14ddc1ac03d1cf34a49487ee0ee8d7fae3497ecaab7d38b1a94e92f5",
+      "evidence": {
+        "entropy_events": 50,
+        "task": 17
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-018",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_3",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "4227990fe2bb1871f11d81e8a8d72381d3ae51446ba656e9a0c867f4513c29ec",
+      "evidence": {
+        "entropy_events": 50,
+        "task": 18
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-019",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_4",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "501af0fc53ff4fd79ba13a6be344b6cd439569ac3aa5996c1e7012b73eca8618",
+      "evidence": {
+        "entropy_events": 50,
+        "task": 19
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-020",
+      "zone": 1,
+      "title": "entropy_bus_ingestion_5",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "c5cc25afdf1e7341f29f0d4c402a6e6b35de50409b0e8245f21cdd42ea929ab1",
+      "evidence": {
+        "entropy_events": 50,
+        "task": 20
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-021",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_1",
+      "status": "pass",
+      "duration_ms": 3,
+      "audit_hash": "9202087014927b63793fd4e488978fb40fe4b845bc6ead9c469d01561d4cd8fc",
+      "evidence": {
+        "task": 21,
+        "worm_persist": true
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-022",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_2",
+      "status": "pass",
+      "duration_ms": 8,
+      "audit_hash": "501067c0f8b5ba0e65499f3ae1772c482bc876c55cf0fccedea99f785608a0b3",
+      "evidence": {
+        "task": 22,
+        "worm_persist": true
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-023",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_3",
+      "status": "pass",
+      "duration_ms": 6,
+      "audit_hash": "6f42de73271bd9cacc209dc25df0629ef14a462bc077770570405f06a6fe31fc",
+      "evidence": {
+        "task": 23,
+        "worm_persist": true
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-024",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_4",
+      "status": "pass",
+      "duration_ms": 2,
+      "audit_hash": "5d190d9922931bfcc305753eb9d9e5557d262a16583cc59592041d381c54dc55",
+      "evidence": {
+        "task": 24,
+        "worm_persist": true
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-025",
+      "zone": 1,
+      "title": "nvm_persistence_cycle_5",
+      "status": "pass",
+      "duration_ms": 8,
+      "audit_hash": "45f857d43c6e31dace498fa90257e5568e96e6b1af33edb2c1d7dc545842c974",
+      "evidence": {
+        "task": 25,
+        "worm_persist": true
+      },
+      "failure_freezes_phase4": true
+    },
+    {
+      "id": "PT-026",
+      "zone": 2,
+      "title": "genesis_no_mint_authority",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "cedea8873bf712bd60328d108f72f9d2249b5d0bd1b0add224b794d4b0c30bb7",
+      "evidence": {
+        "genesis_ok": true,
+        "task": 26
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-027",
+      "zone": 2,
+      "title": "genesis_supply_cap",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "c1b698fcb4797c4b61fb06edb0a0d0f3a50797350d22908008ec618bf85f0701",
+      "evidence": {
+        "genesis_ok": true,
+        "task": 27
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-028",
+      "zone": 2,
+      "title": "genesis_hardening",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "79b6b8afead10598b35114eba25072a1eb82211e39a18939cbc844c78f75012a",
+      "evidence": {
+        "genesis_ok": true,
+        "task": 28
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-029",
+      "zone": 2,
+      "title": "tokenomics_manifest_checksum",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "995de2b47a006fb4586bb2fe5d3da95ef4fd4263b4a053d2c098690bf18fe519",
+      "evidence": {
+        "genesis_ok": true,
+        "task": 29
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-030",
+      "zone": 2,
+      "title": "phase4_mint_schedule_compliance",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b4f91298eba2aa79ab301994bd9138be2841cef80bb349984b10e28df6d6c29f",
+      "evidence": {
+        "genesis_ok": true,
+        "task": 30
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-031",
+      "zone": 2,
+      "title": "vesting_cliff_month_6",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "699c14f9417e3eef54f6a6c106bfb2af84e1046b2d068265a94b48709c836a0c",
+      "evidence": {
+        "m12": 500000000000000,
+        "m18": 1000000000000000,
+        "m24": 1500000000000000,
+        "m30": 2000000000000000,
+        "m6": 0,
+        "task": 31
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-032",
+      "zone": 2,
+      "title": "vesting_linear_month_12",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "742ac355ee65cccdd720180d1a9a695fe3d844ae83c9412f68c6116151744057",
+      "evidence": {
+        "m12": 500000000000000,
+        "m18": 1000000000000000,
+        "m24": 1500000000000000,
+        "m30": 2000000000000000,
+        "m6": 0,
+        "task": 32
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-033",
+      "zone": 2,
+      "title": "vesting_linear_month_18",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "c15c22c2567aa47e3f60109af35bb1290eded05f32c48aaa4782689af1ef5c75",
+      "evidence": {
+        "m12": 500000000000000,
+        "m18": 1000000000000000,
+        "m24": 1500000000000000,
+        "m30": 2000000000000000,
+        "m6": 0,
+        "task": 33
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-034",
+      "zone": 2,
+      "title": "vesting_linear_month_24",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "8cff73d69b39833278369bcf64a59233eaa6672d6a7f3b22e652e25cc13fbf3c",
+      "evidence": {
+        "m12": 500000000000000,
+        "m18": 1000000000000000,
+        "m24": 1500000000000000,
+        "m30": 2000000000000000,
+        "m6": 0,
+        "task": 34
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-035",
+      "zone": 2,
+      "title": "vesting_saft_enforcement",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "7a4e8944108db839f0449218aabd35fbdc0f2f1584257a35c79047694f24b325",
+      "evidence": {
+        "m12": 500000000000000,
+        "m18": 1000000000000000,
+        "m24": 1500000000000000,
+        "m30": 2000000000000000,
+        "m6": 0,
+        "task": 35
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-036",
+      "zone": 2,
+      "title": "double_spend_supply_cap_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "9b48d1c9db22b13a2b249415e08e82101a4f062390e9715780bf59691b8643ac",
+      "evidence": {
+        "double_spend_blocked": true,
+        "task": 36
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-037",
+      "zone": 2,
+      "title": "double_spend_supply_cap_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b0dc5061e9423a19c502d28286b35f8866a0e49a2428bf0a51928b481ee8fcad",
+      "evidence": {
+        "double_spend_blocked": true,
+        "task": 37
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-038",
+      "zone": 2,
+      "title": "double_spend_supply_cap_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "44c2e3f41eab9988f6844deb2328edc09517002237273b58af1bcaedbff024a2",
+      "evidence": {
+        "double_spend_blocked": true,
+        "task": 38
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-039",
+      "zone": 2,
+      "title": "double_spend_supply_cap_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "d953ee4593901d40c7a06bd2612e35d268533504518a25b85baab2cc1b4b9882",
+      "evidence": {
+        "double_spend_blocked": true,
+        "task": 39
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-040",
+      "zone": 2,
+      "title": "double_spend_supply_cap_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "7f7f91ddd6791f74c4c5c1cc756f8c28e4b559d84dc07a8dcc49ee8d2a68e60d",
+      "evidence": {
+        "double_spend_blocked": true,
+        "task": 40
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-041",
+      "zone": 2,
+      "title": "treasury_bucket_integrity",
+      "status": "pass",
+      "duration_ms": 6,
+      "audit_hash": "a9915d7fa102890373a146fcdee76d3be8654a71991caff0b42b78b209fda564",
+      "evidence": {
+        "listing_genesis_ok": true,
+        "task": 41
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-042",
+      "zone": 2,
+      "title": "validator_bucket_integrity",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "9dc58d467e05436bb0a7ba237e533f808193e4e3f8a1f7bee28dd3e9b23169f9",
+      "evidence": {
+        "listing_genesis_ok": true,
+        "task": 42
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-043",
+      "zone": 2,
+      "title": "liquidity_bucket_integrity",
+      "status": "pass",
+      "duration_ms": 7,
+      "audit_hash": "f0f47adf8be1095ac9dafab0f4f29b4ae59a4d1f573c1327d672c399fd02de5a",
+      "evidence": {
+        "listing_genesis_ok": true,
+        "task": 43
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-044",
+      "zone": 2,
+      "title": "listing_config_genesis_match",
+      "status": "pass",
+      "duration_ms": 3,
+      "audit_hash": "66d1f80f682e80b191af15f22d599835e2c53b4fa47a1294af1e92358e803c83",
+      "evidence": {
+        "listing_genesis_ok": true,
+        "task": 44
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-045",
+      "zone": 2,
+      "title": "sub_allocation_lockup_audit",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "c940845cf691d7926a5e4e0ae9a40f20cb7b2b2f1980e88f4b6d013dff9897ea",
+      "evidence": {
+        "listing_genesis_ok": true,
+        "task": 45
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-046",
+      "zone": 2,
+      "title": "tge_mock_distribution_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "d19b5818d2f82019e954462498004e6878e06fbfa094a08f72e7d76cde16f461",
+      "evidence": {
+        "task": 46,
+        "tge_distribution_sum": 16000000
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-047",
+      "zone": 2,
+      "title": "tge_mock_distribution_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "0aa5442ff1efa3e866a4822a2670ddcf3c560b735a0f109327d52e33f0a02d36",
+      "evidence": {
+        "task": 47,
+        "tge_distribution_sum": 16000000
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-048",
+      "zone": 2,
+      "title": "tge_mock_distribution_3",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "ded318aaa0595099be82655656471b39a28ff45d60b587a854340f79ef60f2e4",
+      "evidence": {
+        "task": 48,
+        "tge_distribution_sum": 16000000
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-049",
+      "zone": 2,
+      "title": "tge_mock_distribution_4",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "4c42a897732ce41b8477962fc949328fe885873d46ea85ea21b111052b607b9e",
+      "evidence": {
+        "task": 49,
+        "tge_distribution_sum": 16000000
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-050",
+      "zone": 2,
+      "title": "tge_mock_distribution_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "46c0495bb6c687e33176a8469176bbc18ec9bd507f52c569dac1fa3b9971097f",
+      "evidence": {
+        "task": 50,
+        "tge_distribution_sum": 16000000
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-051",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "14b459e81736c459330d8a7277ddc282586792b1049557997d8e2b894bbcda11",
+      "evidence": {
+        "dark_pool_routed": true,
+        "fragment_slices": 2,
+        "task": 51
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-052",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "d66bd24ab0e0730c103cba6996f45899c9e2c53cd6aab7590b724adcd44c4e7b",
+      "evidence": {
+        "dark_pool_routed": true,
+        "fragment_slices": 3,
+        "task": 52
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-053",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "3c6eee92e0b5301466981cb1250498b5d3be3d393c6cf58aad8694f143877772",
+      "evidence": {
+        "dark_pool_routed": true,
+        "fragment_slices": 4,
+        "task": 53
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-054",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "ff40556465b05741b8c7f61eb960b626e692f840c58aab76857272d03e06d160",
+      "evidence": {
+        "dark_pool_routed": true,
+        "fragment_slices": 5,
+        "task": 54
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-055",
+      "zone": 3,
+      "title": "mirra_block_fragmentation_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "160e769882863a1883dbc6352b8b70c57154275c461d6c6ca7b71c177a785bdd",
+      "evidence": {
+        "dark_pool_routed": true,
+        "fragment_slices": 6,
+        "task": 55
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-056",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "cacdeda651416ffdba93def92ca6e6325c7bff1b59140fc97bf5325cb8326da2",
+      "evidence": {
+        "execution_gate": true,
+        "impact": 2.01e-6,
+        "task": 56
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-057",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "06d2ad4209215404a88409493f0e6981e13fe5df59fcffa1196355c9bc6d876a",
+      "evidence": {
+        "execution_gate": true,
+        "impact": 2.01e-6,
+        "task": 57
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-058",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "d2476a6929e76e260b4ed00be01c5d4219749a000b33c23224ae94ab674fc99d",
+      "evidence": {
+        "execution_gate": true,
+        "impact": 2.01e-6,
+        "task": 58
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-059",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "8ddbbf422b31502c3af82b0cf463291c0e6a9e49ee18a41ab2cf6034eae00802",
+      "evidence": {
+        "execution_gate": true,
+        "impact": 2.01e-6,
+        "task": 59
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-060",
+      "zone": 3,
+      "title": "ai_rebalance_volatility_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b96b4a980828b5733b32a2708f0cc8740c21f0fb3ca7aa731fe8df3eacd10e45",
+      "evidence": {
+        "execution_gate": true,
+        "impact": 2.01e-6,
+        "task": 60
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-061",
+      "zone": 3,
+      "title": "shadow_liquidity_map_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "262d5e4c7b7daf6768be59c01cf2015f8239deb1dcb6782cd0a15f9bbf58130f",
+      "evidence": {
+        "shadow_liquidity_usdc": 88235.2941176471,
+        "task": 61,
+        "venues": 1
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-062",
+      "zone": 3,
+      "title": "shadow_liquidity_map_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "76083daad9ce38934e38046db5cb5e296cfe2a761323a61a3aa039f8b480315b",
+      "evidence": {
+        "shadow_liquidity_usdc": 176470.5882352942,
+        "task": 62,
+        "venues": 1
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-063",
+      "zone": 3,
+      "title": "shadow_liquidity_map_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "7aa31b2d499376c39361b7e04978f57778b16416d960d7507a1f22a39ce5f177",
+      "evidence": {
+        "shadow_liquidity_usdc": 264705.8823529412,
+        "task": 63,
+        "venues": 1
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-064",
+      "zone": 3,
+      "title": "shadow_liquidity_map_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "f1af51d20207b0618dc0c24c8f5861cba08c6adba15fac1123cfa775b42b1049",
+      "evidence": {
+        "shadow_liquidity_usdc": 352941.1764705884,
+        "task": 64,
+        "venues": 1
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-065",
+      "zone": 3,
+      "title": "shadow_liquidity_map_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "26189c99c756c63d6e0b37bad32bb17c0c56ebe158c28e0badfd71a841ae21d7",
+      "evidence": {
+        "shadow_liquidity_usdc": 441176.4705882352,
+        "task": 65,
+        "venues": 1
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-066",
+      "zone": 3,
+      "title": "otc_block_trade_routing_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "2ebfa1915b4488572645a99e48f5a78904d4e09108a24d51ed15934fd8829ff3",
+      "evidence": {
+        "otc_dry_run": "dry-test-0",
+        "task": 66
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-067",
+      "zone": 3,
+      "title": "otc_block_trade_routing_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "1404bf6dfe19b22024988c7c5b6de0e9373899264a609b770e6c3b4a4b0a1ffd",
+      "evidence": {
+        "otc_dry_run": "dry-test-0",
+        "task": 67
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-068",
+      "zone": 3,
+      "title": "otc_block_trade_routing_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "d77a1b5ae2fe66ea4f5b25af4fb88598bbf1fbfd94fae16b85f033ae6902b7c2",
+      "evidence": {
+        "otc_dry_run": "dry-test-0",
+        "task": 68
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-069",
+      "zone": 3,
+      "title": "otc_block_trade_routing_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "a6836c2e1c43dbaf50cd22f16fd517fe43f46d2bf47b4d11bddaa17aff7abbac",
+      "evidence": {
+        "otc_dry_run": "dry-test-0",
+        "task": 69
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-070",
+      "zone": 3,
+      "title": "otc_block_trade_routing_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "61695249b11ec8f9d03206d676d6e73aab5c666d99f6fc466f50cd22e42b1201",
+      "evidence": {
+        "otc_dry_run": "dry-test-0",
+        "task": 70
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-071",
+      "zone": 3,
+      "title": "spread_capture_profit_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "895da955ac789624115255232ba50168e558055d3bd4a4bba47e23439e91a0be",
+      "evidence": {
+        "atu_551": true,
+        "task": 71
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-072",
+      "zone": 3,
+      "title": "spread_capture_profit_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "313e70abbd4ab0bc608696ba5aadade6dfd9921d7dc89d2e1572c13e3ededabb",
+      "evidence": {
+        "atu_551": true,
+        "task": 72
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-073",
+      "zone": 3,
+      "title": "spread_capture_profit_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "a4a0d13a9774dece15d5722cd238c07a211411469e78d02232f4e54ce12f6644",
+      "evidence": {
+        "atu_551": true,
+        "task": 73
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-074",
+      "zone": 3,
+      "title": "spread_capture_profit_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "59a4d4299ddc2c69e514cc4b5195cda86158560a27e7f67e1940f1df3905b0a9",
+      "evidence": {
+        "atu_551": true,
+        "task": 74
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-075",
+      "zone": 3,
+      "title": "spread_capture_profit_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "760312d5bca365be5ffa4309a1a7e68fb4e46e8c29fca9fd3aceb07ee26e35fb",
+      "evidence": {
+        "atu_551": true,
+        "task": 75
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-076",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "be690e3b0db3a780f2ca4ef0d353f063c2e738fef145225eb4cc0f87598f1db2",
+      "evidence": {
+        "safe_monitor_init": true,
+        "task": 76
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-077",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "3d1e81b261ad717c5b297fa5c51e0558714b52819abe3f358323ef92f94c3e67",
+      "evidence": {
+        "safe_monitor_init": true,
+        "task": 77
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-078",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "57bb4a6f276a867d0d8497f41c9f61f1c440961266c44232f414cf6f37a94dc3",
+      "evidence": {
+        "safe_monitor_init": true,
+        "task": 78
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-079",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "c2a23e20e909bd257599b7935c7ec7dd55d65ba11742876a219bdf472845acb3",
+      "evidence": {
+        "safe_monitor_init": true,
+        "task": 79
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-080",
+      "zone": 4,
+      "title": "gnosis_safe_multisig_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "60bdacb2bae2b62f3e2df0e9ec644b8001612bb150d13d2dcb915b922fcf0aa2",
+      "evidence": {
+        "safe_monitor_init": true,
+        "task": 80
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-081",
+      "zone": 4,
+      "title": "capital_flight_guard_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "1f58d309e592b0283a42a69fea2fdab4ecadf99fb05c4a1d25c5eeac677377ba",
+      "evidence": {
+        "capital_flight_guard": "allow",
+        "task": 81
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-082",
+      "zone": 4,
+      "title": "capital_flight_guard_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "9b1939af06366145d4fb8c0f52064eff937342b91c63d78db6af7d8c50e52de5",
+      "evidence": {
+        "capital_flight_guard": "allow",
+        "task": 82
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-083",
+      "zone": 4,
+      "title": "capital_flight_guard_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "066346b5bef8501112812b4892bb7284e7a0b8568679c435f057752d256c0b05",
+      "evidence": {
+        "capital_flight_guard": "allow",
+        "task": 83
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-084",
+      "zone": 4,
+      "title": "capital_flight_guard_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "6c476fc9eb37bad77b6526fbddf10c2649d7a07fdf1044c773607397a01bc35b",
+      "evidence": {
+        "capital_flight_guard": "allow",
+        "task": 84
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-085",
+      "zone": 4,
+      "title": "capital_flight_guard_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b03471dd3308d47800f53f7ea709479aea2591ce5bad82d5e036b5ca47b01218",
+      "evidence": {
+        "capital_flight_guard": "allow",
+        "task": 85
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-086",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_1",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b55f0230251eea8b71a0c90d9cd166c7b8e69d4594f9c5377fb4e445d40923a7",
+      "evidence": {
+        "emergency_unlock_dry_run": true,
+        "task": 86
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-087",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "43cdb43ca0d2b0854f85021a5a9b9fd4a6cbc814eda257cb48cb5cd21d41f99b",
+      "evidence": {
+        "emergency_unlock_dry_run": true,
+        "task": 87
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-088",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "c278be14a429d3de240746fa4be0af93de4c43338de158fabfd3090d24d3b22b",
+      "evidence": {
+        "emergency_unlock_dry_run": true,
+        "task": 88
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-089",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "4cad5ba54171b4a5a5cacfd118165512e2884f75d4e7f6818627db4bb6153da4",
+      "evidence": {
+        "emergency_unlock_dry_run": true,
+        "task": 89
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-090",
+      "zone": 4,
+      "title": "emergency_unlock_dry_run_5",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b72e08f4894aa5bf6892833ee35ab7d2e16cbb7b4303715fde403d8170d0f8d9",
+      "evidence": {
+        "emergency_unlock_dry_run": true,
+        "task": 90
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-091",
+      "zone": 4,
+      "title": "kyc_attestation_blob_1",
+      "status": "pass",
+      "duration_ms": 3,
+      "audit_hash": "c3e10812cc2e9ef7591a3d583ca69a0a4ac5290a37f60d644f4dda3e52d75d95",
+      "evidence": {
+        "attestation_blob": true,
+        "task": 91
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-092",
+      "zone": 4,
+      "title": "kyc_attestation_blob_2",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "a6d1acbda26be5e4a3108c69189c3606682b0d62e53a221fc9cb0483c2e81ff0",
+      "evidence": {
+        "attestation_blob": true,
+        "task": 92
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-093",
+      "zone": 4,
+      "title": "kyc_attestation_blob_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "3c9e9c2a6255326b9f467138873d038ef48ec783fd1fb472404cb3d751f097f4",
+      "evidence": {
+        "attestation_blob": true,
+        "task": 93
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-094",
+      "zone": 4,
+      "title": "kyc_attestation_blob_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "eaa0c36a5edcbae8623ddfe92c6166c9b2c2490b818ca947a22d51d4dc1bf9ee",
+      "evidence": {
+        "attestation_blob": true,
+        "task": 94
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-095",
+      "zone": 4,
+      "title": "kyc_attestation_blob_5",
+      "status": "pass",
+      "duration_ms": 1,
+      "audit_hash": "2f3b35494271eaa6d8ba06f653389dd38b2b51b695b1122a2340c413a93f56c8",
+      "evidence": {
+        "attestation_blob": true,
+        "task": 95
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-096",
+      "zone": 4,
+      "title": "black_swan_recovery_1",
+      "status": "pass",
+      "duration_ms": 2,
+      "audit_hash": "2642d19f360e1739e0d903c283fb8b975e47db086da43538609a734cf984185c",
+      "evidence": {
+        "black_swan_recovery": true,
+        "final_gate": false,
+        "task": 96
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-097",
+      "zone": 4,
+      "title": "black_swan_recovery_2",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "1c35495fdd8f52f071969c93fb322c6edf0a8e6cae38ec7e47b4a220d4f7bd1a",
+      "evidence": {
+        "black_swan_recovery": true,
+        "final_gate": false,
+        "task": 97
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-098",
+      "zone": 4,
+      "title": "black_swan_recovery_3",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "e8b23728e478bef0ea29a8016d3bc51a0f55c2cde2c5249127b3c28436ffad94",
+      "evidence": {
+        "black_swan_recovery": true,
+        "final_gate": false,
+        "task": 98
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-099",
+      "zone": 4,
+      "title": "black_swan_recovery_4",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "6eb66a57f5564c4bdc58f1a93144226cb0293e4b47fcca39973bf2252a35b2c4",
+      "evidence": {
+        "black_swan_recovery": true,
+        "final_gate": false,
+        "task": 99
+      },
+      "failure_freezes_phase4": false
+    },
+    {
+      "id": "PT-100",
+      "zone": 4,
+      "title": "black_swan_final_gate",
+      "status": "pass",
+      "duration_ms": 0,
+      "audit_hash": "b0707d971d249f70fb51d6899ab81c245fe758d11d63a2fd4141bd12b29b3f65",
+      "evidence": {
+        "black_swan_recovery": true,
+        "final_gate": true,
+        "task": 100
+      },
+      "failure_freezes_phase4": false
+    }
+  ]
+}

@@ -1,0 +1,1005 @@
+{
+  "version": 1,
+  "strategies": [
+    {
+      "strategy_id": 1,
+      "primitive": "liquidity_sniping",
+      "variant": 1,
+      "threshold": 0.5,
+      "velocity_gate": 10.0,
+      "churn_gate": 0.1,
+      "z_entry": 1.0,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 2,
+      "primitive": "liquidity_sniping",
+      "variant": 2,
+      "threshold": 0.52,
+      "velocity_gate": 12.0,
+      "churn_gate": 0.12000000000000001,
+      "z_entry": 1.1,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 3,
+      "primitive": "liquidity_sniping",
+      "variant": 3,
+      "threshold": 0.54,
+      "velocity_gate": 14.0,
+      "churn_gate": 0.14,
+      "z_entry": 1.2,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 4,
+      "primitive": "liquidity_sniping",
+      "variant": 4,
+      "threshold": 0.56,
+      "velocity_gate": 16.0,
+      "churn_gate": 0.16,
+      "z_entry": 1.3,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 5,
+      "primitive": "liquidity_sniping",
+      "variant": 5,
+      "threshold": 0.58,
+      "velocity_gate": 18.0,
+      "churn_gate": 0.18,
+      "z_entry": 1.4,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 6,
+      "primitive": "liquidity_sniping",
+      "variant": 6,
+      "threshold": 0.6,
+      "velocity_gate": 20.0,
+      "churn_gate": 0.2,
+      "z_entry": 1.5,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 7,
+      "primitive": "liquidity_sniping",
+      "variant": 7,
+      "threshold": 0.62,
+      "velocity_gate": 22.0,
+      "churn_gate": 0.22,
+      "z_entry": 1.6,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 8,
+      "primitive": "liquidity_sniping",
+      "variant": 8,
+      "threshold": 0.64,
+      "velocity_gate": 24.0,
+      "churn_gate": 0.24000000000000002,
+      "z_entry": 1.7000000000000002,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 9,
+      "primitive": "liquidity_sniping",
+      "variant": 9,
+      "threshold": 0.66,
+      "velocity_gate": 26.0,
+      "churn_gate": 0.26,
+      "z_entry": 1.8,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 10,
+      "primitive": "liquidity_sniping",
+      "variant": 10,
+      "threshold": 0.6799999999999999,
+      "velocity_gate": 28.0,
+      "churn_gate": 0.28,
+      "z_entry": 1.9,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 11,
+      "primitive": "liquidity_sniping",
+      "variant": 11,
+      "threshold": 0.7,
+      "velocity_gate": 30.0,
+      "churn_gate": 0.30000000000000004,
+      "z_entry": 2.0,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 12,
+      "primitive": "liquidity_sniping",
+      "variant": 12,
+      "threshold": 0.72,
+      "velocity_gate": 32.0,
+      "churn_gate": 0.32,
+      "z_entry": 2.1,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 13,
+      "primitive": "liquidity_sniping",
+      "variant": 13,
+      "threshold": 0.74,
+      "velocity_gate": 34.0,
+      "churn_gate": 0.33999999999999997,
+      "z_entry": 2.2,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 14,
+      "primitive": "liquidity_sniping",
+      "variant": 14,
+      "threshold": 0.76,
+      "velocity_gate": 36.0,
+      "churn_gate": 0.36,
+      "z_entry": 2.3,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 15,
+      "primitive": "liquidity_sniping",
+      "variant": 15,
+      "threshold": 0.78,
+      "velocity_gate": 38.0,
+      "churn_gate": 0.38,
+      "z_entry": 2.4000000000000004,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 16,
+      "primitive": "liquidity_sniping",
+      "variant": 16,
+      "threshold": 0.8,
+      "velocity_gate": 40.0,
+      "churn_gate": 0.4,
+      "z_entry": 2.5,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 17,
+      "primitive": "liquidity_sniping",
+      "variant": 17,
+      "threshold": 0.8200000000000001,
+      "velocity_gate": 42.0,
+      "churn_gate": 0.42000000000000004,
+      "z_entry": 2.6,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 18,
+      "primitive": "liquidity_sniping",
+      "variant": 18,
+      "threshold": 0.8400000000000001,
+      "velocity_gate": 44.0,
+      "churn_gate": 0.44000000000000006,
+      "z_entry": 2.7,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 19,
+      "primitive": "liquidity_sniping",
+      "variant": 19,
+      "threshold": 0.86,
+      "velocity_gate": 46.0,
+      "churn_gate": 0.45999999999999996,
+      "z_entry": 2.8,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 20,
+      "primitive": "liquidity_sniping",
+      "variant": 20,
+      "threshold": 0.88,
+      "velocity_gate": 48.0,
+      "churn_gate": 0.48,
+      "z_entry": 2.9000000000000004,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 21,
+      "primitive": "liquidity_sniping",
+      "variant": 21,
+      "threshold": 0.9,
+      "velocity_gate": 50.0,
+      "churn_gate": 0.5,
+      "z_entry": 3.0,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 22,
+      "primitive": "liquidity_sniping",
+      "variant": 22,
+      "threshold": 0.9199999999999999,
+      "velocity_gate": 52.0,
+      "churn_gate": 0.52,
+      "z_entry": 3.1,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 23,
+      "primitive": "liquidity_sniping",
+      "variant": 23,
+      "threshold": 0.94,
+      "velocity_gate": 54.0,
+      "churn_gate": 0.54,
+      "z_entry": 3.2,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 24,
+      "primitive": "liquidity_sniping",
+      "variant": 24,
+      "threshold": 0.96,
+      "velocity_gate": 56.0,
+      "churn_gate": 0.56,
+      "z_entry": 3.3000000000000003,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 25,
+      "primitive": "liquidity_sniping",
+      "variant": 25,
+      "threshold": 0.98,
+      "velocity_gate": 58.0,
+      "churn_gate": 0.58,
+      "z_entry": 3.4000000000000004,
+      "regime_mask": "Stable"
+    },
+    {
+      "strategy_id": 26,
+      "primitive": "mean_reversion",
+      "variant": 1,
+      "threshold": 0.5,
+      "velocity_gate": 10.0,
+      "churn_gate": 0.1,
+      "z_entry": 1.0,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 27,
+      "primitive": "mean_reversion",
+      "variant": 2,
+      "threshold": 0.52,
+      "velocity_gate": 12.0,
+      "churn_gate": 0.12000000000000001,
+      "z_entry": 1.1,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 28,
+      "primitive": "mean_reversion",
+      "variant": 3,
+      "threshold": 0.54,
+      "velocity_gate": 14.0,
+      "churn_gate": 0.14,
+      "z_entry": 1.2,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 29,
+      "primitive": "mean_reversion",
+      "variant": 4,
+      "threshold": 0.56,
+      "velocity_gate": 16.0,
+      "churn_gate": 0.16,
+      "z_entry": 1.3,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 30,
+      "primitive": "mean_reversion",
+      "variant": 5,
+      "threshold": 0.58,
+      "velocity_gate": 18.0,
+      "churn_gate": 0.18,
+      "z_entry": 1.4,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 31,
+      "primitive": "mean_reversion",
+      "variant": 6,
+      "threshold": 0.6,
+      "velocity_gate": 20.0,
+      "churn_gate": 0.2,
+      "z_entry": 1.5,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 32,
+      "primitive": "mean_reversion",
+      "variant": 7,
+      "threshold": 0.62,
+      "velocity_gate": 22.0,
+      "churn_gate": 0.22,
+      "z_entry": 1.6,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 33,
+      "primitive": "mean_reversion",
+      "variant": 8,
+      "threshold": 0.64,
+      "velocity_gate": 24.0,
+      "churn_gate": 0.24000000000000002,
+      "z_entry": 1.7000000000000002,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 34,
+      "primitive": "mean_reversion",
+      "variant": 9,
+      "threshold": 0.66,
+      "velocity_gate": 26.0,
+      "churn_gate": 0.26,
+      "z_entry": 1.8,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 35,
+      "primitive": "mean_reversion",
+      "variant": 10,
+      "threshold": 0.6799999999999999,
+      "velocity_gate": 28.0,
+      "churn_gate": 0.28,
+      "z_entry": 1.9,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 36,
+      "primitive": "mean_reversion",
+      "variant": 11,
+      "threshold": 0.7,
+      "velocity_gate": 30.0,
+      "churn_gate": 0.30000000000000004,
+      "z_entry": 2.0,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 37,
+      "primitive": "mean_reversion",
+      "variant": 12,
+      "threshold": 0.72,
+      "velocity_gate": 32.0,
+      "churn_gate": 0.32,
+      "z_entry": 2.1,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 38,
+      "primitive": "mean_reversion",
+      "variant": 13,
+      "threshold": 0.74,
+      "velocity_gate": 34.0,
+      "churn_gate": 0.33999999999999997,
+      "z_entry": 2.2,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 39,
+      "primitive": "mean_reversion",
+      "variant": 14,
+      "threshold": 0.76,
+      "velocity_gate": 36.0,
+      "churn_gate": 0.36,
+      "z_entry": 2.3,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 40,
+      "primitive": "mean_reversion",
+      "variant": 15,
+      "threshold": 0.78,
+      "velocity_gate": 38.0,
+      "churn_gate": 0.38,
+      "z_entry": 2.4000000000000004,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 41,
+      "primitive": "mean_reversion",
+      "variant": 16,
+      "threshold": 0.8,
+      "velocity_gate": 40.0,
+      "churn_gate": 0.4,
+      "z_entry": 2.5,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 42,
+      "primitive": "mean_reversion",
+      "variant": 17,
+      "threshold": 0.8200000000000001,
+      "velocity_gate": 42.0,
+      "churn_gate": 0.42000000000000004,
+      "z_entry": 2.6,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 43,
+      "primitive": "mean_reversion",
+      "variant": 18,
+      "threshold": 0.8400000000000001,
+      "velocity_gate": 44.0,
+      "churn_gate": 0.44000000000000006,
+      "z_entry": 2.7,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 44,
+      "primitive": "mean_reversion",
+      "variant": 19,
+      "threshold": 0.86,
+      "velocity_gate": 46.0,
+      "churn_gate": 0.45999999999999996,
+      "z_entry": 2.8,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 45,
+      "primitive": "mean_reversion",
+      "variant": 20,
+      "threshold": 0.88,
+      "velocity_gate": 48.0,
+      "churn_gate": 0.48,
+      "z_entry": 2.9000000000000004,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 46,
+      "primitive": "mean_reversion",
+      "variant": 21,
+      "threshold": 0.9,
+      "velocity_gate": 50.0,
+      "churn_gate": 0.5,
+      "z_entry": 3.0,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 47,
+      "primitive": "mean_reversion",
+      "variant": 22,
+      "threshold": 0.9199999999999999,
+      "velocity_gate": 52.0,
+      "churn_gate": 0.52,
+      "z_entry": 3.1,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 48,
+      "primitive": "mean_reversion",
+      "variant": 23,
+      "threshold": 0.94,
+      "velocity_gate": 54.0,
+      "churn_gate": 0.54,
+      "z_entry": 3.2,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 49,
+      "primitive": "mean_reversion",
+      "variant": 24,
+      "threshold": 0.96,
+      "velocity_gate": 56.0,
+      "churn_gate": 0.56,
+      "z_entry": 3.3000000000000003,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 50,
+      "primitive": "mean_reversion",
+      "variant": 25,
+      "threshold": 0.98,
+      "velocity_gate": 58.0,
+      "churn_gate": 0.58,
+      "z_entry": 3.4000000000000004,
+      "regime_mask": "Expansion"
+    },
+    {
+      "strategy_id": 51,
+      "primitive": "flow_momentum",
+      "variant": 1,
+      "threshold": 0.5,
+      "velocity_gate": 10.0,
+      "churn_gate": 0.1,
+      "z_entry": 1.0,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 52,
+      "primitive": "flow_momentum",
+      "variant": 2,
+      "threshold": 0.52,
+      "velocity_gate": 12.0,
+      "churn_gate": 0.12000000000000001,
+      "z_entry": 1.1,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 53,
+      "primitive": "flow_momentum",
+      "variant": 3,
+      "threshold": 0.54,
+      "velocity_gate": 14.0,
+      "churn_gate": 0.14,
+      "z_entry": 1.2,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 54,
+      "primitive": "flow_momentum",
+      "variant": 4,
+      "threshold": 0.56,
+      "velocity_gate": 16.0,
+      "churn_gate": 0.16,
+      "z_entry": 1.3,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 55,
+      "primitive": "flow_momentum",
+      "variant": 5,
+      "threshold": 0.58,
+      "velocity_gate": 18.0,
+      "churn_gate": 0.18,
+      "z_entry": 1.4,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 56,
+      "primitive": "flow_momentum",
+      "variant": 6,
+      "threshold": 0.6,
+      "velocity_gate": 20.0,
+      "churn_gate": 0.2,
+      "z_entry": 1.5,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 57,
+      "primitive": "flow_momentum",
+      "variant": 7,
+      "threshold": 0.62,
+      "velocity_gate": 22.0,
+      "churn_gate": 0.22,
+      "z_entry": 1.6,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 58,
+      "primitive": "flow_momentum",
+      "variant": 8,
+      "threshold": 0.64,
+      "velocity_gate": 24.0,
+      "churn_gate": 0.24000000000000002,
+      "z_entry": 1.7000000000000002,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 59,
+      "primitive": "flow_momentum",
+      "variant": 9,
+      "threshold": 0.66,
+      "velocity_gate": 26.0,
+      "churn_gate": 0.26,
+      "z_entry": 1.8,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 60,
+      "primitive": "flow_momentum",
+      "variant": 10,
+      "threshold": 0.6799999999999999,
+      "velocity_gate": 28.0,
+      "churn_gate": 0.28,
+      "z_entry": 1.9,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 61,
+      "primitive": "flow_momentum",
+      "variant": 11,
+      "threshold": 0.7,
+      "velocity_gate": 30.0,
+      "churn_gate": 0.30000000000000004,
+      "z_entry": 2.0,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 62,
+      "primitive": "flow_momentum",
+      "variant": 12,
+      "threshold": 0.72,
+      "velocity_gate": 32.0,
+      "churn_gate": 0.32,
+      "z_entry": 2.1,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 63,
+      "primitive": "flow_momentum",
+      "variant": 13,
+      "threshold": 0.74,
+      "velocity_gate": 34.0,
+      "churn_gate": 0.33999999999999997,
+      "z_entry": 2.2,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 64,
+      "primitive": "flow_momentum",
+      "variant": 14,
+      "threshold": 0.76,
+      "velocity_gate": 36.0,
+      "churn_gate": 0.36,
+      "z_entry": 2.3,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 65,
+      "primitive": "flow_momentum",
+      "variant": 15,
+      "threshold": 0.78,
+      "velocity_gate": 38.0,
+      "churn_gate": 0.38,
+      "z_entry": 2.4000000000000004,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 66,
+      "primitive": "flow_momentum",
+      "variant": 16,
+      "threshold": 0.8,
+      "velocity_gate": 40.0,
+      "churn_gate": 0.4,
+      "z_entry": 2.5,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 67,
+      "primitive": "flow_momentum",
+      "variant": 17,
+      "threshold": 0.8200000000000001,
+      "velocity_gate": 42.0,
+      "churn_gate": 0.42000000000000004,
+      "z_entry": 2.6,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 68,
+      "primitive": "flow_momentum",
+      "variant": 18,
+      "threshold": 0.8400000000000001,
+      "velocity_gate": 44.0,
+      "churn_gate": 0.44000000000000006,
+      "z_entry": 2.7,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 69,
+      "primitive": "flow_momentum",
+      "variant": 19,
+      "threshold": 0.86,
+      "velocity_gate": 46.0,
+      "churn_gate": 0.45999999999999996,
+      "z_entry": 2.8,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 70,
+      "primitive": "flow_momentum",
+      "variant": 20,
+      "threshold": 0.88,
+      "velocity_gate": 48.0,
+      "churn_gate": 0.48,
+      "z_entry": 2.9000000000000004,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 71,
+      "primitive": "flow_momentum",
+      "variant": 21,
+      "threshold": 0.9,
+      "velocity_gate": 50.0,
+      "churn_gate": 0.5,
+      "z_entry": 3.0,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 72,
+      "primitive": "flow_momentum",
+      "variant": 22,
+      "threshold": 0.9199999999999999,
+      "velocity_gate": 52.0,
+      "churn_gate": 0.52,
+      "z_entry": 3.1,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 73,
+      "primitive": "flow_momentum",
+      "variant": 23,
+      "threshold": 0.94,
+      "velocity_gate": 54.0,
+      "churn_gate": 0.54,
+      "z_entry": 3.2,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 74,
+      "primitive": "flow_momentum",
+      "variant": 24,
+      "threshold": 0.96,
+      "velocity_gate": 56.0,
+      "churn_gate": 0.56,
+      "z_entry": 3.3000000000000003,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 75,
+      "primitive": "flow_momentum",
+      "variant": 25,
+      "threshold": 0.98,
+      "velocity_gate": 58.0,
+      "churn_gate": 0.58,
+      "z_entry": 3.4000000000000004,
+      "regime_mask": "Adversarial"
+    },
+    {
+      "strategy_id": 76,
+      "primitive": "adversarial_churn",
+      "variant": 1,
+      "threshold": 0.5,
+      "velocity_gate": 10.0,
+      "churn_gate": 0.1,
+      "z_entry": 1.0,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 77,
+      "primitive": "adversarial_churn",
+      "variant": 2,
+      "threshold": 0.52,
+      "velocity_gate": 12.0,
+      "churn_gate": 0.12000000000000001,
+      "z_entry": 1.1,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 78,
+      "primitive": "adversarial_churn",
+      "variant": 3,
+      "threshold": 0.54,
+      "velocity_gate": 14.0,
+      "churn_gate": 0.14,
+      "z_entry": 1.2,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 79,
+      "primitive": "adversarial_churn",
+      "variant": 4,
+      "threshold": 0.56,
+      "velocity_gate": 16.0,
+      "churn_gate": 0.16,
+      "z_entry": 1.3,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 80,
+      "primitive": "adversarial_churn",
+      "variant": 5,
+      "threshold": 0.58,
+      "velocity_gate": 18.0,
+      "churn_gate": 0.18,
+      "z_entry": 1.4,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 81,
+      "primitive": "adversarial_churn",
+      "variant": 6,
+      "threshold": 0.6,
+      "velocity_gate": 20.0,
+      "churn_gate": 0.2,
+      "z_entry": 1.5,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 82,
+      "primitive": "adversarial_churn",
+      "variant": 7,
+      "threshold": 0.62,
+      "velocity_gate": 22.0,
+      "churn_gate": 0.22,
+      "z_entry": 1.6,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 83,
+      "primitive": "adversarial_churn",
+      "variant": 8,
+      "threshold": 0.64,
+      "velocity_gate": 24.0,
+      "churn_gate": 0.24000000000000002,
+      "z_entry": 1.7000000000000002,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 84,
+      "primitive": "adversarial_churn",
+      "variant": 9,
+      "threshold": 0.66,
+      "velocity_gate": 26.0,
+      "churn_gate": 0.26,
+      "z_entry": 1.8,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 85,
+      "primitive": "adversarial_churn",
+      "variant": 10,
+      "threshold": 0.6799999999999999,
+      "velocity_gate": 28.0,
+      "churn_gate": 0.28,
+      "z_entry": 1.9,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 86,
+      "primitive": "adversarial_churn",
+      "variant": 11,
+      "threshold": 0.7,
+      "velocity_gate": 30.0,
+      "churn_gate": 0.30000000000000004,
+      "z_entry": 2.0,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 87,
+      "primitive": "adversarial_churn",
+      "variant": 12,
+      "threshold": 0.72,
+      "velocity_gate": 32.0,
+      "churn_gate": 0.32,
+      "z_entry": 2.1,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 88,
+      "primitive": "adversarial_churn",
+      "variant": 13,
+      "threshold": 0.74,
+      "velocity_gate": 34.0,
+      "churn_gate": 0.33999999999999997,
+      "z_entry": 2.2,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 89,
+      "primitive": "adversarial_churn",
+      "variant": 14,
+      "threshold": 0.76,
+      "velocity_gate": 36.0,
+      "churn_gate": 0.36,
+      "z_entry": 2.3,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 90,
+      "primitive": "adversarial_churn",
+      "variant": 15,
+      "threshold": 0.78,
+      "velocity_gate": 38.0,
+      "churn_gate": 0.38,
+      "z_entry": 2.4000000000000004,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 91,
+      "primitive": "adversarial_churn",
+      "variant": 16,
+      "threshold": 0.8,
+      "velocity_gate": 40.0,
+      "churn_gate": 0.4,
+      "z_entry": 2.5,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 92,
+      "primitive": "adversarial_churn",
+      "variant": 17,
+      "threshold": 0.8200000000000001,
+      "velocity_gate": 42.0,
+      "churn_gate": 0.42000000000000004,
+      "z_entry": 2.6,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 93,
+      "primitive": "adversarial_churn",
+      "variant": 18,
+      "threshold": 0.8400000000000001,
+      "velocity_gate": 44.0,
+      "churn_gate": 0.44000000000000006,
+      "z_entry": 2.7,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 94,
+      "primitive": "adversarial_churn",
+      "variant": 19,
+      "threshold": 0.86,
+      "velocity_gate": 46.0,
+      "churn_gate": 0.45999999999999996,
+      "z_entry": 2.8,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 95,
+      "primitive": "adversarial_churn",
+      "variant": 20,
+      "threshold": 0.88,
+      "velocity_gate": 48.0,
+      "churn_gate": 0.48,
+      "z_entry": 2.9000000000000004,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 96,
+      "primitive": "adversarial_churn",
+      "variant": 21,
+      "threshold": 0.9,
+      "velocity_gate": 50.0,
+      "churn_gate": 0.5,
+      "z_entry": 3.0,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 97,
+      "primitive": "adversarial_churn",
+      "variant": 22,
+      "threshold": 0.9199999999999999,
+      "velocity_gate": 52.0,
+      "churn_gate": 0.52,
+      "z_entry": 3.1,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 98,
+      "primitive": "adversarial_churn",
+      "variant": 23,
+      "threshold": 0.94,
+      "velocity_gate": 54.0,
+      "churn_gate": 0.54,
+      "z_entry": 3.2,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 99,
+      "primitive": "adversarial_churn",
+      "variant": 24,
+      "threshold": 0.96,
+      "velocity_gate": 56.0,
+      "churn_gate": 0.56,
+      "z_entry": 3.3000000000000003,
+      "regime_mask": "Accumulation"
+    },
+    {
+      "strategy_id": 100,
+      "primitive": "adversarial_churn",
+      "variant": 25,
+      "threshold": 0.98,
+      "velocity_gate": 58.0,
+      "churn_gate": 0.58,
+      "z_entry": 3.4000000000000004,
+      "regime_mask": "Accumulation"
+    }
+  ]
+}

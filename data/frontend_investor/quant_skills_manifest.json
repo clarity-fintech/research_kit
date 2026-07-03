@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "metric-collapse-arbitrage",
+      "name": "Metric-Collapse Arbitrage",
+      "tag": "quant",
+      "description": "Calculates distance from 99-1 optimization state; filters noisy trades; executes only when deterministic score predicts net edge after fees/latency.",
+      "substrate_links": ["arbitrage_core", "ccr_orchestrator", "mirra_dark_pool"],
+      "risk_modes": ["standard", "hard-kernel-strict", "institutional-max"]
+    },
+    {
+      "id": "topological-state-rebalance",
+      "name": "Topological State-Rebalancing",
+      "tag": "quant",
+      "description": "Manages 99→1 set mechanics; wallet tier migration based on entropy, holding duration, velocity; fee-priority / Set 1 privilege buff.",
+      "substrate_links": ["token_core/user_profile", "ccr", "blue_code/lane_enforcer"],
+      "risk_modes": ["standard", "hard-kernel-strict"]
+    },
+    {
+      "id": "attestation-verify",
+      "name": "Attestation-Verified Routing",
+      "tag": "compliance",
+      "description": "Compliance-as-Code via Attestation Blob; FATF/Travel Rule at kernel.",
+      "substrate_links": ["settlement/attestation_blob.rs", "gatekeeper"],
+      "risk_modes": ["standard", "institutional-max"]
+    },
+    {
+      "id": "entropy-heartbeat-check",
+      "name": "Entropy-Heartbeat Liquidation",
+      "tag": "risk",
+      "description": "Black swan circuit breaker; locks account lanes during extreme entropy.",
+      "substrate_links": ["entropy_bus", "panic_stabilizer", "capital_flight_guard"],
+      "risk_modes": ["standard", "hard-kernel-strict", "institutional-max"]
+    },
+    {
+      "id": "helix-intent-resolve",
+      "name": "HELIX Intent Resolution",
+      "tag": "helix",
+      "description": "Routes ExecutionIntent through HELIX-02 resolver for capital, commerce, and Mirra yield lanes.",
+      "substrate_links": ["helix_engine/intent_resolver", "helix_manifest", "cortexpay_engine"],
+      "risk_modes": ["standard", "hard-kernel-strict", "institutional-max"]
+    },
+    {
+      "id": "helix-net-settle",
+      "name": "HELIX Net Settlement Preview",
+      "tag": "helix",
+      "description": "Net settlement leg preview via HELIX-03; nets bilateral flows before shadow commit.",
+      "substrate_links": ["helix_engine/net_settlement", "helix_engine/shadow_state", "state_manifold"],
+      "risk_modes": ["standard", "hard-kernel-strict"]
+    },
+    {
+      "id": "helix-route",
+      "name": "HELIX Full Route",
+      "tag": "helix",
+      "description": "AVR attestation gate → HELIX-02 intent resolve → HELIX-03 net settle; wired to economic_core and arbitrage_core.",
+      "substrate_links": [
+        "helix_engine/substrate_bridge",
+        "helix_engine/intent_resolver",
+        "helix_engine/net_settlement",
+        "economic_core",
+        "arbitrage_core",
+        "settlement/attestation_blob.rs"
+      ],
+      "risk_modes": ["standard", "hard-kernel-strict", "institutional-max"]
+    },
+    {
+      "id": "cortexpay-predict",
+      "name": "CortexPay Intent Predict",
+      "tag": "cortexpay",
+      "description": "Session intent probability + abandonment score via CORTEX-01.",
+      "substrate_links": ["cortexpay_engine/intent_predictor", "cortexpay_manifest"],
+      "risk_modes": ["standard", "institutional-max"]
+    },
+    {
+      "id": "cortexpay-route-pay",
+      "name": "CortexPay Route Pay",
+      "tag": "cortexpay",
+      "description": "Liquidity-aware rail selection routed through HELIX-02.",
+      "substrate_links": ["cortexpay_engine/payment_router", "helix_engine/intent_resolver"],
+      "risk_modes": ["standard", "hard-kernel-strict"]
+    },
+    {
+      "id": "nt-optimize",
+      "name": "NeuroTemplates Optimize",
+      "tag": "neuro-templates",
+      "description": "Template adaptation cycle via NT-07/NT-08 optimization scoring.",
+      "substrate_links": ["neuro_templates_engine/ml_optimizer", "templates/manifest.json"],
+      "risk_modes": ["standard"]
+    },
+    {
+      "id": "nt-refactor-suggest",
+      "name": "NeuroTemplates Refactor Suggest",
+      "tag": "neuro-templates",
+      "description": "Architecture refactor proposals — dual-lock required to apply.",
+      "substrate_links": ["neuro_templates_engine/auto_refactor"],
+      "risk_modes": ["standard", "hard-kernel-strict"]
+    }
+  ],
+  "gates": {
+    "max_concurrent_per_ip": 3,
+    "one_skill_per_account": true,
+    "sequential_pipeline_only": true
+  },
+  "risk_profiles": {
+    "standard": {
+      "max_capital": 1000000,
+      "slippage_bps": 50,
+      "entropy_halt_threshold": 0.95
+    },
+    "hard-kernel-strict": {
+      "max_capital": 5000000,
+      "slippage_bps": 25,
+      "entropy_halt_threshold": 0.85
+    },
+    "institutional-max": {
+      "max_capital": 50000000,
+      "slippage_bps": 5,
+      "entropy_halt_threshold": 0.92
+    }
+  }
+}

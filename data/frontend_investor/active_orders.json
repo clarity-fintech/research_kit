@@ -1,0 +1,134 @@
+{
+  "anchor_mid": 1.0075696147499997,
+  "target_bid_levels": 5,
+  "target_ask_levels": 5,
+  "min_fill_ratio": 0.1,
+  "placed": [
+    {
+      "side": "Buy",
+      "price": 1.0,
+      "volume": 2000000.0,
+      "order_id": 1,
+      "venue": "MIRRA",
+      "tag": "tge-bid-1"
+    },
+    {
+      "side": "Sell",
+      "price": 1.0099999999999998,
+      "volume": 2000000.0,
+      "order_id": 2,
+      "venue": "MIRRA",
+      "tag": "tge-ask-2"
+    },
+    {
+      "side": "Buy",
+      "price": 0.995,
+      "volume": 1000000.0,
+      "order_id": 3,
+      "venue": "MIRRA",
+      "tag": "tge-bid-3"
+    },
+    {
+      "side": "Sell",
+      "price": 1.015,
+      "volume": 1000000.0,
+      "order_id": 4,
+      "venue": "MIRRA",
+      "tag": "tge-ask-4"
+    },
+    {
+      "side": "Buy",
+      "price": 0.99,
+      "volume": 500000.0,
+      "order_id": 5,
+      "venue": "MIRRA",
+      "tag": "tge-bid-5"
+    },
+    {
+      "side": "Sell",
+      "price": 1.0199999999999998,
+      "volume": 500000.0,
+      "order_id": 6,
+      "venue": "MIRRA",
+      "tag": "tge-ask-6"
+    },
+    {
+      "side": "Buy",
+      "price": 0.985,
+      "volume": 250000.0,
+      "order_id": 7,
+      "venue": "MIRRA",
+      "tag": "tge-bid-7"
+    },
+    {
+      "side": "Sell",
+      "price": 1.025,
+      "volume": 250000.0,
+      "order_id": 8,
+      "venue": "MIRRA",
+      "tag": "tge-ask-8"
+    },
+    {
+      "side": "Buy",
+      "price": 0.975,
+      "volume": 100000.0,
+      "order_id": 9,
+      "venue": "MIRRA",
+      "tag": "tge-bid-9"
+    },
+    {
+      "side": "Sell",
+      "price": 1.035,
+      "volume": 100000.0,
+      "order_id": 10,
+      "venue": "MIRRA",
+      "tag": "tge-ask-10"
+    },
+    {
+      "side": "Buy",
+      "price": 1.0079999999999998,
+      "volume": 75000.0,
+      "order_id": 10000,
+      "venue": "MIRRA",
+      "tag": "pump-up-1"
+    },
+    {
+      "side": "Buy",
+      "price": 1.011,
+      "volume": 50000.0,
+      "order_id": 10001,
+      "venue": "MIRRA",
+      "tag": "pump-up-2"
+    },
+    {
+      "side": "Buy",
+      "price": 1.015,
+      "volume": 25000.0,
+      "order_id": 10002,
+      "venue": "MIRRA",
+      "tag": "pump-up-3"
+    }
+  ],
+  "pump_active": [
+    {
+      "side": "buy",
+      "price": 1.0079999999999998,
+      "volume": 75000.0,
+      "tag": "pump-up-1"
+    },
+    {
+      "side": "buy",
+      "price": 1.011,
+      "volume": 50000.0,
+      "tag": "pump-up-2"
+    },
+    {
+      "side": "buy",
+      "price": 1.015,
+      "volume": 25000.0,
+      "tag": "pump-up-3"
+    }
+  ],
+  "last_replenish_tick": 3,
+  "keep_alive": true
+}

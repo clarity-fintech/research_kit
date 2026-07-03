@@ -1,0 +1,524 @@
+{
+  "generated_at": "2026-07-02T18:25:37Z",
+  "pack": "Volkov Mastermind First Access Pack",
+  "distribution": "exclusive",
+  "private_suite": {
+    "tier2_tech_spec": "docs/investor/TIER2_TECH_SPEC.md",
+    "token_ecosystem": "docs/investor/tokenomics_model.md",
+    "technical_due_diligence": "docs/investor/technical_due_diligence.md",
+    "security_audit": "docs/investor/security_audit_report.md",
+    "live_deck": "frontend/investor/treasury-exclusive.html",
+    "mev_deep_dive": "var/compliance/mev_deep_dive_report.json"
+  },
+  "terminal_vector": {
+    "cognitive_terminal": "frontend/investor/cognitive-terminal.html",
+    "treasury_hud": "frontend/investor/treasury-dashboard.html",
+    "prism_cli": "first_access_pack/02_terminal_vector/prism_cli/",
+    "prism_cli_repo": "https://github.com/williamsnameiswill/clarity-prism-cli",
+    "local_inference": "first_access_pack/02_terminal_vector/inference/",
+    "closed_alpha_api": "first_access_pack/02_terminal_vector/alpha_api/",
+    "proof_of_fidelity": "first_access_pack/02_terminal_vector/proof_of_fidelity/",
+    "closed_alpha_api_base": "http://127.0.0.1:8545/v1/alpha",
+    "routes": [
+      "GET /v1/alpha/manifest",
+      "GET /v1/alpha/telemetry",
+      "GET /v1/alpha/data-primitives",
+      "GET /v1/alpha/topology/logs",
+      "POST /v1/alpha/inference/score"
+    ]
+  },
+  "architecture_layers": {
+    "local_backend": {
+      "status": "functional",
+      "path": "first_access_pack/02_terminal_vector/inference/",
+      "frameworks": [
+        "PyTorch",
+        "MLX"
+      ],
+      "report": "var/compliance/vis_throughput_report.json"
+    },
+    "rag_verification": {
+      "status": "functional",
+      "path": "first_access_pack/02_terminal_vector/proof_of_fidelity/",
+      "script": "vis_intelligence/rag_verify.py",
+      "report": "var/compliance/rag_fidelity_report.json"
+    },
+    "closed_alpha_api": {
+      "status": "functional",
+      "path": "first_access_pack/02_terminal_vector/alpha_api/",
+      "auth_env": "CLRTY_ALPHA_TOKEN"
+    },
+    "prism_cli": {
+      "status": "functional",
+      "path": "first_access_pack/02_terminal_vector/prism_cli/",
+      "repo": "clarity-prism-cli",
+      "report": "var/compliance/prism_cli_gate_report.json",
+      "integrations": [
+        "prism",
+        "helix",
+        "indexer",
+        "settlement",
+        "intelligence",
+        "pipeline"
+      ]
+    },
+    "zk_confidential": {
+      "status": "partial",
+      "path": "zk_guest/",
+      "note": "RISC Zero genesis-hash guest \u2014 pre-mainnet"
+    },
+    "cross_chain_messaging": {
+      "status": "deferred",
+      "path": "CLRTY_SUBSTRATE/bridge_perimeter/cross_chain_messaging.rs",
+      "doc": "docs/l1_launch/DEFERRED_BRIDGE.md"
+    }
+  },
+  "mev_deep_dive": {
+    "generated_at": "2026-06-20T04:54:19Z",
+    "task": "mev_deep_dive",
+    "token": "CLRTY",
+    "sim_seed": 42,
+    "pillars": {
+      "mathematical_proofs": {
+        "pass": true,
+        "suites": [
+          {
+            "id": "M1",
+            "name": "Mathematical proofs \u2014 supply checksum + tokenomics",
+            "status": "pass"
+          },
+          {
+            "id": "M2",
+            "name": "Mathematical proofs \u2014 PoC argmax(E\u2212\u03bbR) anti-toxic selection",
+            "status": "pass"
+          },
+          {
+            "id": "M3",
+            "name": "Mathematical proofs \u2014 integer float control (16M cap)",
+            "status": "pass"
+          },
+          {
+            "id": "M4",
+            "name": "Mathematical proofs \u2014 HELIX net settlement",
+            "status": "pass"
+          }
+        ]
+      },
+      "network_topology": {
+        "pass": true,
+        "suites": [
+          {
+            "id": "T1",
+            "name": "Network topology \u2014 map_topology cluster",
+            "status": "pass"
+          },
+          {
+            "id": "T2",
+            "name": "Network topology \u2014 50ms isolation gate (ATU 540)",
+            "status": "pass"
+          },
+          {
+            "id": "T3",
+            "name": "Network topology \u2014 100-tier binary index map",
+            "status": "pass"
+          }
+        ]
+      },
+      "node_validation": {
+        "pass": true,
+        "suites": [
+          {
+            "id": "V1",
+            "name": "Node validation \u2014 L-DNET 50 nano stress",
+            "status": "pass"
+          },
+          {
+            "id": "V2",
+            "name": "Node validation \u2014 signal bridge slippage gate",
+            "status": "pass"
+          },
+          {
+            "id": "V3",
+            "name": "Node validation \u2014 dead-man switch (ATU 800)",
+            "status": "pass"
+          }
+        ]
+      },
+      "mev_mitigation": {
+        "pass": true,
+        "suites": [
+          {
+            "id": "X1",
+            "name": "MEV mitigation \u2014 toxicity score injector",
+            "status": "pass"
+          },
+          {
+            "id": "X2",
+            "name": "MEV mitigation \u2014 HELIX matching grid + intent resolver",
+            "status": "pass"
+          },
+          {
+            "id": "X3",
+            "name": "MEV mitigation \u2014 HELIX kernel + substrate bridge",
+            "status": "pass"
+          },
+          {
+            "id": "X4",
+            "name": "MEV mitigation \u2014 dual-lock skill pipeline",
+            "status": "pass"
+          },
+          {
+            "id": "X5",
+            "name": "MEV mitigation \u2014 HELIX audit script",
+            "status": "pass"
+          },
+          {
+            "id": "X6",
+            "name": "MEV mitigation \u2014 SIM100 adversarial regime (seed 42)",
+            "status": "pass"
+          }
+        ]
+      }
+    },
+    "suites": [
+      {
+        "id": "M1",
+        "name": "Mathematical proofs \u2014 supply checksum + tokenomics",
+        "status": "pass"
+      },
+      {
+        "id": "M2",
+        "name": "Mathematical proofs \u2014 PoC argmax(E\u2212\u03bbR) anti-toxic selection",
+        "status": "pass"
+      },
+      {
+        "id": "M3",
+        "name": "Mathematical proofs \u2014 integer float control (16M cap)",
+        "status": "pass"
+      },
+      {
+        "id": "M4",
+        "name": "Mathematical proofs \u2014 HELIX net settlement",
+        "status": "pass"
+      },
+      {
+        "id": "T1",
+        "name": "Network topology \u2014 map_topology cluster",
+        "status": "pass"
+      },
+      {
+        "id": "T2",
+        "name": "Network topology \u2014 50ms isolation gate (ATU 540)",
+        "status": "pass"
+      },
+      {
+        "id": "T3",
+        "name": "Network topology \u2014 100-tier binary index map",
+        "status": "pass"
+      },
+      {
+        "id": "V1",
+        "name": "Node validation \u2014 L-DNET 50 nano stress",
+        "status": "pass"
+      },
+      {
+        "id": "V2",
+        "name": "Node validation \u2014 signal bridge slippage gate",
+        "status": "pass"
+      },
+      {
+        "id": "V3",
+        "name": "Node validation \u2014 dead-man switch (ATU 800)",
+        "status": "pass"
+      },
+      {
+        "id": "X1",
+        "name": "MEV mitigation \u2014 toxicity score injector",
+        "status": "pass"
+      },
+      {
+        "id": "X2",
+        "name": "MEV mitigation \u2014 HELIX matching grid + intent resolver",
+        "status": "pass"
+      },
+      {
+        "id": "X3",
+        "name": "MEV mitigation \u2014 HELIX kernel + substrate bridge",
+        "status": "pass"
+      },
+      {
+        "id": "X4",
+        "name": "MEV mitigation \u2014 dual-lock skill pipeline",
+        "status": "pass"
+      },
+      {
+        "id": "X5",
+        "name": "MEV mitigation \u2014 HELIX audit script",
+        "status": "pass"
+      },
+      {
+        "id": "X6",
+        "name": "MEV mitigation \u2014 SIM100 adversarial regime (seed 42)",
+        "status": "pass"
+      }
+    ],
+    "passed": 16,
+    "failed": 0,
+    "total": 16,
+    "gate_pass": true
+  },
+  "helix_runtime": {
+    "generated_at": 1781993666,
+    "engine": "helix_engine",
+    "shadow_dir": "var/helix",
+    "modules": [
+      {
+        "id": "HELIX-01",
+        "name": "matching_grid",
+        "status": "implemented",
+        "artifact": "helix_engine/src/matching_grid.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-02",
+        "name": "intent_resolver",
+        "status": "implemented",
+        "artifact": "helix_engine/src/intent_resolver.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-03",
+        "name": "net_settlement",
+        "status": "implemented",
+        "artifact": "helix_engine/src/net_settlement.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-04",
+        "name": "synthetic_pairs",
+        "status": "partial",
+        "artifact": "helix_engine/src/synthetic_pairs.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-05",
+        "name": "arb_mesh",
+        "status": "implemented",
+        "artifact": "helix_engine/src/arb_mesh.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-06",
+        "name": "liquidity_graph",
+        "status": "implemented",
+        "artifact": "helix_engine/src/liquidity_graph.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-07",
+        "name": "encrypted_tunnels",
+        "status": "partial",
+        "artifact": "helix_engine/src/encrypted_tunnels.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-08",
+        "name": "predictive_oracle",
+        "status": "partial",
+        "artifact": "helix_engine/src/predictive_oracle.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-09",
+        "name": "imm_core",
+        "status": "implemented",
+        "artifact": "helix_engine/src/imm_core.rs",
+        "cli": null
+      },
+      {
+        "id": "HELIX-10",
+        "name": "kernel",
+        "status": "implemented",
+        "artifact": "helix_engine/src/kernel.rs",
+        "cli": "clrty helix status"
+      }
+    ],
+    "substrate_links": [
+      "state_manifold",
+      "arbitrage_core",
+      "quant_stack",
+      "mirra_dark_pool",
+      "economic_core",
+      "deterministic_committer"
+    ],
+    "skills": [
+      "helix-intent-resolve",
+      "helix-net-settle",
+      "helix-route"
+    ]
+  },
+  "launch_readiness": {
+    "generated_at": 1781993679,
+    "summary": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 1,
+      "hard_failed": 0,
+      "duration_seconds": 43,
+      "readiness_pct": 100.0,
+      "launch_ready": true,
+      "pretest_l1_pulse": "green",
+      "pretest_zone1_fail": false,
+      "validation_fail": false,
+      "compliance_fail": false,
+      "security_layers_documented_pct": 100.0,
+      "sovereign_documented_pct": 83.3,
+      "atomic_defense_pct": 100.0,
+      "sovereign_gate_pass": true,
+      "helix_documented_pct": 100.0,
+      "helix_gate_pass": true
+    },
+    "phases": [
+      {
+        "name": "pretest",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "validation",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "system_check",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "l1_substrate_audit",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "listing_compliance_pack",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "mainnet_contract_gates",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "bridge_connection_hashes",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "security_layers_audit",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "sovereign_protocols_audit",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "helix_components_audit",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "arbitrage_core_tests",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "quant_stack_tests",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "signal_bridge_tests",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "fork_swap_stress",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "sim_100_events",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "treasury_dashboard_sync",
+        "status": "pass",
+        "detail": "ok"
+      },
+      {
+        "name": "break_it_suite",
+        "status": "skip",
+        "detail": "pass --with-break-it to enable"
+      }
+    ]
+  },
+  "genesis_entropy": {
+    "chain_id": "clrty-1",
+    "convergence_id": "clrty-convergence-v1",
+    "total_supply": 16000000,
+    "decimals": 9,
+    "mint_authority": null,
+    "freeze_authority": null,
+    "denom": "uclrty",
+    "allocations": {
+      "treasury": 4000000,
+      "validators": 3000000,
+      "liquidity": 4000000,
+      "ecosystem": 3000000,
+      "public": 2000000
+    },
+    "sub_allocations": {
+      "team_vesting": {
+        "amount": 1600000,
+        "source": "treasury",
+        "cliff_months": 12,
+        "vest_months": 48
+      },
+      "reserve": {
+        "amount": 800000,
+        "source": "treasury"
+      }
+    },
+    "distribution_tiers": {
+      "team": {
+        "amount": 1600000,
+        "source": "treasury",
+        "cliff_months": 12,
+        "vest_months": 48
+      },
+      "private_seed": {
+        "amount": 2000000,
+        "source": "treasury",
+        "cliff_months": 6,
+        "vest_months": 24
+      },
+      "ecosystem_grants": {
+        "amount": 3000000,
+        "source": "ecosystem"
+      },
+      "liquidity_pools": {
+        "amount": 4000000,
+        "source": "liquidity"
+      },
+      "treasury": {
+        "amount": 2400000,
+        "source": "treasury",
+        "note": "treasury bucket after team/seed carve-outs"
+      }
+    }
+  }
+}

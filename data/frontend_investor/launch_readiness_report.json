@@ -1,0 +1,109 @@
+{
+  "generated_at": 1781993679,
+  "summary": {
+    "passed": 16,
+    "failed": 0,
+    "skipped": 1,
+    "hard_failed": 0,
+    "duration_seconds": 43,
+    "readiness_pct": 100.0,
+    "launch_ready": true,
+    "pretest_l1_pulse": "green",
+    "pretest_zone1_fail": false,
+    "validation_fail": false,
+    "compliance_fail": false,
+    "security_layers_documented_pct": 100.0,
+    "sovereign_documented_pct": 83.3,
+    "atomic_defense_pct": 100.0,
+    "sovereign_gate_pass": true,
+    "helix_documented_pct": 100.0,
+    "helix_gate_pass": true
+  },
+  "phases": [
+    {
+      "name": "pretest",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "validation",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "system_check",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "l1_substrate_audit",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "listing_compliance_pack",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "mainnet_contract_gates",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "bridge_connection_hashes",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "security_layers_audit",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "sovereign_protocols_audit",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "helix_components_audit",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "arbitrage_core_tests",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "quant_stack_tests",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "signal_bridge_tests",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "fork_swap_stress",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "sim_100_events",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "treasury_dashboard_sync",
+      "status": "pass",
+      "detail": "ok"
+    },
+    {
+      "name": "break_it_suite",
+      "status": "skip",
+      "detail": "pass --with-break-it to enable"
+    }
+  ]
+}

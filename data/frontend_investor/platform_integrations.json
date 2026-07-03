@@ -1,0 +1,712 @@
+{
+  "blocked_count": 0,
+  "connected_count": 16,
+  "count": 100,
+  "deferred_count": 84,
+  "gate_pass": true,
+  "implemented_count": 16,
+  "probes": [
+    {
+      "detail": "missing CLRTY_VISA_API_KEY",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "visa",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_MASTERCARD_CONSUMER_KEY",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "mastercard",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_SWIFT_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "swift",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_JPM_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "jpm_onyx",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_RIPPLE_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "ripple",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ACH_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "ach_nacha",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_SEPA_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "sepa",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_FEDNOW_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "fednow",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_STRIPE_API_KEY",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "stripe",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_CIRCLE_API_KEY",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "circle",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_CHAINLINK_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "chainlink",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_FIREBLOCKS_API_KEY",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "fireblocks",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_COPPER_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "copper",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_B2C2_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "b2c2",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_WINTERMUTE_API_KEY; connection_type=fiat_settlement",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "wintermute",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_AWS_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "aws",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_GCP_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "gcp",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_AZURE_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "azure",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_NVIDIA_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "nvidia",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_AKASH_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "akash",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_RENDER_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "render",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_FETCH_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "fetch_ai",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_AUTOGPT_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "autogpt",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_LANGCHAIN_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "langchain",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_HF_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "huggingface",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_FILECOIN_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "ipfs_filecoin",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ARWEAVE_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "arweave",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ANKR_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "ankr",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BIGQUERY_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "bigquery",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_SNOWFLAKE_API_KEY; connection_type=compute_metering",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "snowflake",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_CHAINALYSIS_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "chainalysis",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ELLIPTIC_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "elliptic",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_TRM_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "trm_labs",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_WORLDCOIN_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "worldcoin",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_POLYGON_ID_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "polygon_id",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_CIVIC_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "civic",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BLOOM_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "bloom",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ONFIDO_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "onfido",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_SUMSUB_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "sumsub",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_SOCURE_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "socure",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_LIT_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "lit_protocol",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_PRIVY_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "privy",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ZK_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "zk_proofs",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BRIGHTID_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "brightid",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_GITCOIN_API_KEY; connection_type=kyc_compliance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "gitcoin_passport",
+      "status": "deferred"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "hardhat",
+      "status": "implemented"
+    },
+    {
+      "detail": "forge_cli=missing foundry.toml=missing Makefile=present; connection_type=local_devtool",
+      "latency_ms": 1,
+      "sandbox_url": null,
+      "slug": "foundry",
+      "status": "implemented"
+    },
+    {
+      "detail": "rustc=ok Cargo.toml=present; connection_type=local_devtool",
+      "latency_ms": 30,
+      "sandbox_url": null,
+      "slug": "rust",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "wasm",
+      "status": "implemented"
+    },
+    {
+      "detail": "docker_cli=ok Dockerfile=missing; connection_type=local_devtool",
+      "latency_ms": 69,
+      "sandbox_url": null,
+      "slug": "docker",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "kubernetes",
+      "status": "implemented"
+    },
+    {
+      "detail": "workflows_dir=present; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "github_actions",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "terraform",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "vscode",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "postman",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "alchemy",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "infura",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "quicknode",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "the_graph",
+      "status": "implemented"
+    },
+    {
+      "detail": "substrate_links_present=Makefile,scripts/audit/verify_all_modules.sh; connection_type=local_devtool",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "graphql",
+      "status": "implemented"
+    },
+    {
+      "detail": "missing CLRTY_BINANCE_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "binance_institutional",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_COINBASE_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "coinbase_prime",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_KRAKEN_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "kraken_institutional",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_HIDDENROAD_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "hidden_road",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_FALCONX_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "falconx",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_CUMBERLAND_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "cumberland",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_JUMP_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "jump_crypto",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_WINTERMUTE_INST_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "wintermute_institutional",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BITGO_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "bitgo",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ANCHORAGE_API_KEY; connection_type=institutional_trading",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "anchorage",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_DUNE_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "dune",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_NANSEN_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "nansen",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_GLASSNODE_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "glassnode",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_MESSARI_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "messari",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_COINMETRICS_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "coinmetrics",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_TOKENTERMINAL_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "tokenterminal",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ARTEMIS_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "artemis",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_DEFILLAMA_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "defillama",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_PARSEC_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "parsec",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_THEBLOCK_API_KEY; connection_type=analytics_feed",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "the_block",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_TRADINGVIEW_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "tradingview",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BLOOMBERG_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "bloomberg",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_METATRADER_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "metatrader",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_NINJATRADER_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "ninjatrader",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_QUANTCONNECT_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "quantconnect",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BACKTRADER_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "backtrader",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_HUMMINGBOT_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "hummingbot",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_KOINLY_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "koinly",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ROTKI_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "rotki",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_COINTRACKER_API_KEY; connection_type=trading_terminal",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "cointracker",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_LEGALZOOM_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "legalzoom",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_DOCUSIGN_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "docusign",
+      "status": "deferred"
+    },
+    {
+      "detail": "SAFE_TREASURY_ADDRESS=missing safe_client.rs=present; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "gnosis_safe",
+      "status": "implemented"
+    },
+    {
+      "detail": "missing CLRTY_MULTIS_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "multis",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_COLONY_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "colony",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_DAOSTACK_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "daostack",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ARAGON_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "aragon",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_BOARDROOM_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "boardroom",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_SNAPSHOT_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "snapshot",
+      "status": "deferred"
+    },
+    {
+      "detail": "missing CLRTY_ZODIAC_API_KEY; connection_type=legal_governance",
+      "latency_ms": 0,
+      "sandbox_url": null,
+      "slug": "zodiac",
+      "status": "deferred"
+    }
+  ],
+  "ready_count": 0,
+  "task": "platform_integrations_audit"
+}

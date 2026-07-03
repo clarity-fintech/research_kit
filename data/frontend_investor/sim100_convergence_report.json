@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-06-22T13:07:30Z",
+  "task": "sim100_convergence",
+  "seed": 42,
+  "threshold": 0.001,
+  "merkle": "94e73f187aa0dda0e628268b8ca4288e1b29ac87d04d247f68e14e4c1b1d732e",
+  "atu_10001": "pass",
+  "gate_pass": true
+}

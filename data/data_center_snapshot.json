@@ -1,0 +1,495 @@
+{
+  "template_version": "performance_roi_v1",
+  "featured_group": "velocity",
+  "scaling_status": "stagnant",
+  "scaling_hint": "Focus on Access Conversion to drive utility-based demand.",
+  "founder_opex_ratio": 0.0,
+  "performance_roi": {
+    "daily_fee_revenue_usd": 44900.0,
+    "founder_daily_draw_usd": 8980.0,
+    "treasury_growth_rate_usd": 17960.0,
+    "personal_roi": -1.1,
+    "break_even_days": Infinity,
+    "runway_days": 13.333333333333332,
+    "founder_opex_ratio": 0.0,
+    "taxation_efficiency": 0.0,
+    "access_conversion_rate": 0.05,
+    "access_conversion_target": 0.15,
+    "scaling_status": "stagnant",
+    "scaling_hint": "Focus on Access Conversion to drive utility-based demand.",
+    "tax_bps": 400,
+    "provenance": "clrty-monetization-calculus::performance_roi"
+  },
+  "income_ledger_summary": {
+    "execution_fees_24h_usd": 44900.0,
+    "governance_fees_24h_usd": 24000.0,
+    "royalty_income_24h_usd": 1000.0,
+    "marketplace_commission_24h_usd": 0.0,
+    "private_income_cumulative_usd": 45900.0,
+    "fee_router_status": 1.0
+  },
+  "monetization_revenue_tags": [
+    {
+      "layer_id": "L01",
+      "slug": "tax_engine",
+      "title": "Tax Engine",
+      "status": "live",
+      "billing": "on_chain",
+      "stripe_slug": null,
+      "api_route": "internal://calculus/tax",
+      "modeled_mrr_usd": null,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L02",
+      "slug": "burn_to_access",
+      "title": "Burn-to-Access",
+      "status": "live",
+      "billing": "internal",
+      "stripe_slug": null,
+      "api_route": "POST /v1/monetization/burn-quote",
+      "modeled_mrr_usd": null,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L03",
+      "slug": "daas_tier1",
+      "title": "DaaS-Core",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "daas_tier1",
+      "api_route": "GET /v1/monetization/daas/quote",
+      "modeled_mrr_usd": 3000.0,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L04",
+      "slug": "telemetry_edge",
+      "title": "Telemetry-X",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "telemetry_edge",
+      "api_route": "GET /v1/alpha/telemetry",
+      "modeled_mrr_usd": 5000.0,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L05",
+      "slug": "exec_sniper",
+      "title": "Exec-Sniper API",
+      "status": "live",
+      "billing": "hybrid",
+      "stripe_slug": "exec_sniper",
+      "api_route": "POST /v1/monetization/sniper/quote",
+      "modeled_mrr_usd": 1000.0,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L06",
+      "slug": "node_governance",
+      "title": "Node Governance",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "node_sovereign",
+      "api_route": "POST /v1/monetization/node/register",
+      "modeled_mrr_usd": 1666.6666666666667,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L07",
+      "slug": "sdk_enterprise",
+      "title": "SDK/Tooling License",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "sdk_enterprise",
+      "api_route": "entitlement:sdk_enterprise",
+      "modeled_mrr_usd": 833.3333333333334,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L08",
+      "slug": "marketplace_commission",
+      "title": "Marketplace Commission",
+      "status": "live",
+      "billing": "on_chain",
+      "stripe_slug": null,
+      "api_route": "POST /v1/monetization/marketplace/settle",
+      "modeled_mrr_usd": null,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L09",
+      "slug": "model_royalty",
+      "title": "Royalty-on-Model-Reuse",
+      "status": "live",
+      "billing": "on_chain",
+      "stripe_slug": null,
+      "api_route": "POST /v1/monetization/royalty/quote",
+      "modeled_mrr_usd": null,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L10",
+      "slug": "x402_metered",
+      "title": "x402 API Monetization",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "x402_metered",
+      "api_route": "POST /v1/intelligence/x402/quote",
+      "modeled_mrr_usd": 19.8,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L11",
+      "slug": "predictive_intel",
+      "title": "Predictive Intelligence SaaS",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "predictive_intel",
+      "api_route": "GET /v1/alpha/telemetry",
+      "modeled_mrr_usd": 4000.0,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L13",
+      "slug": "governance_stake",
+      "title": "Governance Stake Fee",
+      "status": "live",
+      "billing": "on_chain",
+      "stripe_slug": null,
+      "api_route": "POST /v1/governance/vote",
+      "modeled_mrr_usd": null,
+      "provenance": "clrty-monetization-calculus"
+    },
+    {
+      "layer_id": "L14",
+      "slug": "stripe_fiat",
+      "title": "Stripe Fiat Funnel",
+      "status": "live",
+      "billing": "stripe",
+      "stripe_slug": "all_paid",
+      "api_route": "POST /v1/integrations/stripe/webhook",
+      "modeled_mrr_usd": null,
+      "provenance": "clrty-monetization-calculus"
+    }
+  ],
+  "manifest_refs": {
+    "data_center": "CLRTY_SUBSTRATE/boot/data_center_manifest.json",
+    "monetization_layers": "CLRTY_SUBSTRATE/boot/monetization_layers_manifest.json",
+    "data_center_version": 1,
+    "monetization_layers_version": 1
+  },
+  "sections": {
+    "extraction": {
+      "metrics": [
+        {
+          "slug": "daily_fee_revenue_usd",
+          "title": "Daily Fee Revenue",
+          "section": "extraction",
+          "section_label": "I",
+          "value": 44900.0,
+          "unit": "usd",
+          "status": "modeled",
+          "source": "clrty-monetization-calculus::performance_roi",
+          "target": null
+        },
+        {
+          "slug": "founder_daily_draw_usd",
+          "title": "Founder Daily Draw",
+          "section": "extraction",
+          "section_label": "I",
+          "value": 8980.0,
+          "unit": "usd",
+          "status": "computed",
+          "source": "computed",
+          "target": null
+        },
+        {
+          "slug": "treasury_growth_rate_usd",
+          "title": "Treasury Growth Rate",
+          "section": "extraction",
+          "section_label": "I",
+          "value": 17960.0,
+          "unit": "usd",
+          "status": "modeled",
+          "source": "computed",
+          "target": null
+        },
+        {
+          "slug": "yield_efficiency",
+          "title": "Yield Efficiency",
+          "section": "extraction",
+          "section_label": "I",
+          "value": 0.0,
+          "unit": "ratio",
+          "status": "modeled",
+          "source": "/v1/status",
+          "target": null
+        },
+        {
+          "slug": "personal_roi",
+          "title": "Personal ROI",
+          "section": "extraction",
+          "section_label": "I",
+          "value": -1.1,
+          "unit": "ratio",
+          "status": "computed",
+          "source": "sheets",
+          "target": null
+        },
+        {
+          "slug": "break_even_days",
+          "title": "Break-Even Timeline",
+          "section": "extraction",
+          "section_label": "I",
+          "value": 0.5567928730512249,
+          "unit": "days",
+          "status": "computed",
+          "source": "computed",
+          "target": null
+        }
+      ]
+    },
+    "velocity": {
+      "metrics": [
+        {
+          "slug": "dau",
+          "title": "Daily Active Users",
+          "section": "velocity",
+          "section_label": "II",
+          "value": 0.0,
+          "unit": "count",
+          "status": "modeled",
+          "source": "explorer_d1",
+          "target": null
+        },
+        {
+          "slug": "transaction_velocity_24h",
+          "title": "Transaction Velocity",
+          "section": "velocity",
+          "section_label": "II",
+          "value": 0.0,
+          "unit": "usd",
+          "status": "live",
+          "source": "/v1/fma/status",
+          "target": null
+        },
+        {
+          "slug": "staking_penetration_rate",
+          "title": "Staking Penetration Rate",
+          "section": "velocity",
+          "section_label": "II",
+          "value": 0.0,
+          "unit": "ratio",
+          "status": "modeled",
+          "source": "/v1/status",
+          "target": 0.5
+        },
+        {
+          "slug": "holder_retention_30d",
+          "title": "Holder Retention Rate",
+          "section": "velocity",
+          "section_label": "II",
+          "value": 0.0,
+          "unit": "ratio",
+          "status": "modeled",
+          "source": "explorer_d1",
+          "target": null
+        },
+        {
+          "slug": "avg_transaction_size_usd",
+          "title": "Average Transaction Size",
+          "section": "velocity",
+          "section_label": "II",
+          "value": 0.0,
+          "unit": "usd",
+          "status": "computed",
+          "source": "computed",
+          "target": null
+        },
+        {
+          "slug": "taxation_efficiency",
+          "title": "Taxation Efficiency",
+          "section": "velocity",
+          "section_label": "II",
+          "value": 0.0,
+          "unit": "ratio",
+          "status": "computed",
+          "source": "computed",
+          "target": 0.95
+        }
+      ]
+    },
+    "demand": {
+      "metrics": [
+        {
+          "slug": "access_conversion_rate",
+          "title": "Access Conversion Rate",
+          "section": "demand",
+          "section_label": "III",
+          "value": 0.05,
+          "unit": "ratio",
+          "status": "computed",
+          "source": "clrty-monetization-calculus",
+          "target": 0.15
+        },
+        {
+          "slug": "discount_arbitrage_rate",
+          "title": "Discount Arbitrage Rate",
+          "section": "demand",
+          "section_label": "III",
+          "value": 0.0,
+          "unit": "ratio",
+          "status": "modeled",
+          "source": "settlement",
+          "target": null
+        },
+        {
+          "slug": "burn_rate_deflationary",
+          "title": "Burn Rate (Deflationary)",
+          "section": "demand",
+          "section_label": "III",
+          "value": 0.0,
+          "unit": "ratio",
+          "status": "modeled",
+          "source": "on_chain",
+          "target": null
+        },
+        {
+          "slug": "social_sentiment_index",
+          "title": "Social Sentiment",
+          "section": "demand",
+          "section_label": "III",
+          "value": 0.65,
+          "unit": "score",
+          "status": "manual",
+          "source": "sheets",
+          "target": null
+        }
+      ]
+    },
+    "operational": {
+      "metrics": [
+        {
+          "slug": "burn_rate_opex_usd",
+          "title": "Burn Rate (OpEx)",
+          "section": "operational",
+          "section_label": "IV",
+          "value": 4500.0,
+          "unit": "usd",
+          "status": "manual",
+          "source": "sheets",
+          "target": null
+        },
+        {
+          "slug": "network_reach_growth",
+          "title": "Network Reach",
+          "section": "operational",
+          "section_label": "IV",
+          "value": 0.07142857142857142,
+          "unit": "ratio",
+          "status": "manual",
+          "source": "sheets",
+          "target": null
+        },
+        {
+          "slug": "cpa_usd",
+          "title": "Cost Per Acquisition",
+          "section": "operational",
+          "section_label": "IV",
+          "value": 1000.0,
+          "unit": "usd",
+          "status": "computed",
+          "source": "computed",
+          "target": 5.0
+        },
+        {
+          "slug": "runway_days",
+          "title": "Runway",
+          "section": "operational",
+          "section_label": "IV",
+          "value": 13.333333333333332,
+          "unit": "days",
+          "status": "computed",
+          "source": "computed",
+          "target": null
+        }
+      ]
+    },
+    "private_monetization": {
+      "metrics": [
+        {
+          "slug": "execution_fees_24h_usd",
+          "title": "Execution Fees (24h)",
+          "section": "private_monetization",
+          "section_label": "V",
+          "value": 44900.0,
+          "unit": "usd",
+          "status": "on_chain",
+          "source": "income_ledger",
+          "target": null
+        },
+        {
+          "slug": "governance_fees_24h_usd",
+          "title": "Governance/Protocol Fees (24h)",
+          "section": "private_monetization",
+          "section_label": "V",
+          "value": 24000.0,
+          "unit": "usd",
+          "status": "on_chain",
+          "source": "income_ledger",
+          "target": null
+        },
+        {
+          "slug": "royalty_income_24h_usd",
+          "title": "Model Royalty Income (24h)",
+          "section": "private_monetization",
+          "section_label": "V",
+          "value": 1000.0,
+          "unit": "usd",
+          "status": "on_chain",
+          "source": "income_ledger",
+          "target": null
+        },
+        {
+          "slug": "marketplace_commission_24h_usd",
+          "title": "Marketplace Commission (24h)",
+          "section": "private_monetization",
+          "section_label": "V",
+          "value": 0.0,
+          "unit": "usd",
+          "status": "on_chain",
+          "source": "income_ledger",
+          "target": null
+        },
+        {
+          "slug": "private_income_cumulative_usd",
+          "title": "Private Stream Cumulative",
+          "section": "private_monetization",
+          "section_label": "V",
+          "value": 45900.0,
+          "unit": "usd",
+          "status": "on_chain",
+          "source": "income_ledger",
+          "target": null
+        },
+        {
+          "slug": "fee_router_status",
+          "title": "On-Chain Fee Router Status",
+          "section": "private_monetization",
+          "section_label": "V",
+          "value": 1.0,
+          "unit": "score",
+          "status": "on_chain",
+          "source": "manifest",
+          "target": 2.0
+        }
+      ]
+    }
+  },
+  "computed_at": "2026-07-03T18:33:36.887906+00:00",
+  "api_status": {
+    "error": "HTTP Error 403: Forbidden",
+    "path": "/v1/status"
+  }
+}

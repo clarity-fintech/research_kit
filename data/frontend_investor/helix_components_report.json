@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-06-20T22:14:26Z",
+  "manifest_path": "CLRTY_SUBSTRATE/boot/helix_manifest.json",
+  "runtime_table": "var/trading/helix_runtime_table.json",
+  "summary": {
+    "total_modules": 10,
+    "implemented": 7,
+    "partial": 3,
+    "planned": 0,
+    "documented_pct": 100.0,
+    "helix_documented_pct": 100.0,
+    "docs_present": [
+      "docs/investor/helix_engine.md",
+      "docs/investor/helix_engine_architecture.md",
+      "docs/protocol/helix_hidden_exchange_layer.md",
+      "docs/architecture/helix_hidden_exchange_layer.md"
+    ],
+    "docs_ok": true,
+    "tests_pass": true,
+    "gate_documented_pct_min": 80.0,
+    "gate_pass": true
+  },
+  "modules": [
+    {
+      "id": "HELIX-01",
+      "name": "matching_grid",
+      "artifact": "helix_engine/src/matching_grid.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    },
+    {
+      "id": "HELIX-02",
+      "name": "intent_resolver",
+      "artifact": "helix_engine/src/intent_resolver.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    },
+    {
+      "id": "HELIX-03",
+      "name": "net_settlement",
+      "artifact": "helix_engine/src/net_settlement.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    },
+    {
+      "id": "HELIX-04",
+      "name": "synthetic_pairs",
+      "artifact": "helix_engine/src/synthetic_pairs.rs",
+      "artifact_exists": true,
+      "scaffold": true,
+      "status": "partial"
+    },
+    {
+      "id": "HELIX-05",
+      "name": "arb_mesh",
+      "artifact": "helix_engine/src/arb_mesh.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    },
+    {
+      "id": "HELIX-06",
+      "name": "liquidity_graph",
+      "artifact": "helix_engine/src/liquidity_graph.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    },
+    {
+      "id": "HELIX-07",
+      "name": "encrypted_tunnels",
+      "artifact": "helix_engine/src/encrypted_tunnels.rs",
+      "artifact_exists": true,
+      "scaffold": true,
+      "status": "partial"
+    },
+    {
+      "id": "HELIX-08",
+      "name": "predictive_oracle",
+      "artifact": "helix_engine/src/predictive_oracle.rs",
+      "artifact_exists": true,
+      "scaffold": true,
+      "status": "partial"
+    },
+    {
+      "id": "HELIX-09",
+      "name": "imm_core",
+      "artifact": "helix_engine/src/imm_core.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    },
+    {
+      "id": "HELIX-10",
+      "name": "kernel",
+      "artifact": "helix_engine/src/kernel.rs",
+      "artifact_exists": true,
+      "scaffold": false,
+      "status": "implemented"
+    }
+  ],
+  "verify_commands": [
+    "cargo test -p helix_engine",
+    "cargo run -p clarity-cli --bin clrty -- helix status",
+    "clrty execute 2601"
+  ]
+}

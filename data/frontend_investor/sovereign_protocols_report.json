@@ -1,0 +1,182 @@
+{
+  "generated_at": "2026-07-02T18:24:54Z",
+  "manifest_path": "CLRTY_SUBSTRATE/boot/sovereign_protocols_manifest.json",
+  "summary": {
+    "total": 600,
+    "implemented": 65,
+    "partial": 435,
+    "planned": 100,
+    "deferred": 0,
+    "documented_pct": 83.3,
+    "perimeter_500_pct": 80.0,
+    "atomic_600_pct": 100.0,
+    "gate_documented_pct_min": 80.0,
+    "gate_pass": true,
+    "atomic_gate_min": 80.0,
+    "atomic_gate_pass": true
+  },
+  "bands": {
+    "perimeter_500": {
+      "total": 500,
+      "documented": 400,
+      "readiness_pct": 80.0
+    },
+    "atomic_600": {
+      "total": 100,
+      "documented": 100,
+      "readiness_pct": 100.0
+    }
+  },
+  "zone_rollups": {
+    "A": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "B": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "C": {
+      "implemented": 25,
+      "partial": 0,
+      "planned": 0,
+      "deferred": 0
+    },
+    "D": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "E": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "F": {
+      "implemented": 0,
+      "partial": 0,
+      "planned": 25,
+      "deferred": 0
+    },
+    "G": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "H": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "I": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "J": {
+      "implemented": 0,
+      "partial": 0,
+      "planned": 25,
+      "deferred": 0
+    },
+    "K": {
+      "implemented": 0,
+      "partial": 0,
+      "planned": 25,
+      "deferred": 0
+    },
+    "L": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "M": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "N": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "O": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "P": {
+      "implemented": 0,
+      "partial": 0,
+      "planned": 25,
+      "deferred": 0
+    },
+    "Q": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "R": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "S": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "T": {
+      "implemented": 0,
+      "partial": 25,
+      "planned": 0,
+      "deferred": 0
+    },
+    "U": {
+      "implemented": 20,
+      "partial": 0,
+      "planned": 0,
+      "deferred": 0
+    },
+    "V": {
+      "implemented": 0,
+      "partial": 20,
+      "planned": 0,
+      "deferred": 0
+    },
+    "W": {
+      "implemented": 0,
+      "partial": 20,
+      "planned": 0,
+      "deferred": 0
+    },
+    "X": {
+      "implemented": 0,
+      "partial": 20,
+      "planned": 0,
+      "deferred": 0
+    },
+    "Y": {
+      "implemented": 20,
+      "partial": 0,
+      "planned": 0,
+      "deferred": 0
+    }
+  }
+}

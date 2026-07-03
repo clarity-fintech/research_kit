@@ -1,0 +1,802 @@
+[
+  {
+    "event_id": 1,
+    "mid_price": 1.005,
+    "bid_depth": 5050000.0,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.101
+  },
+  {
+    "event_id": 2,
+    "mid_price": 1.005,
+    "bid_depth": 5100500.0,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10200000000000001
+  },
+  {
+    "event_id": 3,
+    "mid_price": 1.005,
+    "bid_depth": 5151505.0,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10300000000000001
+  },
+  {
+    "event_id": 4,
+    "mid_price": 1.005,
+    "bid_depth": 5203020.05,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10400000000000001
+  },
+  {
+    "event_id": 5,
+    "mid_price": 1.005,
+    "bid_depth": 5255050.2505,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10500000000000001
+  },
+  {
+    "event_id": 6,
+    "mid_price": 1.005,
+    "bid_depth": 5307600.753005,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10600000000000001
+  },
+  {
+    "event_id": 7,
+    "mid_price": 1.005,
+    "bid_depth": 5360676.76053505,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10700000000000001
+  },
+  {
+    "event_id": 8,
+    "mid_price": 1.005,
+    "bid_depth": 5414283.528140401,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10800000000000001
+  },
+  {
+    "event_id": 9,
+    "mid_price": 1.005,
+    "bid_depth": 5468426.363421804,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.10900000000000001
+  },
+  {
+    "event_id": 10,
+    "mid_price": 1.005,
+    "bid_depth": 5523110.627056022,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.11
+  },
+  {
+    "event_id": 11,
+    "mid_price": 1.005,
+    "bid_depth": 5578341.733326582,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.111
+  },
+  {
+    "event_id": 12,
+    "mid_price": 1.005,
+    "bid_depth": 5634125.150659848,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.112
+  },
+  {
+    "event_id": 13,
+    "mid_price": 1.005,
+    "bid_depth": 5690466.402166447,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.113
+  },
+  {
+    "event_id": 14,
+    "mid_price": 1.005,
+    "bid_depth": 5747371.066188111,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.114
+  },
+  {
+    "event_id": 15,
+    "mid_price": 1.005,
+    "bid_depth": 5804844.776849993,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.115
+  },
+  {
+    "event_id": 16,
+    "mid_price": 1.005,
+    "bid_depth": 5862893.224618493,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.116
+  },
+  {
+    "event_id": 17,
+    "mid_price": 1.005,
+    "bid_depth": 5921522.156864678,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.117
+  },
+  {
+    "event_id": 18,
+    "mid_price": 1.005,
+    "bid_depth": 5980737.378433324,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.11800000000000001
+  },
+  {
+    "event_id": 19,
+    "mid_price": 1.005,
+    "bid_depth": 6040544.752217658,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.11900000000000001
+  },
+  {
+    "event_id": 20,
+    "mid_price": 1.005,
+    "bid_depth": 6100950.199739834,
+    "ask_depth": 5000000.0,
+    "regime": "Stable",
+    "lambda": 0.12000000000000001
+  },
+  {
+    "event_id": 21,
+    "mid_price": 1.005,
+    "bid_depth": 6100950.199739834,
+    "ask_depth": 5000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.12100000000000001
+  },
+  {
+    "event_id": 22,
+    "mid_price": 1.005,
+    "bid_depth": 6100950.199739834,
+    "ask_depth": 5000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.122
+  },
+  {
+    "event_id": 23,
+    "mid_price": 1.005,
+    "bid_depth": 6100950.199739834,
+    "ask_depth": 5000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.123
+  },
+  {
+    "event_id": 24,
+    "mid_price": 1.005,
+    "bid_depth": 6100950.199739834,
+    "ask_depth": 5000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.124
+  },
+  {
+    "event_id": 25,
+    "mid_price": 1.005,
+    "bid_depth": 6100950.199739834,
+    "ask_depth": 5000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.125
+  },
+  {
+    "event_id": 26,
+    "mid_price": 1.005,
+    "bid_depth": 6262959.7017372325,
+    "ask_depth": 5100000.0,
+    "regime": "Stable",
+    "lambda": 0.126
+  },
+  {
+    "event_id": 27,
+    "mid_price": 1.005,
+    "bid_depth": 6426589.2987546045,
+    "ask_depth": 5200000.0,
+    "regime": "Stable",
+    "lambda": 0.127
+  },
+  {
+    "event_id": 28,
+    "mid_price": 1.005,
+    "bid_depth": 6591855.191742151,
+    "ask_depth": 5300000.0,
+    "regime": "Stable",
+    "lambda": 0.128
+  },
+  {
+    "event_id": 29,
+    "mid_price": 1.005,
+    "bid_depth": 6758773.743659573,
+    "ask_depth": 5400000.0,
+    "regime": "Stable",
+    "lambda": 0.129
+  },
+  {
+    "event_id": 30,
+    "mid_price": 1.005,
+    "bid_depth": 6927361.481096168,
+    "ask_depth": 5500000.0,
+    "regime": "Stable",
+    "lambda": 0.13
+  },
+  {
+    "event_id": 31,
+    "mid_price": 1.005,
+    "bid_depth": 7097635.095907129,
+    "ask_depth": 5600000.0,
+    "regime": "Stable",
+    "lambda": 0.131
+  },
+  {
+    "event_id": 32,
+    "mid_price": 1.005,
+    "bid_depth": 7269611.4468662,
+    "ask_depth": 5700000.0,
+    "regime": "Stable",
+    "lambda": 0.132
+  },
+  {
+    "event_id": 33,
+    "mid_price": 1.005,
+    "bid_depth": 7443307.561334862,
+    "ask_depth": 5800000.0,
+    "regime": "Stable",
+    "lambda": 0.133
+  },
+  {
+    "event_id": 34,
+    "mid_price": 1.005,
+    "bid_depth": 7618740.636948211,
+    "ask_depth": 5900000.0,
+    "regime": "Stable",
+    "lambda": 0.134
+  },
+  {
+    "event_id": 35,
+    "mid_price": 1.005,
+    "bid_depth": 7795928.043317693,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.135
+  },
+  {
+    "event_id": 36,
+    "mid_price": 1.0086,
+    "bid_depth": 7873887.32375087,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.136
+  },
+  {
+    "event_id": 37,
+    "mid_price": 1.0123,
+    "bid_depth": 7952626.196988379,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.137
+  },
+  {
+    "event_id": 38,
+    "mid_price": 1.0161,
+    "bid_depth": 8032152.458958263,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.138
+  },
+  {
+    "event_id": 39,
+    "mid_price": 1.02,
+    "bid_depth": 8112473.983547845,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.139
+  },
+  {
+    "event_id": 40,
+    "mid_price": 1.024,
+    "bid_depth": 8193598.723383323,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.14
+  },
+  {
+    "event_id": 41,
+    "mid_price": 1.0281,
+    "bid_depth": 8275534.710617157,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.14100000000000001
+  },
+  {
+    "event_id": 42,
+    "mid_price": 1.0323,
+    "bid_depth": 8358290.0577233285,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.14200000000000002
+  },
+  {
+    "event_id": 43,
+    "mid_price": 1.0366,
+    "bid_depth": 8441872.958300563,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.14300000000000002
+  },
+  {
+    "event_id": 44,
+    "mid_price": 1.041,
+    "bid_depth": 8526291.687883569,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.14400000000000002
+  },
+  {
+    "event_id": 45,
+    "mid_price": 1.0454999999999999,
+    "bid_depth": 8611554.604762405,
+    "ask_depth": 6000000.0,
+    "regime": "Stable",
+    "lambda": 0.14500000000000002
+  },
+  {
+    "event_id": 46,
+    "mid_price": 1.0465454999999997,
+    "bid_depth": 8611554.604762405,
+    "ask_depth": 6000000.0,
+    "regime": "Expansion",
+    "lambda": 0.14600000000000002
+  },
+  {
+    "event_id": 47,
+    "mid_price": 1.0486385909999998,
+    "bid_depth": 8611554.604762405,
+    "ask_depth": 6000000.0,
+    "regime": "Expansion",
+    "lambda": 0.14700000000000002
+  },
+  {
+    "event_id": 48,
+    "mid_price": 1.0517845067729996,
+    "bid_depth": 8611554.604762405,
+    "ask_depth": 6000000.0,
+    "regime": "Expansion",
+    "lambda": 0.14800000000000002
+  },
+  {
+    "event_id": 49,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 8611554.604762405,
+    "ask_depth": 6000000.0,
+    "regime": "Expansion",
+    "lambda": 0.14900000000000002
+  },
+  {
+    "event_id": 50,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 8611554.604762405,
+    "ask_depth": 6000000.0,
+    "regime": "Expansion",
+    "lambda": 0.15000000000000002
+  },
+  {
+    "event_id": 51,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 7319821.414048044,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.15100000000000002
+  },
+  {
+    "event_id": 52,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 6221848.201940837,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.15200000000000002
+  },
+  {
+    "event_id": 53,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 5288570.971649712,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.153
+  },
+  {
+    "event_id": 54,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 4495285.325902255,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.154
+  },
+  {
+    "event_id": 55,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 3820992.527016917,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.155
+  },
+  {
+    "event_id": 56,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 3247843.6479643793,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.156
+  },
+  {
+    "event_id": 57,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 2760667.1007697224,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.157
+  },
+  {
+    "event_id": 58,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 2346567.035654264,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.158
+  },
+  {
+    "event_id": 59,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 1994581.9803061243,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.159
+  },
+  {
+    "event_id": 60,
+    "mid_price": 1.0559916448000917,
+    "bid_depth": 1695394.6832602057,
+    "ask_depth": 6000000.0,
+    "regime": "Adversarial",
+    "lambda": 0.16
+  },
+  {
+    "event_id": 61,
+    "mid_price": 1.0659916448000917,
+    "bid_depth": 1695394.6832602057,
+    "ask_depth": 4200000.0,
+    "regime": "Adversarial",
+    "lambda": 0.161
+  },
+  {
+    "event_id": 62,
+    "mid_price": 1.0759916448000917,
+    "bid_depth": 1695394.6832602057,
+    "ask_depth": 2940000.0,
+    "regime": "Adversarial",
+    "lambda": 0.162
+  },
+  {
+    "event_id": 63,
+    "mid_price": 1.0859916448000917,
+    "bid_depth": 1695394.6832602057,
+    "ask_depth": 2057999.9999999998,
+    "regime": "Adversarial",
+    "lambda": 0.163
+  },
+  {
+    "event_id": 64,
+    "mid_price": 1.0959916448000917,
+    "bid_depth": 1695394.6832602057,
+    "ask_depth": 1440599.9999999998,
+    "regime": "Adversarial",
+    "lambda": 0.164
+  },
+  {
+    "event_id": 65,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 1695394.6832602057,
+    "ask_depth": 1008419.9999999998,
+    "regime": "Adversarial",
+    "lambda": 0.165
+  },
+  {
+    "event_id": 66,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 1525855.2149341851,
+    "ask_depth": 907577.9999999998,
+    "regime": "Adversarial",
+    "lambda": 0.166
+  },
+  {
+    "event_id": 67,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 1373269.6934407668,
+    "ask_depth": 816820.1999999998,
+    "regime": "Adversarial",
+    "lambda": 0.167
+  },
+  {
+    "event_id": 68,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 1235942.72409669,
+    "ask_depth": 735138.1799999998,
+    "regime": "Adversarial",
+    "lambda": 0.168
+  },
+  {
+    "event_id": 69,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 1112348.4516870212,
+    "ask_depth": 661624.3619999998,
+    "regime": "Adversarial",
+    "lambda": 0.169
+  },
+  {
+    "event_id": 70,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 1001113.6065183191,
+    "ask_depth": 595461.9257999999,
+    "regime": "Adversarial",
+    "lambda": 0.17
+  },
+  {
+    "event_id": 71,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 901002.2458664873,
+    "ask_depth": 535915.7332199999,
+    "regime": "Adversarial",
+    "lambda": 0.171
+  },
+  {
+    "event_id": 72,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 810902.0212798385,
+    "ask_depth": 482324.15989799995,
+    "regime": "Adversarial",
+    "lambda": 0.17200000000000001
+  },
+  {
+    "event_id": 73,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 729811.8191518547,
+    "ask_depth": 434091.74390819995,
+    "regime": "Adversarial",
+    "lambda": 0.173
+  },
+  {
+    "event_id": 74,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 656830.6372366693,
+    "ask_depth": 390682.56951738,
+    "regime": "Adversarial",
+    "lambda": 0.174
+  },
+  {
+    "event_id": 75,
+    "mid_price": 1.1059916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Adversarial",
+    "lambda": 0.175
+  },
+  {
+    "event_id": 76,
+    "mid_price": 1.1079916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.176
+  },
+  {
+    "event_id": 77,
+    "mid_price": 1.1099916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.177
+  },
+  {
+    "event_id": 78,
+    "mid_price": 1.1119916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.178
+  },
+  {
+    "event_id": 79,
+    "mid_price": 1.1139916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.179
+  },
+  {
+    "event_id": 80,
+    "mid_price": 1.1159916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.18
+  },
+  {
+    "event_id": 81,
+    "mid_price": 1.1179916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.181
+  },
+  {
+    "event_id": 82,
+    "mid_price": 1.1199916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.182
+  },
+  {
+    "event_id": 83,
+    "mid_price": 1.1219916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.183
+  },
+  {
+    "event_id": 84,
+    "mid_price": 1.1239916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.184
+  },
+  {
+    "event_id": 85,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 591147.5735130024,
+    "ask_depth": 351614.312565642,
+    "regime": "Expansion",
+    "lambda": 0.185
+  },
+  {
+    "event_id": 86,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 597059.0492481324,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.186
+  },
+  {
+    "event_id": 87,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 603029.6397406138,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.187
+  },
+  {
+    "event_id": 88,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 609059.9361380199,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.188
+  },
+  {
+    "event_id": 89,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 615150.5354994001,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.189
+  },
+  {
+    "event_id": 90,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 621302.0408543941,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.19
+  },
+  {
+    "event_id": 91,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 627515.0612629381,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.191
+  },
+  {
+    "event_id": 92,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 633790.2118755674,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.192
+  },
+  {
+    "event_id": 93,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 640128.1139943232,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.193
+  },
+  {
+    "event_id": 94,
+    "mid_price": 1.1259916448000917,
+    "bid_depth": 646529.3951342665,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.194
+  },
+  {
+    "event_id": 95,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 652994.6890856092,
+    "ask_depth": 351614.312565642,
+    "regime": "Accumulation",
+    "lambda": 0.195
+  },
+  {
+    "event_id": 96,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 659524.6359764653,
+    "ask_depth": 351614.312565642,
+    "regime": "Stable",
+    "lambda": 0.196
+  },
+  {
+    "event_id": 97,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 666119.88233623,
+    "ask_depth": 351614.312565642,
+    "regime": "Stable",
+    "lambda": 0.197
+  },
+  {
+    "event_id": 98,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 672781.0811595924,
+    "ask_depth": 351614.312565642,
+    "regime": "Stable",
+    "lambda": 0.198
+  },
+  {
+    "event_id": 99,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 679508.8919711882,
+    "ask_depth": 351614.312565642,
+    "regime": "Stable",
+    "lambda": 0.199
+  },
+  {
+    "event_id": 100,
+    "mid_price": 1.1309916448000916,
+    "bid_depth": 686303.9808909001,
+    "ask_depth": 351614.312565642,
+    "regime": "Stable",
+    "lambda": 0.2
+  }
+]

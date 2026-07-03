@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "engine": "helix_engine",
+  "modules": [
+    {
+      "id": "HELIX-01",
+      "name": "matching_grid",
+      "description": "Deterministic MIRRA order book matching grid",
+      "artifact": "helix_engine/src/matching_grid.rs"
+    },
+    {
+      "id": "HELIX-02",
+      "name": "intent_resolver",
+      "description": "ExecutionIntent resolution for commerce and capital flows",
+      "artifact": "helix_engine/src/intent_resolver.rs"
+    },
+    {
+      "id": "HELIX-03",
+      "name": "net_settlement",
+      "description": "Net settlement legs between parties",
+      "artifact": "helix_engine/src/net_settlement.rs"
+    },
+    {
+      "id": "HELIX-04",
+      "name": "synthetic_pairs",
+      "description": "Synthetic pair registry scaffold",
+      "artifact": "helix_engine/src/synthetic_pairs.rs",
+      "scaffold": true
+    },
+    {
+      "id": "HELIX-05",
+      "name": "arb_mesh",
+      "description": "Cross-venue arbitrage mesh via arbitrage_core spread detection",
+      "artifact": "helix_engine/src/arb_mesh.rs"
+    },
+    {
+      "id": "HELIX-06",
+      "name": "liquidity_graph",
+      "description": "Liquidity routing graph for capital paths",
+      "artifact": "helix_engine/src/liquidity_graph.rs"
+    },
+    {
+      "id": "HELIX-07",
+      "name": "encrypted_tunnels",
+      "description": "Encrypted tunnel metadata registry scaffold",
+      "artifact": "helix_engine/src/encrypted_tunnels.rs",
+      "scaffold": true
+    },
+    {
+      "id": "HELIX-08",
+      "name": "predictive_oracle",
+      "description": "Predictive oracle hook scaffold",
+      "artifact": "helix_engine/src/predictive_oracle.rs",
+      "scaffold": true
+    },
+    {
+      "id": "HELIX-09",
+      "name": "imm_core",
+      "description": "IMM spread core with shadow persistence",
+      "artifact": "helix_engine/src/imm_core.rs"
+    },
+    {
+      "id": "HELIX-10",
+      "name": "kernel",
+      "description": "Continuous HELIX kernel tick loop",
+      "artifact": "helix_engine/src/kernel.rs",
+      "binary": "helixd"
+    }
+  ],
+  "shadow_dir": "var/helix",
+  "substrate_links": [
+    "state_manifold",
+    "arbitrage_core",
+    "quant_stack",
+    "mirra_dark_pool",
+    "economic_core",
+    "deterministic_committer"
+  ],
+  "sovereign_cross_links": [
+    "SP-276",
+    "SP-561",
+    "MSA-051"
+  ],
+  "verify_script": "scripts/audit/verify_helix_components.sh"
+}

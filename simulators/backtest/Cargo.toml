@@ -1,0 +1,12 @@
+[package]
+name = "backtest_simulator"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+quant_stack = { path = "../../quant_stack" }
+clrty-substrate = { path = "../../CLRTY_SUBSTRATE" }
+serde = { version = "1", features = ["derive"] }

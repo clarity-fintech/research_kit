@@ -1,0 +1,85 @@
+{
+  "updated_at": 1781911343,
+  "accounts": {
+    "0xINST": {
+      "active_skill": null,
+      "halted": false,
+      "last_result": {
+        "skill_id": "entropy-heartbeat-check",
+        "status": "heartbeat_ok",
+        "executed": false,
+        "scaffold": false,
+        "message": "lambda=0.0000 entropy=0.0100 threshold=0.9200 lanes_locked=false",
+        "metrics": {
+          "capital": 10000000,
+          "entropy_pulse": 0.01,
+          "halt_threshold": 0.92,
+          "lambda": 0.0,
+          "lanes_locked": false
+        },
+        "evidence": {
+          "black_swan_trigger": false,
+          "event_type": "LambdaPressure",
+          "substrate": [
+            "entropy_bus",
+            "panic_stabilizer",
+            "capital_flight_guard"
+          ]
+        }
+      }
+    }
+  },
+  "ip_usage": {},
+  "skills": {
+    "attestation-verify": {
+      "last_status": "failed",
+      "last_run_at": 1781911343,
+      "scaffold": false,
+      "metrics": {
+        "attestation_count": 0,
+        "capital": 10000000,
+        "fatf_travel_rule": "kernel_enforced",
+        "kyc_tier": 3,
+        "wallet_valid": false
+      }
+    },
+    "topological-state-rebalance": {
+      "last_status": "idle",
+      "last_run_at": 0,
+      "scaffold": true,
+      "metrics": {
+        "current_set": null,
+        "entropy": null,
+        "target_set": null
+      }
+    },
+    "entropy-heartbeat-check": {
+      "last_status": "heartbeat_ok",
+      "last_run_at": 1781911343,
+      "scaffold": false,
+      "metrics": {
+        "capital": 10000000,
+        "entropy_pulse": 0.01,
+        "halt_threshold": 0.92,
+        "lambda": 0.0,
+        "lanes_locked": false
+      }
+    },
+    "metric-collapse-arbitrage": {
+      "last_status": "skipped_edge",
+      "last_run_at": 1781911343,
+      "scaffold": false,
+      "metrics": {
+        "capital": 10000000,
+        "collapse_distance": 0.010000000000000007,
+        "fee_cost_usd": 5000.0,
+        "latency_cost_usd": 2000.0,
+        "min_edge_usd": 2000.0,
+        "net_edge_usd": -6995.0,
+        "optimization_target": 0.99,
+        "risk_mode": "standard",
+        "spread_edge_usd": 5.0000000000001155
+      }
+    }
+  }
+}

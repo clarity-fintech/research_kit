@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-07-03T19:00:41.182431+00:00",
+  "sources": [
+    {
+      "source": "docs/investor/INVESTOR_DATA_ROOM_INDEX.md",
+      "destination": "docs/indexes/INVESTOR_DATA_ROOM_INDEX.md"
+    },
+    {
+      "source": "docs/investor/FULL_PROJECT_MANIFEST.md",
+      "destination": "docs/indexes/FULL_PROJECT_MANIFEST.md"
+    },
+    {
+      "source": "docs/architecture/REPO_MAP.md",
+      "destination": "docs/indexes/REPO_MAP.md"
+    },
+    {
+      "source": "docs/master_blueprint.md",
+      "destination": "docs/protocol-architecture/master_blueprint.md"
+    },
+    {
+      "source": "docs/whitepaper.md",
+      "destination": "docs/protocol-architecture/whitepaper.md"
+    },
+    {
+      "source": "docs/protocol",
+      "destination": "docs/protocol-architecture/protocol"
+    },
+    {
+      "source": "docs/architecture",
+      "destination": "docs/protocol-architecture/architecture"
+    },
+    {
+      "source": "docs/chain",
+      "destination": "docs/protocol-architecture/chain"
+    },
+    {
+      "source": "docs/security",
+      "destination": "docs/protocol-architecture/security"
+    },
+    {
+      "source": "docs/tokenomics",
+      "destination": "docs/protocol-architecture/tokenomics"
+    },
+    {
+      "source": "docs/investor/technical_due_diligence.md",
+      "destination": "docs/investor-research/technical_due_diligence.md"
+    },
+    {
+      "source": "docs/investor/tokenomics_model.md",
+      "destination": "docs/investor-research/tokenomics_model.md"
+    },
+    {
+      "source": "docs/investor/helix_engine.md",
+      "destination": "docs/investor-research/helix_engine.md"
+    },
+    {
+      "source": "docs/investor/helix_engine_architecture.md",
+      "destination": "docs/investor-research/helix_engine_architecture.md"
+    },
+    {
+      "source": "docs/investor/quantum_skills_trading_suite.md",
+      "destination": "docs/investor-research/quantum_skills_trading_suite.md"
+    },
+    {
+      "source": "docs/investor/performance_roi_tracking_template.md",
+      "destination": "docs/investor-research/performance_roi_tracking_template.md"
+    },
+    {
+      "source": "docs/simulation",
+      "destination": "docs/simulation-arbitrage/simulation"
+    },
+    {
+      "source": "docs/arbitrage",
+      "destination": "docs/simulation-arbitrage/arbitrage"
+    },
+    {
+      "source": "docs/diagrams/blueprints",
+      "destination": "docs/simulation-arbitrage/diagrams/blueprints"
+    },
+    {
+      "source": "docs/diagrams/rendered/manifest.json",
+      "destination": "docs/simulation-arbitrage/diagrams/rendered_manifest.json"
+    },
+    {
+      "source": "simulators/state_space",
+      "destination": "simulators/state_space"
+    },
+    {
+      "source": "simulators/tokenomics",
+      "destination": "simulators/tokenomics"
+    },
+    {
+      "source": "simulators/tokenomics_engine",
+      "destination": "simulators/tokenomics_engine"
+    },
+    {
+      "source": "simulators/clrty_mirror",
+      "destination": "simulators/clrty_mirror"
+    },
+    {
+      "source": "simulators/backtest",
+      "destination": "simulators/backtest"
+    },
+    {
+      "source": "CLRTY_SUBSTRATE/boot/data_center_manifest.json",
+      "destination": "data/data_center_manifest.json"
+    },
+    {
+      "source": "var/metrics/data_center_snapshot.json",
+      "destination": "data/data_center_snapshot.json"
+    },
+    {
+      "source": "var/metrics/sheets_inputs.json",
+      "destination": "data/sheets_inputs.json"
+    },
+    {
+      "source": "frontend/investor/data",
+      "destination": "data/frontend_investor"
+    },
+    {
+      "source": "var/mlx/scores.jsonl",
+      "destination": "data/mlx_scores_sample.jsonl"
+    }
+  ]
+}

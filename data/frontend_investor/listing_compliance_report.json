@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-06-20T22:14:40Z",
+  "task": "38_exchange_listing_compliance",
+  "immutability_audit_pass": true,
+  "verify_immutability_pass": true,
+  "genesis_verify_pass": true,
+  "listing_config_test_pass": true,
+  "supply_checksum_test_pass": true,
+  "metadata_crosscheck_pass": true,
+  "scorecard_doc": "docs/infrastructure/listing_readiness_scorecard.md",
+  "deployment_runbook": "docs/infrastructure/token_deployment_runbook.md",
+  "symbol": "CLRTY",
+  "name": "CLARITY IA",
+  "supply_cap_clrtY": 16000000,
+  "decimals": 9,
+  "denom": "uclrty",
+  "chain_id": "clrty-1",
+  "mint_authority": null,
+  "freeze_authority": null,
+  "listing_config": {"version": 1, "supply_cap_clrtY": 16000000, "decimals": 9, "cex_float_at_tge": {"circulating_estimate_clrtY": 3200000, "locked_estimate_clrtY": 9000000, "notes": "Funded scenario M0 \u2014 ~64% locked at TGE"}, "scheduled_unlock_windows": ["day_180", "day_365"], "categories": [{"id": "private_seed_saft", "label": "Private seed / SAFT", "cliff_months": 6, "vest_months": 24, "allocation_clrtY": 2000000, "multiplier": 1.5, "transfer_restricted_until_tge_plus_cliff": true, "source": ["genesis_entropy.json:private_seed", "allocation_weights.rs:SeedGenesis"]}, {"id": "strategic_round", "label": "Strategic round", "cliff_months": 6, "vest_months": 24, "multiplier": 1.75, "usd_min_cents": 50000000, "transfer_restricted_until_tge_plus_cliff": true, "source": ["allocation_weights.rs:StrategicRound"]}, {"id": "hardware_node_partner", "label": "Hardware node partner", "cliff_months": 12, "vest_months": 36, "multiplier": 2.0, "compute_score_min": 80, "transfer_restricted_until_tge_plus_cliff": true, "source": ["allocation_weights.rs:HardwareNodePartner"]}, {"id": "team_vesting", "label": "Team vesting", "cliff_months": 12, "vest_months": 48, "allocation_clrtY": 1600000, "source": ["genesis_entropy.json:team_vesting"]}, {"id": "treasury_reserve", "label": "Treasury reserve", "allocation_clrtY": 800000, "governance_gated": true, "source": ["genesis_entropy.json:reserve"]}, {"id": "ecosystem_grants", "label": "Ecosystem grants", "allocation_clrtY": 3000000, "governance_gated": true, "source": ["genesis_entropy.json:ecosystem_grants"]}, {"id": "liquidity_tge", "label": "Liquidity pools (TGE deploy)", "allocation_clrtY": 4000000, "cex_tradable_at_tge": "partial_lp_tranches", "source": ["genesis_entropy.json:liquidity_pools"]}, {"id": "public_backlog", "label": "Public / backlog", "allocation_clrtY": 2000000, "tranche_by_tier": true, "source": ["genesis_entropy.json:public", "backlog tiers 0-4"]}, {"id": "staking_program", "label": "CEX staking program (separate from investor vesting)", "lockup_days": [30, 90, 365, 730], "source": ["token_staking_matrix.clrty", "FmaStakingVault.sol"]}]},
+  "forbidden_selectors_hex": [
+    "40c10f19",
+    "9bdc29fd",
+    "79cc6790",
+    "52747fdf",
+    "01324aee",
+    "8456cb59"
+  ],
+  "forbidden_selector_labels": [
+    "mint(address,uint256)",
+    "burn(address,uint256)",
+    "burnFrom(address,uint256)",
+    "blacklist(address)",
+    "setBlacklist(address,bool)",
+    "pause()"
+  ],
+  "contracts_tested": [
+    "CLRTY_SUBSTRATE/bridge_perimeter/fma/immutability_audit.rs",
+    "Phase3Audit.t.sol (when forge available)"
+  ],
+  "notes": "No admin mint/blacklist/pause surface in immutability audit patterns. L1 genesis mint_authority null. EVM mirrors deferred Phase 10."
+}

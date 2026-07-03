@@ -1,0 +1,2269 @@
+{
+  "version": 3,
+  "generated_from": [
+    "docs/simulation/CLRTY_Live_Market_Notion.md",
+    "docs/test/full_pretest_100.md",
+    "docs/security/MASS_SECURITY_ARCHITECTURE.md",
+    "docs/master_blueprint.md",
+    "docs/tokenomics/TOKENOMICS_LOCKED.md",
+    "docs/investor/",
+    "https://www.clarity-fintech.com/",
+    "CLRTY_SUBSTRATE/boot/pretest_manifest.json",
+    "CLRTY_SUBSTRATE/boot/settlement_config.json",
+    "CLRTY_SUBSTRATE/boot/security_layers_manifest.json",
+    "CLRTY_SUBSTRATE/boot/helix_manifest.json",
+    "var/launch/status_report.json",
+    "CLRTY_SUBSTRATE/boot/data_center_manifest.json",
+    "CLRTY_SUBSTRATE/boot/monetization_layers_manifest.json",
+    "docs/investor/performance_roi_tracking_template.md",
+    "docs/monetization/MONETIZATION_LAYERS.md",
+    "monetization-layers/products/stripe_portal.json"
+  ],
+  "allocation_cap": {
+    "total_supply_tokens": 16000000,
+    "total_supply_base_units": 16000000000000000,
+    "private_seed_cap_tokens": 2000000,
+    "public_bucket_tokens": 2000000,
+    "decimals": 9,
+    "mint_authority": null
+  },
+  "blueprint_compliance": {
+    "chain_id": "clrty-1",
+    "numeric_chain_id": 1202,
+    "denom": "uclrty",
+    "mint_authority": "null",
+    "domain": "clarity-fintech.com",
+    "sources": [
+      "docs/master_blueprint.md",
+      "docs/tokenomics/TOKENOMICS_LOCKED.md",
+      "CODE_FREEZE.md"
+    ]
+  },
+  "live_endpoints": {
+    "rest": "https://api.clarity-fintech.com",
+    "rpc": "https://rpc.clarity-fintech.com",
+    "tunnel_origin": "https://api-internal.clarity-fintech.com",
+    "labs_pages": "https://33a092b7.clrty-labs.pages.dev",
+    "labs_target": "https://labs.clarity-fintech.com",
+    "website": "https://www.clarity-fintech.com/"
+  },
+  "helix_modules": [
+    {
+      "id": "HELIX-01",
+      "detail": "Dark matching grid \u2014 MIRRA book port; private match before canonical commit.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-02",
+      "detail": "Intent resolver \u2014 commerce/capital/nano intents simulate routes before execution.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-03",
+      "detail": "Net settlement \u2014 opposing flows cancel; only net delta exported to committer.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-04",
+      "detail": "Synthetic pairs \u2014 virtual pair registry scaffold for internal derivatives.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-05",
+      "detail": "Latency arb mesh \u2014 spread scan via arbitrage_core producer loop extension.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-06",
+      "detail": "Liquidity graph \u2014 unified venue routing over AMM + book + perp scaffolds.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-07",
+      "detail": "Encrypted tunnels \u2014 AVR-gated path metadata scaffold (audit scope item).",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-08",
+      "detail": "Predictive oracle \u2014 liquidity stress / slippage forecast hook to FMA inference.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-09",
+      "detail": "IMM core \u2014 dynamic spread + inventory from quant_stack FMA book depth.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    },
+    {
+      "id": "HELIX-10",
+      "detail": "Continuous kernel \u2014 always-on helixd tick loop replacing 3-tick producer scaffold.",
+      "manifest": "CLRTY_SUBSTRATE/boot/helix_manifest.json"
+    }
+  ],
+  "notion_refs": {
+    "early_access": "https://app.notion.com/p/Early-Access-to-CLRITY-37f704760d24800298b3ede45d52ce4d",
+    "clrty_main": "https://app.notion.com/p/CLRTY-383704760d248039950eef8816181040",
+    "website": "https://www.clarity-fintech.com/",
+    "fallback_doc": "docs/simulation/CLRTY_Live_Market_Notion.md",
+    "data_center": "https://app.notion.com/p/VIS-CLARITY-PnL-391704760d24804db75ad141f9757285",
+    "vis_clarity_pnl": "https://app.notion.com/p/VIS-CLARITY-PnL-391704760d24804db75ad141f9757285",
+    "monetization_layers": "CLRTY_SUBSTRATE/boot/monetization_layers_manifest.json",
+    "stripe_portal": "monetization-layers/products/stripe_portal.json"
+  },
+  "categories": [
+    "Protocol",
+    "Tokenomics",
+    "Execution",
+    "Security",
+    "Launch",
+    "Investor Perks",
+    "Live Deployment"
+  ],
+  "modules": [
+    {
+      "id": "01",
+      "name": "Status HUD",
+      "quadrant": "Q1"
+    },
+    {
+      "id": "02",
+      "name": "Capital Flow",
+      "quadrant": "Q1"
+    },
+    {
+      "id": "03",
+      "name": "MIRRA OTC",
+      "quadrant": "Q2"
+    },
+    {
+      "id": "04",
+      "name": "Security Matrix",
+      "quadrant": "Q3"
+    },
+    {
+      "id": "05",
+      "name": "Governance",
+      "quadrant": "Q4"
+    },
+    {
+      "id": "06",
+      "name": "Asset Ledger",
+      "quadrant": "Q4"
+    },
+    {
+      "id": "07",
+      "name": "Infrastructure",
+      "quadrant": "Q1"
+    },
+    {
+      "id": "08",
+      "name": "Compliance",
+      "quadrant": "Q3"
+    },
+    {
+      "id": "09",
+      "name": "Investor Perks",
+      "quadrant": "Q2"
+    },
+    {
+      "id": "10",
+      "name": "Alert/Action",
+      "quadrant": "Q4"
+    }
+  ],
+  "helix_graph": [
+    {
+      "id": "HELIX-01",
+      "name": "matching_grid",
+      "zone": 3,
+      "doc": "docs/investor/helix_engine_architecture.md"
+    },
+    {
+      "id": "HELIX-02",
+      "name": "intent_resolver",
+      "zone": 3,
+      "doc": "docs/investor/helix_engine.md"
+    },
+    {
+      "id": "HELIX-03",
+      "name": "net_settlement",
+      "zone": 3,
+      "doc": "docs/protocol/helix_hidden_exchange_layer.md"
+    },
+    {
+      "id": "HELIX-04",
+      "name": "synthetic_pairs",
+      "zone": 3,
+      "scaffold": true
+    },
+    {
+      "id": "HELIX-05",
+      "name": "arb_mesh",
+      "zone": 3,
+      "substrate": "arbitrage_core"
+    },
+    {
+      "id": "HELIX-06",
+      "name": "liquidity_graph",
+      "zone": 3
+    },
+    {
+      "id": "HELIX-07",
+      "name": "encrypted_tunnels",
+      "zone": 3,
+      "scaffold": true
+    },
+    {
+      "id": "HELIX-08",
+      "name": "predictive_oracle",
+      "zone": 3,
+      "scaffold": true
+    },
+    {
+      "id": "HELIX-09",
+      "name": "imm_core",
+      "zone": 3
+    },
+    {
+      "id": "HELIX-10",
+      "name": "kernel",
+      "zone": 3,
+      "binary": "helixd",
+      "panel": "frontend/investor/treasury-dashboard.html#helixPanel"
+    }
+  ],
+  "count": 123,
+  "items": [
+    {
+      "id": 1,
+      "category": "Protocol",
+      "title": "sim block commit latency median",
+      "detail": "In-process sim-block commit median latency must stay under 1ms in release builds \u2014 core PoC throughput gate.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-001 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-001",
+      "related": [
+        2
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 1
+    },
+    {
+      "id": 2,
+      "category": "Protocol",
+      "title": "sim block commit p50 100 samples",
+      "detail": "P50 over 100 samples validates consistent block commit performance under sustained load.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-002 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-002",
+      "related": [
+        1,
+        3
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 2
+    },
+    {
+      "id": 3,
+      "category": "Protocol",
+      "title": "sim block commit p95",
+      "detail": "P95 tail latency bound prevents consensus stalls during burst traffic.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-003 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-003",
+      "related": [
+        2,
+        4
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 3
+    },
+    {
+      "id": 4,
+      "category": "Protocol",
+      "title": "sim block commit max",
+      "detail": "Max commit latency cap catches outlier stalls before mainnet.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-004 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-004",
+      "related": [
+        3,
+        5
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 4
+    },
+    {
+      "id": 5,
+      "category": "Protocol",
+      "title": "topology isolation gate 50ms",
+      "detail": "TOPOLOGY_ISOLATION_LATENCY_MS == 50 \u2014 atmospheric_sync enforces 50ms topology isolation gate.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-005 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-005",
+      "related": [
+        4,
+        6
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 5
+    },
+    {
+      "id": 6,
+      "category": "Protocol",
+      "title": "consensus sync geo node 1",
+      "detail": "Geo-distributed consensus sync node 1 \u2014 multi-region PoC validator alignment.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-006 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-006",
+      "related": [
+        5,
+        7
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 6
+    },
+    {
+      "id": 7,
+      "category": "Protocol",
+      "title": "consensus sync geo node 2",
+      "detail": "Geo-distributed consensus sync node 2 \u2014 l1_concurrency stress path.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-007 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-007",
+      "related": [
+        6,
+        8
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 7
+    },
+    {
+      "id": 8,
+      "category": "Protocol",
+      "title": "consensus sync geo node 3",
+      "detail": "Geo-distributed consensus sync node 3 \u2014 validator set hardening pre-TGE.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-008 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-008",
+      "related": [
+        7,
+        9
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 8
+    },
+    {
+      "id": 9,
+      "category": "Protocol",
+      "title": "consensus sync geo node 4",
+      "detail": "Geo-distributed consensus sync node 4 \u2014 cross-region block propagation.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-009 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-009",
+      "related": [
+        8,
+        10
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 9
+    },
+    {
+      "id": 10,
+      "category": "Protocol",
+      "title": "consensus sync geo node 5",
+      "detail": "Geo-distributed consensus sync node 5 \u2014 final geo sync gate in Zone I.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-010 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-010",
+      "related": [
+        9,
+        11
+      ],
+      "module": "01",
+      "module_name": "Status HUD",
+      "quadrant": "Q1",
+      "funnel_index": 10
+    },
+    {
+      "id": 11,
+      "category": "Protocol",
+      "title": "state root chain hop 1",
+      "detail": "State root chain hop 1 \u2014 state_manifold commits to state_root.bin each pulse.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-011 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-011",
+      "related": [
+        10,
+        12
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 11
+    },
+    {
+      "id": 12,
+      "category": "Protocol",
+      "title": "state root chain hop 2",
+      "detail": "State root chain hop 2 \u2014 Merkle continuity across block boundaries.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-012 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-012",
+      "related": [
+        11,
+        13
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 12
+    },
+    {
+      "id": 13,
+      "category": "Protocol",
+      "title": "state root chain hop 3",
+      "detail": "State root chain hop 3 \u2014 WORM audit trail linkage.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-013 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-013",
+      "related": [
+        12,
+        14
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 13
+    },
+    {
+      "id": 14,
+      "category": "Protocol",
+      "title": "state root chain hop 4",
+      "detail": "State root chain hop 4 \u2014 genesis_seal anchor verification.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-014 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-014",
+      "related": [
+        13,
+        15
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 14
+    },
+    {
+      "id": 15,
+      "category": "Protocol",
+      "title": "state root chain hop 5",
+      "detail": "State root chain hop 5 \u2014 full chain hop sequence complete.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-015 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-015",
+      "related": [
+        14,
+        16
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 15
+    },
+    {
+      "id": 16,
+      "category": "Protocol",
+      "title": "entropy bus ingestion 1",
+      "detail": "EntropyBus \u03bb ingestion cycle 1 \u2014 GlobalManifoldState (\u03bb, H, E, R) heartbeat begins.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-016 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-016",
+      "related": [
+        15,
+        17
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 16
+    },
+    {
+      "id": 17,
+      "category": "Protocol",
+      "title": "entropy bus ingestion 2",
+      "detail": "EntropyBus ingestion 2 \u2014 flat price \u2260 flat network; \u03bb drifts every event.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-017 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-017",
+      "related": [
+        16,
+        18
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 17
+    },
+    {
+      "id": 18,
+      "category": "Protocol",
+      "title": "entropy bus ingestion 3",
+      "detail": "EntropyBus ingestion 3 \u2014 PoC argmax(E \u2212 \u03bbR) consumes manifold pressure.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-018 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-018",
+      "related": [
+        17,
+        19
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 18
+    },
+    {
+      "id": 19,
+      "category": "Protocol",
+      "title": "entropy bus ingestion 4",
+      "detail": "EntropyBus ingestion 4 \u2014 fee flywheel coupling to burn schedule.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-019 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-019",
+      "related": [
+        18,
+        20
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 19
+    },
+    {
+      "id": 20,
+      "category": "Protocol",
+      "title": "entropy bus ingestion 5",
+      "detail": "EntropyBus ingestion 5 \u2014 Zone I entropy pipeline verified.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-020 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-020",
+      "related": [
+        19,
+        21
+      ],
+      "module": "02",
+      "module_name": "Capital Flow",
+      "quadrant": "Q1",
+      "funnel_index": 20
+    },
+    {
+      "id": 21,
+      "category": "Protocol",
+      "title": "nvm persistence cycle 1",
+      "detail": "NVM persistence cycle 1 \u2014 transaction_log.wrm append-only durability.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-021 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-021",
+      "related": [
+        20,
+        22
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 21
+    },
+    {
+      "id": 22,
+      "category": "Protocol",
+      "title": "nvm persistence cycle 2",
+      "detail": "NVM persistence cycle 2 \u2014 crash recovery without state drift.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-022 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-022",
+      "related": [
+        21,
+        23
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 22
+    },
+    {
+      "id": 23,
+      "category": "Protocol",
+      "title": "nvm persistence cycle 3",
+      "detail": "NVM persistence cycle 3 \u2014 worm_audit integrity checks.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-023 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-023",
+      "related": [
+        22,
+        24
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 23
+    },
+    {
+      "id": 24,
+      "category": "Protocol",
+      "title": "nvm persistence cycle 4",
+      "detail": "NVM persistence cycle 4 \u2014 persistence under concurrent commits.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-024 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-024",
+      "related": [
+        23,
+        25
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 24
+    },
+    {
+      "id": 25,
+      "category": "Protocol",
+      "title": "nvm persistence cycle 5",
+      "detail": "NVM persistence cycle 5 \u2014 Zone I storage gate complete.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-025 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-025",
+      "related": [
+        24,
+        26
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 25
+    },
+    {
+      "id": 26,
+      "category": "Tokenomics",
+      "title": "genesis no mint authority",
+      "detail": "mint_authority: null in genesis_entropy.json \u2014 16M cap is permanent; no post-genesis mint.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-026 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-026",
+      "related": [
+        25,
+        27
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 26
+    },
+    {
+      "id": 27,
+      "category": "Tokenomics",
+      "title": "genesis supply cap",
+      "detail": "Total supply locked at 16,000,000 CLRTY; supply_checksum.rs enforces immutability.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-027 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-027",
+      "related": [
+        26,
+        28
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 27
+    },
+    {
+      "id": 28,
+      "category": "Tokenomics",
+      "title": "genesis hardening",
+      "detail": "genesis_hardening.rs seals genesis parameters before TGE \u2014 one-time mint only.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-028 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-028",
+      "related": [
+        27,
+        29
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 28
+    },
+    {
+      "id": 29,
+      "category": "Tokenomics",
+      "title": "tokenomics manifest checksum",
+      "detail": "tokenomics_manifest.json checksum cross-validates against TOKENOMICS_LOCKED.md.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-029 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-029",
+      "related": [
+        28,
+        30
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 29
+    },
+    {
+      "id": 30,
+      "category": "Tokenomics",
+      "title": "phase4 mint schedule compliance",
+      "detail": "Phase 4 tokenization schedule compliance \u2014 no inflationary emissions path.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-030 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-030",
+      "related": [
+        29,
+        31
+      ],
+      "module": "03",
+      "module_name": "MIRRA OTC",
+      "quadrant": "Q2",
+      "funnel_index": 30
+    },
+    {
+      "id": 31,
+      "category": "Tokenomics",
+      "title": "vesting cliff month 6",
+      "detail": "6-month cliff on Seed/Strategic SAFT tiers \u2014 ~Day 180 first unlock window.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-031 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-031",
+      "related": [
+        30,
+        32
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 31
+    },
+    {
+      "id": 32,
+      "category": "Tokenomics",
+      "title": "vesting linear month 12",
+      "detail": "12-month linear vest cadence for team and strategic allocations.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-032 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-032",
+      "related": [
+        31,
+        33
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 32
+    },
+    {
+      "id": 33,
+      "category": "Tokenomics",
+      "title": "vesting linear month 18",
+      "detail": "18-month vest continuation \u2014 scheduled supply events absorbed by MM + treasury.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-033 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-033",
+      "related": [
+        32,
+        34
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 33
+    },
+    {
+      "id": 34,
+      "category": "Tokenomics",
+      "title": "vesting linear month 24",
+      "detail": "24-month SAFT vest tail \u2014 escrowed register rights, not instant float.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-034 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-034",
+      "related": [
+        33,
+        35
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 34
+    },
+    {
+      "id": 35,
+      "category": "Tokenomics",
+      "title": "vesting saft enforcement",
+      "detail": "ecosystem_vesting_escrow enforces SAFT lockups on-chain.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-035 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-035",
+      "related": [
+        34,
+        36
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 35
+    },
+    {
+      "id": 36,
+      "category": "Tokenomics",
+      "title": "double spend supply cap 1",
+      "detail": "Double-spend gate 1 \u2014 supply cap invariant under adversarial transfer attempts.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-036 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-036",
+      "related": [
+        35,
+        37
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 36
+    },
+    {
+      "id": 37,
+      "category": "Tokenomics",
+      "title": "double spend supply cap 2",
+      "detail": "Double-spend gate 2 \u2014 ledger integrity at TGE mock distribution.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-037 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-037",
+      "related": [
+        36,
+        38
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 37
+    },
+    {
+      "id": 38,
+      "category": "Tokenomics",
+      "title": "double spend supply cap 3",
+      "detail": "Double-spend gate 3 \u2014 bucket sum invariant 16M.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-038 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-038",
+      "related": [
+        37,
+        39
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 38
+    },
+    {
+      "id": 39,
+      "category": "Tokenomics",
+      "title": "double spend supply cap 4",
+      "detail": "Double-spend gate 4 \u2014 cross-bucket transfer bounds.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-039 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-039",
+      "related": [
+        38,
+        40
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 39
+    },
+    {
+      "id": 40,
+      "category": "Tokenomics",
+      "title": "double spend supply cap 5",
+      "detail": "Double-spend gate 5 \u2014 full double-spend battery pass.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-040 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-040",
+      "related": [
+        39,
+        41
+      ],
+      "module": "04",
+      "module_name": "Security Matrix",
+      "quadrant": "Q3",
+      "funnel_index": 40
+    },
+    {
+      "id": 41,
+      "category": "Tokenomics",
+      "title": "treasury bucket integrity",
+      "detail": "Treasury bucket 4M CLRTY (25%) \u2014 governance-gated venous reserve.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-041 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-041",
+      "related": [
+        40,
+        42
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 41
+    },
+    {
+      "id": 42,
+      "category": "Tokenomics",
+      "title": "validator bucket integrity",
+      "detail": "Validators bucket 3M CLRTY (18.75%) \u2014 PoC security stake bond.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-042 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-042",
+      "related": [
+        41,
+        43
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 42
+    },
+    {
+      "id": 43,
+      "category": "Tokenomics",
+      "title": "liquidity bucket integrity",
+      "detail": "Liquidity bucket 4M CLRTY (25%) \u2014 MIRRA + AMM TGE seed.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-043 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-043",
+      "related": [
+        42,
+        44
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 43
+    },
+    {
+      "id": 44,
+      "category": "Tokenomics",
+      "title": "listing config genesis match",
+      "detail": "mainnet_listing_config.json reconciles to genesis_entropy allocations.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-044 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-044",
+      "related": [
+        43,
+        45
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 44
+    },
+    {
+      "id": 45,
+      "category": "Tokenomics",
+      "title": "sub allocation lockup audit",
+      "detail": "Sub-allocation lockup audit \u2014 team 12/48, seed 6/24, public tier 0\u20134.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-045 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-045",
+      "related": [
+        44,
+        46
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 45
+    },
+    {
+      "id": 46,
+      "category": "Tokenomics",
+      "title": "tge mock distribution 1",
+      "detail": "TGE mock distribution 1 \u2014 ~3.2M circulating at M0 funded scenario.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-046 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-046",
+      "related": [
+        45,
+        47
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 46
+    },
+    {
+      "id": 47,
+      "category": "Tokenomics",
+      "title": "tge mock distribution 2",
+      "detail": "TGE mock distribution 2 \u2014 ~2.4M staked at genesis.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-047 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-047",
+      "related": [
+        46,
+        48
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 47
+    },
+    {
+      "id": 48,
+      "category": "Tokenomics",
+      "title": "tge mock distribution 3",
+      "detail": "TGE mock distribution 3 \u2014 ~9M locked in vesting escrow.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-048 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-048",
+      "related": [
+        47,
+        49
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 48
+    },
+    {
+      "id": 49,
+      "category": "Tokenomics",
+      "title": "tge mock distribution 4",
+      "detail": "TGE mock distribution 4 \u2014 0 burned at Day 0.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-049 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-049",
+      "related": [
+        48,
+        50
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 49
+    },
+    {
+      "id": 50,
+      "category": "Tokenomics",
+      "title": "tge mock distribution 5",
+      "detail": "TGE mock distribution 5 \u2014 backlog tranches, not float dump.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-050 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-050",
+      "related": [
+        49,
+        51
+      ],
+      "module": "05",
+      "module_name": "Governance",
+      "quadrant": "Q4",
+      "funnel_index": 50
+    },
+    {
+      "id": 51,
+      "category": "Execution",
+      "title": "mirra block fragmentation 1",
+      "detail": "fragment_block_order splits block orders into micro-strategy dark-pool slices (scaffold).",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-051 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-051",
+      "related": [
+        50,
+        52
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 51
+    },
+    {
+      "id": 52,
+      "category": "Execution",
+      "title": "mirra block fragmentation 2",
+      "detail": "Dark pool fragmentation 2 \u2014 per-slice routing in economic_core.rs.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-052 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-052",
+      "related": [
+        51,
+        53
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 52
+    },
+    {
+      "id": 53,
+      "category": "Execution",
+      "title": "mirra block fragmentation 3",
+      "detail": "MIRRA fragmentation 3 \u2014 production matching engine gap documented.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-053 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-053",
+      "related": [
+        52,
+        54
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 53
+    },
+    {
+      "id": 54,
+      "category": "Execution",
+      "title": "mirra block fragmentation 4",
+      "detail": "MIRRA fragmentation 4 \u2014 anti-gaming path partial.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-054 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-054",
+      "related": [
+        53,
+        55
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 54
+    },
+    {
+      "id": 55,
+      "category": "Execution",
+      "title": "mirra block fragmentation 5",
+      "detail": "MIRRA fragmentation 5 \u2014 Zone III scaffold accepted for launch.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-055 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-055",
+      "related": [
+        54,
+        56
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 55
+    },
+    {
+      "id": 56,
+      "category": "Execution",
+      "title": "ai rebalance volatility 1",
+      "detail": "Volatility gate rebalance 1 \u2014 slippage gate under stress.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-056 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-056",
+      "related": [
+        55,
+        57
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 56
+    },
+    {
+      "id": 57,
+      "category": "Execution",
+      "title": "ai rebalance volatility 2",
+      "detail": "Volatility gate 2 \u2014 toxicity filter bounds adverse flow.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-057 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-057",
+      "related": [
+        56,
+        58
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 57
+    },
+    {
+      "id": 58,
+      "category": "Execution",
+      "title": "ai rebalance volatility 3",
+      "detail": "Volatility gate 3 \u2014 SIM100 adversarial third spread widening.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-058 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-058",
+      "related": [
+        57,
+        59
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 58
+    },
+    {
+      "id": 59,
+      "category": "Execution",
+      "title": "ai rebalance volatility 4",
+      "detail": "Volatility gate 4 \u2014 regime-adaptive latency.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-059 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-059",
+      "related": [
+        58,
+        60
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 59
+    },
+    {
+      "id": 60,
+      "category": "Execution",
+      "title": "ai rebalance volatility 5",
+      "detail": "Volatility gate 5 \u2014 Blue Code bounded patches.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-060 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-060",
+      "related": [
+        59,
+        61
+      ],
+      "module": "06",
+      "module_name": "Asset Ledger",
+      "quadrant": "Q4",
+      "funnel_index": 60
+    },
+    {
+      "id": 61,
+      "category": "Execution",
+      "title": "shadow liquidity map 1",
+      "detail": "ShadowLiquidityMap infers hidden depth from bid_contract 0.85\u00d7 delta.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-061 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-061",
+      "related": [
+        60,
+        62
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 61
+    },
+    {
+      "id": 62,
+      "category": "Execution",
+      "title": "shadow liquidity map 2",
+      "detail": "Shadow liquidity 2 \u2014 arbitrage_core scaffold.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-062 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-062",
+      "related": [
+        61,
+        63
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 62
+    },
+    {
+      "id": 63,
+      "category": "Execution",
+      "title": "shadow liquidity map 3",
+      "detail": "Shadow liquidity 3 \u2014 multi-venue live feeds gap.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-063 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-063",
+      "related": [
+        62,
+        64
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 63
+    },
+    {
+      "id": 64,
+      "category": "Execution",
+      "title": "shadow liquidity map 4",
+      "detail": "Shadow liquidity 4 \u2014 CEX dark pool API partial.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-064 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-064",
+      "related": [
+        63,
+        65
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 64
+    },
+    {
+      "id": 65,
+      "category": "Execution",
+      "title": "shadow liquidity map 5",
+      "detail": "Shadow liquidity 5 \u2014 Zone III honest partial status.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json \u00b7 PT-065 \u00b7 docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "pretest_id": "PT-065",
+      "related": [
+        64,
+        65,
+        66
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 65
+    },
+    {
+      "id": 66,
+      "category": "Launch",
+      "title": "554-day launch window",
+      "detail": "First 554 days anchor TGE, burn ramp, vest cliffs, and CEX ramp \u2014 structure proven before Phase 5.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        65,
+        67
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 66
+    },
+    {
+      "id": 67,
+      "category": "Launch",
+      "title": "16M hard cap forever",
+      "detail": "Fixed supply 16,000,000 CLRTY (16,000,000,000,000,000 base units) \u2014 mint_authority null; funding buys depth, never dilutes.",
+      "perk_tier": "standard",
+      "source": "docs/tokenomics/TOKENOMICS_LOCKED.md",
+      "related": [
+        66,
+        68
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 67
+    },
+    {
+      "id": 68,
+      "category": "Launch",
+      "title": "SIM100 validation gate",
+      "detail": "100-event deterministic batch (seed 42) \u2014 45% stable, 30% adversarial \u2014 proves survivability.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        67,
+        69
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 68
+    },
+    {
+      "id": 69,
+      "category": "Launch",
+      "title": "ATU 10001 determinism",
+      "detail": "cargo run -p atu_runner -- 10001 \u2014 merkle match required for Day 0+ gate.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        68,
+        70
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 69
+    },
+    {
+      "id": 70,
+      "category": "Launch",
+      "title": "Burn phase 2% \u2192 5% \u2192 10%",
+      "detail": "Bootstrap 2% (~Day 90) \u2192 stabilization 5% \u2192 mature 10% (~Day 180) deflationary schedule.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        69,
+        71
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 70
+    },
+    {
+      "id": 71,
+      "category": "Launch",
+      "title": "First vest cliff ~Day 180",
+      "detail": "Seed/Strategic 6-month cliff \u2014 scheduled supply absorbed by MM + treasury buffer.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        70,
+        72
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 71
+    },
+    {
+      "id": 72,
+      "category": "Launch",
+      "title": "Treasury USD $75M\u2013$150M scenario",
+      "detail": "Working raise $75M\u2013$100M; stress sizing to $150M \u2014 pays audits, MM, CEX, not new tokens.",
+      "perk_tier": "exclusive",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        71,
+        73
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 72
+    },
+    {
+      "id": 73,
+      "category": "Launch",
+      "title": "Liquidity bucket 4M CLRTY",
+      "detail": "25% of supply seeds MIRRA + AMM at TGE \u2014 paired with stables for two-sided quotes.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/genesis_entropy.json",
+      "related": [
+        72,
+        74
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 73
+    },
+    {
+      "id": 74,
+      "category": "Launch",
+      "title": "Bridge deferred Phase 10",
+      "detail": "L1-only scope \u2014 no omnichain supply drift at launch.",
+      "perk_tier": "standard",
+      "source": "docs/l1_launch/DEFERRED_BRIDGE.md",
+      "related": [
+        73,
+        75
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 74
+    },
+    {
+      "id": 75,
+      "category": "Launch",
+      "title": "Launch readiness script",
+      "detail": "bash scripts/launch/launch_readiness.sh \u2014 pretest + validation + audits + stress.",
+      "perk_tier": "standard",
+      "source": "docs/test/full_pretest_100.md",
+      "related": [
+        74,
+        76
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 75
+    },
+    {
+      "id": 76,
+      "category": "Launch",
+      "title": "177-day pretest campaign",
+      "detail": "pretest_manifest.json campaign_days: 177 \u2014 dashboard counter tracks elapsed/remaining.",
+      "perk_tier": "standard",
+      "source": "CLRTY_SUBSTRATE/boot/pretest_manifest.json",
+      "related": [
+        75,
+        77
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 76
+    },
+    {
+      "id": 77,
+      "category": "Launch",
+      "title": "Genesis verify gate",
+      "detail": "cargo run -p clarity-cli -- chain genesis-verify \u2014 Pre-TGE / Day 0 milestone.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        76,
+        78
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 77
+    },
+    {
+      "id": 78,
+      "category": "Launch",
+      "title": "L1 concurrency stress",
+      "detail": "bash scripts/stress/l1_concurrency.sh \u2014 pre-TGE hardening gate.",
+      "perk_tier": "standard",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        77,
+        79
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 78
+    },
+    {
+      "id": 79,
+      "category": "Launch",
+      "title": "Listing compliance pack",
+      "detail": "Six boolean gates in listing_compliance_report.json \u2014 genesis, checksum, immutability.",
+      "perk_tier": "standard",
+      "source": "frontend/investor/data/listing_compliance_report.json",
+      "related": [
+        78,
+        80
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 79
+    },
+    {
+      "id": 80,
+      "category": "Launch",
+      "title": "MSA 100-layer map",
+      "detail": "Mass Security Architecture Zones I\u2013IV aligned to PT-001\u2013PT-100.",
+      "perk_tier": "standard",
+      "source": "docs/security/MASS_SECURITY_ARCHITECTURE.md",
+      "related": [
+        79,
+        81
+      ],
+      "module": "08",
+      "module_name": "Compliance",
+      "quadrant": "Q3",
+      "funnel_index": 80
+    },
+    {
+      "id": 81,
+      "category": "Launch",
+      "title": "Early Access Notion",
+      "detail": "Early Access to CLRITY \u2014 SAFT pipeline; 12.5% public float (2M CLRTY); Seed $100K / Strategic $500K tiers.",
+      "perk_tier": "exclusive",
+      "source": "https://app.notion.com/p/Early-Access-to-CLRITY-37f704760d24800298b3ede45d52ce4d",
+      "related": [
+        80,
+        82
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 81
+    },
+    {
+      "id": 82,
+      "category": "Launch",
+      "title": "CLRTY main Notion doc",
+      "detail": "Institutional vision \u2014 sovereign L1, capital-before-float, 16M cap; mirrors CLRTY_Live_Market_Notion.md.",
+      "perk_tier": "standard",
+      "source": "https://app.notion.com/p/CLRTY-383704760d248039950eef8816181040",
+      "related": [
+        81,
+        83
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 82
+    },
+    {
+      "id": 83,
+      "category": "Investor Perks",
+      "title": "Abstraction Logic L0\u2192L3",
+      "detail": "Visual-depth curriculum \u2014 see clrty-1 as circulatory system, not spreadsheet.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/abstraction_logic_curriculum.md",
+      "related": [
+        82,
+        84
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 83
+    },
+    {
+      "id": 84,
+      "category": "Investor Perks",
+      "title": "CVP Raw Mono surfaces",
+      "detail": "Black & white investor UI \u2014 monospace, 1px borders, honesty badge modeled\u2192live.",
+      "perk_tier": "standard",
+      "source": "docs/investor/clarity_visual_protocol.md",
+      "related": [
+        83,
+        85
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 84
+    },
+    {
+      "id": 85,
+      "category": "Investor Perks",
+      "title": "Genesis participation portal",
+      "detail": "invest.clrty.network \u2014 weighted allocation before mainnet public launch.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/genesis_participation_protocol.md",
+      "related": [
+        84,
+        86
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 85
+    },
+    {
+      "id": 86,
+      "category": "Investor Perks",
+      "title": "Attestation blob access",
+      "detail": "VIS-signed cryptographic attestation \u2014 required for register allocation.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/genesis_participation_protocol.md",
+      "related": [
+        85,
+        87
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 86
+    },
+    {
+      "id": 87,
+      "category": "Investor Perks",
+      "title": "SAFT 1.5\u00d7\u20132.0\u00d7 multiplier",
+      "detail": "Reg D 506(b) / Reg S \u2014 weighted token allocation, not equity SAFE.",
+      "perk_tier": "exclusive",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        86,
+        88
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 87
+    },
+    {
+      "id": 88,
+      "category": "Investor Perks",
+      "title": "Seed Genesis $100K min",
+      "detail": "Minimum check Seed tier \u2014 6mo cliff / 24mo vest via escrow.",
+      "perk_tier": "exclusive",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        87,
+        89
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 88
+    },
+    {
+      "id": 89,
+      "category": "Investor Perks",
+      "title": "Strategic Round $500K min",
+      "detail": "Strategic tier \u2014 12/36 cliff/vest; hardware node partner path.",
+      "perk_tier": "exclusive",
+      "source": "docs/simulation/CLRTY_Live_Market_Notion.md",
+      "related": [
+        88,
+        90
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 89
+    },
+    {
+      "id": 90,
+      "category": "Investor Perks",
+      "title": "Treasury transparency 100%",
+      "detail": "16M CLRTY fully mapped \u2014 macro buckets + sub-allocation drill-down.",
+      "perk_tier": "standard",
+      "source": "docs/investor/treasury_transparency_dashboard.md",
+      "related": [
+        89,
+        91
+      ],
+      "module": "09",
+      "module_name": "Investor Perks",
+      "quadrant": "Q2",
+      "funnel_index": 90
+    },
+    {
+      "id": 91,
+      "category": "Investor Perks",
+      "title": "Moniverse economic engine",
+      "detail": "Autonetic Moniversion \u2014 fee capture, recycle, burn, Set-tier scarcity.",
+      "perk_tier": "standard",
+      "source": "docs/investor/moniverse_economic_engine.md",
+      "related": [
+        90,
+        92
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 91
+    },
+    {
+      "id": 92,
+      "category": "Investor Perks",
+      "title": "CCR Sets 99\u21921",
+      "detail": "Wallet tier re-solved each transfer \u2014 coordination weight, not bought labels.",
+      "perk_tier": "standard",
+      "source": "docs/investor/moniverse_economic_engine.md",
+      "related": [
+        91,
+        93
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 92
+    },
+    {
+      "id": 93,
+      "category": "Investor Perks",
+      "title": "Proof-of-Yield meter",
+      "detail": "Entropy-fee yield on bonded supply and register rights \u2014 L1 flow metric.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/abstraction_logic_curriculum.md",
+      "related": [
+        92,
+        94
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 93
+    },
+    {
+      "id": 94,
+      "category": "Investor Perks",
+      "title": "Mirror-trades density feed",
+      "detail": "Institutional flow classified \u2014 network density composite score.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/abstraction_logic_curriculum.md",
+      "related": [
+        93,
+        95
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 94
+    },
+    {
+      "id": 95,
+      "category": "Investor Perks",
+      "title": "Settlement gatekeeper API",
+      "detail": "GET /v1/compliance/treasury \u00b7 allocation-preview \u00b7 attestation endpoints.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/settlement_gatekeeper.md",
+      "related": [
+        94,
+        96
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 95
+    },
+    {
+      "id": 96,
+      "category": "Investor Perks",
+      "title": "Signal normalization doctrine",
+      "detail": "Banned hype signals \u2014 CVP honesty on all investor comms.",
+      "perk_tier": "standard",
+      "source": "docs/investor/signal_normalization.md",
+      "related": [
+        95,
+        97
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 96
+    },
+    {
+      "id": 97,
+      "category": "Investor Perks",
+      "title": "Chain-Shift reporting",
+      "detail": "Monthly brief template \u2014 L2 minimum for external PDFs.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/chain_shift_reporting_template.md",
+      "related": [
+        96,
+        98
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 97
+    },
+    {
+      "id": 98,
+      "category": "Investor Perks",
+      "title": "Register binding visualization",
+      "detail": "L3 node graph \u2014 wallet/register binding topology.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/register_binding_visualization.md",
+      "related": [
+        97,
+        99
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 98
+    },
+    {
+      "id": 99,
+      "category": "Investor Perks",
+      "title": "Exclusive treasury dashboard",
+      "detail": "treasury-exclusive.html \u2014 launch readiness, funding, pretest zones, MSA bars.",
+      "perk_tier": "exclusive",
+      "source": "frontend/investor/treasury-exclusive.html",
+      "related": [
+        98,
+        100
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 99
+    },
+    {
+      "id": 100,
+      "category": "Investor Perks",
+      "title": "Investor graph hub suite",
+      "detail": "clrty-graph.html \u00b7 investor-hub.html \u2014 100 nano clarity details wired.",
+      "perk_tier": "standard",
+      "source": "frontend/investor/clrty-graph.html",
+      "related": [
+        99,
+        101
+      ],
+      "module": "10",
+      "module_name": "Alert/Action",
+      "quadrant": "Q4",
+      "funnel_index": 100
+    },
+    {
+      "id": 101,
+      "category": "Live Deployment",
+      "title": "Intelligence Layer for Capital",
+      "detail": "$CLRTY is the native intelligence layer \u2014 sovereign L1 kernel optimizing capital allocation across global markets.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        100,
+        102
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 101
+    },
+    {
+      "id": 102,
+      "category": "Live Deployment",
+      "title": "HELIX private execution",
+      "detail": "MEV-resistant routing and internal order matching \u2014 static txs become self-optimizing execution systems.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/ \u00b7 docs/investor/helix_engine.md",
+      "related": [
+        101,
+        103
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 102
+    },
+    {
+      "id": 103,
+      "category": "Live Deployment",
+      "title": "PRISM Economy tiers",
+      "detail": "Private PRISM Clusters \u00b7 Model Marketplace \u00b7 Dev Layer \u00b7 Public PRISM Network \u2014 intelligence decides what data matters.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        102,
+        104
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 103
+    },
+    {
+      "id": 104,
+      "category": "Live Deployment",
+      "title": "Proof-of-Intelligence 98.2",
+      "detail": "PoA/01 \u2014 avg performance index of PoA assets globally; intelligence-native asset validation.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        103,
+        105
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 104
+    },
+    {
+      "id": 105,
+      "category": "Live Deployment",
+      "title": "Deterministic Finality <400ms",
+      "detail": "SETTLE/02 \u2014 cross-agent financial transaction settlement latency target under 400ms.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        104,
+        106
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 105
+    },
+    {
+      "id": 106,
+      "category": "Live Deployment",
+      "title": "TGE Investments portal",
+      "detail": "Exclusive CLI early access \u00b7 private investment portal \u00b7 mastermind group \u2014 POA/01 investor funnel.",
+      "perk_tier": "exclusive",
+      "source": "https://www.clarity-fintech.com/ \u00b7 Notion Early Access",
+      "related": [
+        105,
+        107
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 106
+    },
+    {
+      "id": 107,
+      "category": "Live Deployment",
+      "title": "npm @clrty/sdk",
+      "detail": "Developer SDK \u2014 Clarity client for HELIX execute, skills deploy, and chain integration.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/ \u00b7 npm install @clrty/sdk",
+      "related": [
+        106,
+        108
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 107
+    },
+    {
+      "id": 108,
+      "category": "Live Deployment",
+      "title": "npm @clrt/cli global",
+      "detail": "Operator CLI \u2014 clrt account, prism query, network status; npm install -g @clrt/cli.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        107,
+        109
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 108
+    },
+    {
+      "id": 109,
+      "category": "Live Deployment",
+      "title": "Proof-of-Relevance (PoR)",
+      "detail": "NEW PRIMITIVE \u2014 Predictive Query Nodes cache user queries and contract reads before requests arrive.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        108,
+        110
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 109
+    },
+    {
+      "id": 110,
+      "category": "Live Deployment",
+      "title": "Cross-Chain Shadow RPC",
+      "detail": "Query Solana and other chains while hiding strategy queries and execution paths from adversaries.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        109,
+        111
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 110
+    },
+    {
+      "id": 111,
+      "category": "Live Deployment",
+      "title": "Multi-Source Data Fusion",
+      "detail": "Fuse blockchain data, market feeds, sentiment, and macro signals into unified inference nodes.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        110,
+        112
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 111
+    },
+    {
+      "id": 112,
+      "category": "Live Deployment",
+      "title": "Secure Enclave Nodes",
+      "detail": "Hardware-enclave execution path for institutional capital and attestation-bound register rights.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        111,
+        113
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 112
+    },
+    {
+      "id": 113,
+      "category": "Live Deployment",
+      "title": "Adaptive Transaction Logic",
+      "detail": "Conditional execution paths, dynamic fees, context-aware routing, outcome-based logic selection.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/ \u00b7 HELIX Engine",
+      "related": [
+        112,
+        114
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 113
+    },
+    {
+      "id": 114,
+      "category": "Live Deployment",
+      "title": "Capital Efficiency Engine",
+      "detail": "Reduces slippage, optimizes liquidity usage, improves yield pathways, enhances arb execution.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/",
+      "related": [
+        113,
+        115
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 114
+    },
+    {
+      "id": 115,
+      "category": "Live Deployment",
+      "title": "Moniversive Execution Chain",
+      "detail": "Self-compressing L1 for deterministic execution, capital efficiency, and intelligence-native assets.",
+      "perk_tier": "standard",
+      "source": "https://www.clarity-fintech.com/ \u00b7 clrty-1",
+      "related": [
+        114,
+        116
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 115
+    },
+    {
+      "id": 116,
+      "category": "Live Deployment",
+      "title": "Private seed cap 2M CLRTY",
+      "detail": "settlement_config private_seed_cap_tokens: 2,000,000 \u2014 AllocationCapExceeded enforced in commit_payment.rs.",
+      "perk_tier": "exclusive",
+      "source": "CLRTY_SUBSTRATE/boot/settlement_config.json",
+      "related": [
+        115,
+        117
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 116
+    },
+    {
+      "id": 117,
+      "category": "Live Deployment",
+      "title": "Public early-access 2M CLRTY",
+      "detail": "12.5% genesis bucket \u2014 backlog tranches 0\u20134; never exceeds 2M public allocation cap.",
+      "perk_tier": "standard",
+      "source": "docs/tokenomics/TOKENOMICS_LOCKED.md \u00b7 frontend/token/early-access.html",
+      "related": [
+        116,
+        118
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 117
+    },
+    {
+      "id": 118,
+      "category": "Live Deployment",
+      "title": "Live REST api.clarity-fintech.com",
+      "detail": "Public REST /v1/status returns \u03bb, entropy_h, supply_minted, supply_cap \u2014 Workers \u2192 tunnel \u2192 clrty-api.",
+      "perk_tier": "standard",
+      "source": "var/launch/status_report.json \u00b7 verified live",
+      "related": [
+        117,
+        119
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 118
+    },
+    {
+      "id": 119,
+      "category": "Live Deployment",
+      "title": "Live RPC rpc.clarity-fintech.com",
+      "detail": "Public JSON-RPC getSlot on clrty-1 chainId 1202 \u2014 finalized commitment, MLX score in result.",
+      "perk_tier": "standard",
+      "source": "var/launch/status_report.json \u00b7 verified live",
+      "related": [
+        118,
+        120
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 119
+    },
+    {
+      "id": 120,
+      "category": "Live Deployment",
+      "title": "Clarity Fortress Pages deploy",
+      "detail": "Clarity Fortress at clrty-labs.pages.dev \u2014 walkthrough, faucet, explorer, playground wired to live API/RPC.",
+      "perk_tier": "standard",
+      "source": "frontend/labs/ \u00b7 https://33a092b7.clrty-labs.pages.dev",
+      "related": [
+        119,
+        121
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 120
+    },
+    {
+      "id": 121,
+      "category": "Live Deployment",
+      "title": "CLRTY DATA CENTER",
+      "detail": "Performance & ROI tracking \u2014 rotating live metrics (extraction, velocity, demand, operational) synced to Notion; Sheets source of truth.",
+      "perk_tier": "exclusive",
+      "source": "docs/investor/performance_roi_tracking_template.md \u00b7 GET /v1/data-center/snapshot",
+      "related": [
+        120,
+        122
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 121
+    },
+    {
+      "id": 122,
+      "category": "Live Deployment",
+      "title": "Monetization Layers B2B",
+      "detail": "L01\u2013L14 paid access \u2014 Exec-Sniper, DaaS-Core, Telemetry-X, Stripe portal; revenue tags in data_center_snapshot with clrty-monetization-calculus provenance.",
+      "perk_tier": "exclusive",
+      "source": "docs/monetization/MONETIZATION_LAYERS.md \u00b7 CLRTY_SUBSTRATE/boot/monetization_layers_manifest.json",
+      "related": [
+        121,
+        123
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 122
+    },
+    {
+      "id": 123,
+      "category": "Live Deployment",
+      "title": "Monetization Portal (Stripe)",
+      "detail": "stripe_portal.json \u2192 frontend/labs/data/ \u2014 checkout URLs, entitlements, POST /v1/integrations/stripe/webhook.",
+      "perk_tier": "standard",
+      "source": "monetization-layers/products/stripe_portal.json \u00b7 make monetization-portal-sync",
+      "related": [
+        122
+      ],
+      "module": "07",
+      "module_name": "Infrastructure",
+      "quadrant": "Q1",
+      "funnel_index": 123
+    }
+  ]
+}
