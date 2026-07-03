@@ -6,6 +6,15 @@ Deep Systems. Real Infrastructure. Verifiable Intelligence.
 
 Go beyond surface-level understanding and explore the core systems powering CLRTY-1.
 
+## Downloads
+
+Start here:
+
+- **Full Research Kit ZIP:** [`dist/research-kit-full.zip`](dist/research-kit-full.zip)
+- **Checksums:** [`dist/SHA256SUMS.txt`](dist/SHA256SUMS.txt)
+- **Download index:** [`DOWNLOADS.md`](DOWNLOADS.md)
+- **Git clone:** `git clone https://github.com/clarity-fintech/research_kit.git`
+
 ## Study Execution Layers
 
 Understand how transactions are optimized before on-chain settlement:
