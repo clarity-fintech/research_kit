@@ -11,6 +11,9 @@ Go beyond surface-level understanding and explore the core systems powering CLRT
 Start here:
 
 - **Full Research Kit ZIP:** [`dist/research-kit-full.zip`](dist/research-kit-full.zip)
+- **Research Data Pack:** [`dist/research-data-pack.zip`](dist/research-data-pack.zip)
+- **Simulation Research Pack:** [`dist/simulation-research-pack.zip`](dist/simulation-research-pack.zip)
+- **Mastermind First Access Pack:** [`dist/mastermind-first-access-pack.zip`](dist/mastermind-first-access-pack.zip)
 - **Checksums:** [`dist/SHA256SUMS.txt`](dist/SHA256SUMS.txt)
 - **Download index:** [`DOWNLOADS.md`](DOWNLOADS.md)
 - **Git clone:** `git clone https://github.com/clarity-fintech/research_kit.git`
