@@ -64,3 +64,37 @@ Dive into the architecture of CLRTY-1:
 ## Repository Layout
 
 See `INDEX.md`, `RESEARCH_TOPICS.md`, and `DATA_DICTIONARY.md`.
+
+
+---
+
+<!-- CLRTY-DEVREF:START -->
+
+## Developer reference
+
+> Auto-generated command/architecture reference for **[`clarity-fintech/research_kit`](https://github.com/clarity-fintech/research_kit)**. The sections above are the maintained overview.
+
+### Get it running
+
+```bash
+git clone https://github.com/clarity-fintech/research_kit
+cd research_kit
+```
+
+### Architecture (tracked layout)
+
+| Path | Files |
+|---|---|
+| `docs/` | 84 |
+| `simulators/` | 36 |
+| `data/` | 33 |
+| `engine-summaries/` | 6 |
+| `dist/` | 5 |
+| `manifests/` | 1 |
+
+### Settlement context
+
+Part of the **CLRTY-1** ecosystem (chain **1202**). MIS modules are compiled by the
+[CLRTY-MIS-Kernel](https://github.com/clarity-fintech/CLRTY-MIS-Kernel) `misc` compiler.
+
+<!-- CLRTY-DEVREF:END -->
